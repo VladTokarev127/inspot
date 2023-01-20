@@ -1,0 +1,50 @@
+.header
+	position: fixed
+	left: 0
+	top: 55px
+	width: 100%
+	transition: .3s ease-in-out
+	z-index: 9
+	&__logo
+		margin-right: auto
+	&__nav
+		&-list
+			margin: 0
+			padding: 0
+			list-style-type: none
+			display: flex
+			align-items: center
+			& > li
+				font-style: normal
+				font-weight: 400
+				font-size: 20px
+				line-height: 25px
+				text-transform: uppercase
+				margin-right: 28px
+				&:last-child
+					margin-right: 0
+				&.current_page_item
+					a
+						color: #e02656
+				&.menu-item-has-children
+					position: relative
+					padding-right: 20px
+					&::after
+						position: absolute
+						right: 0
+						top: 6px
+						content: ''
+						width: 12px
+						height: 7px
+						background-image: url(../img/menu-arrow.svg)
+						background-repeat: no-repeat
+						background-position: center
+					ul
+						display: none
+				& > a
+					color: #fff
+					text-decoration: none
+					transition: .3s ease-in-out
+					&:hover,
+					&:focus-visible
+						color: #e02656
