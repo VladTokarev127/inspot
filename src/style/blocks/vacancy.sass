@@ -1,0 +1,95 @@
+.vacancy
+	margin-bottom: 180px
+	&__list
+		width: 100%
+	&__item
+		padding-top: 34px
+		padding-bottom: 34px
+		border-bottom: 1px solid #323232
+		&:first-child
+			border-top: 1px solid #323232
+	&__top
+		display: flex
+		align-items: center
+		justify-content: space-between
+		cursor: pointer
+		&:hover,
+		&.is-active
+			.vacancy__name
+				color: #fff
+			.vacancy__arrow
+				fill: #fff
+		&.is-active
+			.vacancy__arrow
+				transform: rotate(180deg)
+	&__name
+		margin-right: 50px
+		font-family: $it-font
+		font-style: italic
+		font-weight: 800
+		font-size: 60px
+		line-height: 73px
+		text-transform: uppercase
+		color: #323232
+		transition: .7s ease-in-out
+	&__arrow
+		transition: .7s ease-in-out
+		fill: #323232
+	&__desc
+		padding-top: 25px
+		display: none
+	&__price
+		font-family: $it-font
+		font-style: italic
+		font-weight: 400
+		font-size: 40px
+		line-height: 48px
+		margin-bottom: 52px
+		text-transform: uppercase
+		display: inline-block
+		background: linear-gradient(90.14deg, #E12555 0%, #4BA1D9 99.76%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+		color: #323232
+	&__text
+		font-family: $it-font
+		font-style: normal
+		font-weight: 400
+		font-size: 20px
+		line-height: 24px
+		color: #e7e7e7
+		margin-bottom: 77px
+		h3
+			font-family: $it-font
+			font-style: italic
+			font-weight: 800
+			font-size: 40px
+			line-height: 48px
+			text-transform: uppercase
+			margin: 0
+			margin-bottom: 28px
+		ul
+			margin: 0
+			margin-left: 50px
+			padding: 0
+			list-style-type: none
+			& > li
+				position: relative
+				margin: 0
+				margin-bottom: 15px
+				padding-left: 50px
+				&::after
+					position: absolute
+					left: 0
+					top: 4px
+					content: ''
+					width: 25px
+					height: 15px
+					background-image: url(../img/li-marker.svg)
+					background-repeat: no-repeat
+					background-position: center
+		p
+			margin: 0
+			margin-bottom: 15px
+		*:last-child
+			margin-bottom: 0

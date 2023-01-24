@@ -31,6 +31,14 @@ $(function() {
 
 	$(window).scroll(function(e) {
 		setHeader();
+	});
+
+	$('.vacancy__top').click(function(e) {
+		e.preventDefault();
+		$(this)
+			.toggleClass('is-active')
+			.next()
+			.slideToggle(700);
 	})
 
 });
