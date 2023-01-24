@@ -1,10 +1,18 @@
 .header
-	position: fixed
+	position: static
 	left: 0
-	top: 55px
+	top: -200px
+	padding-top: 55px
 	width: 100%
-	transition: .3s ease-in-out
 	z-index: 9
+	transition: .7s ease-in-out
+	margin-bottom: -122px
+	&__fixed
+		position: fixed
+		padding-top: 15px
+		padding-bottom: 15px
+		top: 0
+		background-color: #000
 	&__logo
 		margin-right: auto
 	&__nav

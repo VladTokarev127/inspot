@@ -30,6 +30,16 @@
 
 <body>
 
+	<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<defs>
+			<filter id="round">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+				<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+			</filter>
+		</defs>
+	</svg>
+
 	<div class="wrapper">
 
 		<header class="header">
@@ -76,16 +86,19 @@
 							<div class="hero__item-bg"><img src="img/hero-img-1.jpg" alt=""></div>
 							<a href="#" class="hero__item-btn btn btn_white">Подробнее</a>
 							<div class="hero__item-info"><b>Nunc lectus tortor</b> fringilla tempus</div>
+							<div class="hero__rgb"><img src="img/rgb-line.png" alt=""></div>
 						</div>
 						<div class="hero__item hero__item_2">
 							<div class="hero__item-bg"><img src="img/hero-img-2.jpg" alt=""></div>
 							<a href="#" class="hero__item-btn btn btn_white">Подробнее</a>
-							<div class="hero__item-info">Nunc lectus tortor fringilla tempus</div>
+							<div class="hero__item-info"><b>Nunc lectus tortor</b> fringilla tempus</div>
+							<div class="hero__rgb"><img src="img/rgb-line.png" alt=""></div>
 						</div>
 						<div class="hero__item hero__item_3">
 							<div class="hero__item-bg"><img src="img/hero-img-3.jpg" alt=""></div>
 							<a href="#" class="hero__item-btn btn btn_white">Подробнее</a>
 							<div class="hero__item-info"><b>Nunc lectus</b> auctor</div>
+							<div class="hero__rgb"><img src="img/rgb-line.png" alt=""></div>
 						</div>
 					</div>
 
@@ -94,7 +107,101 @@
 			</section>
 			<!-- end section hero -->
 
+			<!-- star section hero__clubs -->
+			<div class="container">
+			<section class="hero__clubs">
+
+					<div class="hero__clubs-list">
+						<a href="#" class="hero__clubs-item">
+							<div class="hero__clubs-content">
+								<div class="hero__clubs-num">85</div>
+								<div class="hero__clubs-text">Nunc lectus fringilla <br>tempus, auctor accumsan </div>
+							</div>
+							<div class="hero__clubs-img">
+								<span class="hero__clubs-mask hero__clubs-bg">
+									<img src="img/hero-club-1.jpg" alt="">
+								</span>
+								<span class="hero__clubs-mask">
+									<img src="img/hero-club-1.jpg" alt="">
+								</span>
+							</div>
+						</a>
+						<a href="#" class="hero__clubs-item">
+							<div class="hero__clubs-content">
+								<div class="hero__clubs-num">5 500</div>
+								<div class="hero__clubs-text">Nunc lectus fringilla <br>tempus, auctor </div>
+							</div>
+							<div class="hero__clubs-img">
+								<span class="hero__clubs-mask hero__clubs-bg">
+									<img src="img/hero-club-2.jpg" alt="">
+								</span>
+								<span class="hero__clubs-mask">
+									<img src="img/hero-club-2.jpg" alt="">
+								</span>
+							</div>
+						</a>
+						<a href="#" class="hero__clubs-item">
+							<div class="hero__clubs-content">
+								<div class="hero__clubs-num">50 000</div>
+								<div class="hero__clubs-text">Nunc lectus fringilla <br>tempus, auctor accumsan </div>
+							</div>
+							<div class="hero__clubs-img">
+								<span class="hero__clubs-mask hero__clubs-bg">
+									<img src="img/hero-club-3.jpg" alt="">
+								</span>
+								<span class="hero__clubs-mask">
+									<img src="img/hero-club-3.jpg" alt="">
+								</span>
+							</div>
+						</a>
+						<a href="#" class="hero__clubs-item">
+							<div class="hero__clubs-content">
+								<div class="hero__clubs-num">600 000</div>
+								<div class="hero__clubs-text">Nunc lectus fringilla <br>tempus, auctor </div>
+							</div>
+							<div class="hero__clubs-img">
+								<span class="hero__clubs-mask hero__clubs-bg">
+									<img src="img/hero-club-4.jpg" alt="">
+								</span>
+								<span class="hero__clubs-mask">
+									<img src="img/hero-club-4.jpg" alt="">
+								</span>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</section>
+			<!-- end section hero__clubs -->
+
 		</main>
+
+		<footer class="footer">
+			<div class="container">
+
+				<div class="footer__grid">
+					<div class="footer__item">
+						<p>ОГРН 1182375044697</p>
+						<p>ИНН 2z368010296</p>
+						<p>Москва, Профсоюзная, 56.</p>
+					</div>
+					<div class="footer__item">
+						<p><a href="mailto:">example@mail.ru</a></p>
+						<p><a href="tel:">8 800 888 99 77</a></p>
+						<p><a href="#">политика конфиденциальности</a></p>
+					</div>
+					<div class="footer__item">
+						<p>example@mail.ru</p>
+						<p>8 800 888 99 77</p>
+						<p>соцсети</p>
+					</div>
+					<div class="footer__item">
+						<p>© INSPOT 2022</p>
+					</div>
+				</div>
+
+			</div>
+		</footer>
 
 	</div>
 
