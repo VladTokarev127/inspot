@@ -39,6 +39,13 @@ $(function() {
 			.toggleClass('is-active')
 			.next()
 			.slideToggle(700);
-	})
+	});
+
+	const swiper = new Swiper('.swiper', {
+		autoHeight: false,
+		pagination: {
+			el: ".swiper-pagination",
+		},
+	});
 
 });
