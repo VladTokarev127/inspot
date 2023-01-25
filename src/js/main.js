@@ -43,8 +43,10 @@ $(function() {
 
 	const swiper = new Swiper('.swiper', {
 		autoHeight: false,
+		spaceBetween: 54,
 		pagination: {
 			el: ".swiper-pagination",
+			clickable: true,
 		},
 	});
 

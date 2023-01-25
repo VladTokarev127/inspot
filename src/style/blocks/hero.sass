@@ -26,20 +26,37 @@
 			content: ''
 			width: 100%
 			height: 100%
-			background-image: url(../img/rgb-line.png)
-			background-repeat: no-repeat
-			background-size: 100% 100%
-			filter: blur(9.5px)
+			background-image: linear-gradient(to right, #01FF08 0%, #02FFFE 12.5%, #0006FF 25%, #FC00FF, 37.5%, #CA0707 50%, #01FF08 62.5%, #02FFFE 75%, #0006FF 87.5%, #FC00FF 100%)
+			background-repeat: repeat
+			background-size: 200% 100%
+			animation-name: rgbline
+			animation-duration: 40s
+			animation-iteration-count: infinite
+			animation-play-state: running
+			animation-fill-mode: both
+			filter: blur(12.5px)
 			z-index: -1
 			opacity: 0
 			visibility: hidden
 			transition: .7s ease-in-out
-		img
+		span
+			z-index: 1
+			position: relative
+			display: block
 			opacity: 0
 			visibility: hidden
 			transition: .7s ease-in-out
 			width: 100%
 			height: 100%
+			background-position: 0 center
+			background-image: linear-gradient(to right, #01FF08 0%, #02FFFE 12.5%, #0006FF 25%, #FC00FF, 37.5%, #CA0707 50%, #01FF08 62.5%, #02FFFE 75%, #0006FF 87.5%, #FC00FF 100%)
+			background-repeat: repeat
+			background-size: 200% 100%
+			animation-name: rgbline
+			animation-duration: 40s
+			animation-iteration-count: infinite
+			animation-play-state: running
+			animation-fill-mode: both
 	&__item
 		height: 100%
 		position: absolute
@@ -118,7 +135,7 @@
 			&::after
 				opacity: 0.6
 				visibility: visible
-			.hero__rgb img
+			.hero__rgb span
 				opacity: 1
 				visibility: visible
 			.hero__rgb::after
@@ -170,7 +187,6 @@
 		animation-iteration-count: infinite
 		animation-play-state: running
 		animation-fill-mode: both
-
 	&__clubs
 		&-list
 			width: 100%
@@ -187,7 +203,7 @@
 					text-shadow: #fff
 				.hero__clubs-text
 					color: #fff
-				.hero__clubs-bg
+				.hero__clubs-bg span
 					opacity: 1
 					visibility: visible
 					top: 20px
@@ -248,14 +264,21 @@
 			z-index: -1
 			left: 0
 			top: 0
-			width: 100%
-			height: 100%
-			object-fit: cover
-			filter: blur(180px)
-			opacity: 0
-			visibility: hidden
-			transition: .7s ease-in-out
-			transform: rotate(180deg)
+			-webkit-mask-image: unset
+			span
+				position: absolute
+				z-index: -1
+				left: 0
+				top: 0
+				width: 100%
+				height: 100%
+				object-fit: cover
+				filter: blur(40px)
+				background-position: center
+				background-repeat: no-repeat
+				opacity: 0
+				visibility: hidden
+				transition: .7s ease-in-out
 		&-img
 			flex: 0 49%
 			height: 165px
@@ -269,3 +292,11 @@
 				object-fit: cover
 				filter: saturate(0)
 				transition: .7s ease-in-out
+
+@keyframes rgbline
+	0%
+		background-position: 0 center
+	50%
+		background-position: 100% center
+	100%
+		background-position: 0% center
