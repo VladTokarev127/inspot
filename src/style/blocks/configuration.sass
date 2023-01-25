@@ -1,0 +1,100 @@
+.configuration
+	&__title
+		margin-bottom: 60px
+	&__grid
+		flex: 1 100%
+		display: grid
+		grid-template-columns: repeat(8,1fr)
+		grid-gap: 50px 0
+	&__item
+		text-align: center
+		&:hover
+			.configuration__icon-bg span
+				opacity: 1
+				visibility: visible
+				animation-play-state: running
+			.configuration__icon-bg::after
+				opacity: 1
+				visibility: visible
+				animation-play-state: running
+	&__icon
+		position: relative
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 110px
+		margin-bottom: 20px
+		z-index: 1
+		&-bg
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			span
+				z-index: -1
+				position: absolute
+				display: block
+				left: 0
+				top: 0
+				opacity: 0
+				visibility: hidden
+				transition: .7s ease-in-out
+				width: 100%
+				height: 100%
+				background-position: 0 center
+				background-image: linear-gradient(to right, #01FF08 0%, #02FFFE 12.5%, #0006FF 25%, #FC00FF, 37.5%, #CA0707 50%, #01FF08 62.5%, #02FFFE 75%, #0006FF 87.5%, #FC00FF 100%)
+				background-repeat: repeat
+				background-size: 600% 100%
+				animation-name: conf-line
+				animation-duration: 80s
+				animation-iteration-count: infinite
+				animation-play-state: paused
+				animation-fill-mode: both
+			&::after
+				position: absolute
+				left: 0
+				top: 0
+				content: ''
+				width: 100%
+				height: 100%
+				background-image: linear-gradient(to right, #01FF08 0%, #02FFFE 12.5%, #0006FF 25%, #FC00FF, 37.5%, #CA0707 50%, #01FF08 62.5%, #02FFFE 75%, #0006FF 87.5%, #FC00FF 100%)
+				background-repeat: repeat
+				background-size: 600% 100%
+				animation-name: conf-line
+				animation-duration: 80s
+				animation-iteration-count: infinite
+				animation-play-state: paused
+				animation-fill-mode: both
+				filter: blur(12.5px)
+				z-index: -9
+				opacity: 0
+				visibility: hidden
+				transition: .7s ease-in-out
+	&__info
+	&__type
+		margin-bottom: 10px
+		font-family: $it-font
+		font-style: normal
+		font-weight: 400
+		font-size: 20px
+		line-height: 24px
+		text-transform: uppercase
+		color: #E7E7E7
+	&__name
+		font-family: $it-font
+		font-style: italic
+		font-weight: 700
+		font-size: 20px
+		line-height: 24px
+		text-align: center
+		color: #545454
+
+@keyframes conf-line
+	0%
+		background-position: -100% center
+	50%
+		background-position: -20% center
+	100%
+		background-position: -100% center

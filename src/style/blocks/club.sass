@@ -1,0 +1,186 @@
+.club
+	&__hero
+		padding-bottom: 250px
+		background-image: url(../img/club-hero-bg.png)
+		background-repeat: no-repeat
+		background-position: center calc(100% - 60px)
+		.container
+			position: relative
+		&-circle
+			position: absolute
+			z-index: -1
+			left: calc(15px + 10%)
+			bottom: -265px
+			width: 562px
+			height: 562px
+			border-radius: 50%
+			background: #0071B4
+			opacity: 0.2
+			filter: blur(125px)
+			animation-name: cicrle-animation
+			animation-duration: 20s
+			animation-iteration-count: infinite
+			animation-play-state: running
+			animation-fill-mode: both
+		&-info
+			flex: 1
+			margin-right: 50px
+			align-self: flex-start
+		&-title
+			font-family: $it-font
+			font-style: italic
+			font-weight: 800
+			font-size: 80px
+			line-height: 97px
+			text-transform: uppercase
+			color: #E7E7E7
+			margin-bottom: 21px
+		&-loc
+			font-family: $it-font
+			font-style: italic
+			font-weight: 400
+			font-size: 50px
+			line-height: 60px
+			text-transform: uppercase
+			color: #C81C49
+		&-swiper
+			margin: -90px
+			padding: 90px
+			&-container
+				flex: 0 57.5%
+				max-width: 57.5%
+				align-self: flex-start
+			.swiper-pagination
+				position: absolute
+				left: auto
+				bottom: auto
+				width: auto
+				right: 134px
+				top: 136px
+				display: flex
+				align-items: center
+			.swiper-pagination-bullet
+				margin: 0
+				margin-right: 10px
+				width: 25px
+				height: 15px
+				position: relative
+				background: 0
+				border: 0
+				opacity: 1
+				&::after,
+				&::before
+					position: absolute
+					left: 0
+					top: 0
+					content: ''
+					width: 100%
+					height: 100%
+					background-repeat: no-repeat
+					background-position: center
+					transition: .3s ease-in-out
+				&::before
+					background-image: url(../img/slide-dot.png)
+				&::after
+					background-image: url(../img/slide-dot-active.png)
+					opacity: 0
+					visibility: hidden
+				&:hover,
+				&-active
+					&::after
+						opacity: 1
+						visibility: visible
+				&:last-child
+					margin-right: 0
+			&-full
+				position: absolute
+				bottom: 32px
+				left: 40px
+				z-index: 1
+				stroke: #E7E7E7
+				color: #E7E7E7
+				text-decoration: none
+				transition: .3s
+				display: flex
+				font-size: 0
+				line-height: 0
+				align-items: center
+				&:hover
+					color: #E02656
+					stroke: #E02656
+				span
+					position: relative
+					top: 2px
+					font-style: normal
+					font-weight: 900
+					font-size: 20px
+					line-height: 25px
+					text-transform: uppercase
+				svg
+					margin-right: 13px
+			&-slide
+				position: relative
+				&.swiper-slide-active
+					.club__hero-swiper-slide-bg span
+						opacity: 1
+						visibility: visible
+				&-mask
+					display: block
+					width: 100%
+					height: 100%
+					-webkit-mask-image: url(../img/club-hero-mask.svg)
+					-webkit-mask-repeat: no-repeat
+					-webkit-mask-size: 100% 100%
+					position: relative
+					&:last-child
+						&::after
+							position: absolute
+							left: 0
+							top: 0
+							content: ''
+							width: 100%
+							height: 100%
+							mix-blend-mode: multiply
+							background: linear-gradient(180deg, #E02655 0%, #4BA1D9 100%)
+							background-repeat: no-repeat
+							transition: .7s ease-in-out
+				&-bg
+					position: absolute
+					left: 0
+					top: 0
+					z-index: -1
+					-webkit-mask-image: unset
+					span
+						position: absolute
+						z-index: -1
+						left: 0
+						top: 0
+						width: 100%
+						height: 100%
+						object-fit: cover
+						filter: blur(75px)
+						opacity: 0
+						visibility: hidden
+						mix-blend-mode: normal
+						transition: .3s ease-in-out
+		&-thumbs
+			display: grid
+			grid-template-columns: repeat(7,1fr)
+			grid-gap: 12px
+			margin-top: 40px
+			position: relative
+			z-index: 9
+		&-thumb
+			opacity: 0.5
+			-webkit-mask-image: url(../img/club-thumb-mask.svg)
+			-webkit-mask-repeat: no-repeat
+			-webkit-mask-size: 100% 100%
+			transition: .3s ease-in-out
+			cursor: pointer
+			&:hover,
+			&.is-active
+				opacity: 1
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover

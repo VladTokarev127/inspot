@@ -1,0 +1,35 @@
+.manager
+	padding-top: 205px
+	position: relative
+	background-image: url(../img/manager-bg.png)
+	background-position: center 79px
+	background-repeat: no-repeat
+	z-index: 4
+	.container
+		position: relative
+		z-index: 1
+	&__circle
+		position: absolute
+		z-index: -1
+		right: calc(-8px - 20%)
+		top: -400px
+		width: 819px
+		height: 819px
+		border-radius: 50%
+		background: linear-gradient(268.42deg, #FF2F6E -8.98%, #C51B47 97.94%)
+		opacity: 0.2
+		filter: blur(125px)
+		animation-name: cicrle-animation
+		animation-duration: 20s
+		animation-iteration-count: infinite
+		animation-play-state: running
+		animation-fill-mode: both
+		pointer-events: none
+	&__content
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+	&__title
+		margin-right: 110px
+		flex: 1
+		color: #e02656

@@ -1,0 +1,171 @@
+.prices
+	padding-top: 250px
+	background-position: center 121px
+	background-image: url(../img/prices-bg.png)
+	background-repeat: no-repeat
+	position: relative
+	&__circle
+		position: absolute
+		z-index: 3
+		right: calc(-513px - 20%)
+		top: -10px
+		width: 819px
+		height: 819px
+		border-radius: 50%
+		background: linear-gradient(268.42deg, #FF2F6E -8.98%, #C51B47 97.94%)
+		opacity: 0.2
+		filter: blur(125px)
+		animation-name: cicrle-animation
+		animation-duration: 20s
+		animation-iteration-count: infinite
+		animation-play-state: running
+		animation-fill-mode: both
+		pointer-events: none
+	&__title
+		margin-bottom: 60px
+	&__grid
+		width: 100%
+		display: grid
+		grid-template-columns: repeat(3,1fr)
+		grid-gap: 0
+		margin-bottom: 60px
+	&__item
+		background-color: #323232
+		padding: 1px
+		position: relative
+		z-index: 1
+		overflow: hidden
+		margin-left: -1px
+		&:hover
+			z-index: 2
+			&::after
+				left: 0
+				opacity: 1
+				visibility: visible
+			.prices__img-bg
+				left: 100%
+		&::after
+			position: absolute
+			z-index: -1
+			left: -100%
+			top: 0
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: #000000
+			background: linear-gradient(90.14deg, #E12555 0%, #4BA1D9 99.76%)
+			opacity: 0
+			visibility: hidden
+			transition: .7s ease-in-out
+	&__content
+		background-color: #000
+		position: relative
+		z-index: 1
+		overflow: hidden
+		padding-top: 39px
+		padding-left: 60px
+		padding-right: 60px
+		padding-bottom: 23px
+		min-height: 240px
+	&__top
+		margin-bottom: 31px
+	&__time
+		font-family: $it-font
+		font-style: italic
+		font-weight: 700
+		font-size: 50px
+		line-height: 60px
+		text-transform: uppercase
+		color: #e7e7e7
+		margin-bottom: 3px
+	&__desc
+		font-family: $it-font
+		font-style: italic
+		font-weight: 400
+		font-size: 20px
+		line-height: 24px
+		text-transform: uppercase
+		color: #e02656
+	&__val
+		text-align: right
+		font-family: $it-font
+		font-style: italic
+		font-weight: 700
+		font-size: 50px
+		line-height: 60px
+		text-transform: uppercase
+		color: #e7e7e7
+		z-index: 2
+		position: relative
+	&__img
+		position: absolute
+		z-index: -1
+		left: -1px
+		bottom: -1px
+		width: 60%
+		height: 51px
+		-webkit-mask-image: url(../img/prices-mask.svg)
+		-webkit-mask-repeat: no-repeat
+		-webkit-mask-size: 100% 100%
+		background-repeat: no-repeat
+		background-size: 100% 100%
+		padding-top: 1px
+		padding-right: 1px
+		&-bg
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 51px
+			background-color: #000
+			transition: .7s ease-in-out
+		&::before
+			position: absolute
+			z-index: 1
+			left: 0
+			top: 0
+			content: ''
+			width: 100%
+			height: 100%
+			background-image: url(../img/prices-border.png)
+			background-repeat: no-repeat
+			background-position: center
+			background-size: 100% 100%
+		&::after
+			position: absolute
+			left: 0
+			top: 0
+			content: ''
+			width: 100%
+			height: 100%
+			background: linear-gradient(90.14deg, #E12555 0%, #4BA1D9 99.76%)
+			background-repeat: no-repeat
+			background-position: center
+			mix-blend-mode: multiply
+		img
+			filter: grayscale(0)
+			width: 100%
+			height: 100%
+			object-fit: cover
+	&__text
+		flex: 1 100%
+		text-align: center
+		font-family: $it-font
+		font-style: italic
+		font-weight: 800
+		font-size: 50px
+		line-height: 60px
+		margin-bottom: 60px
+		text-align: center
+		text-transform: uppercase
+		color: #323232
+		b,strong
+			color: #cd1e4d
+			font-weight: inherit
+		p
+			margin: 0
+			margin-bottom: 30px
+			&:last-child
+				margin-bottom: 0
+	&__btn
+		margin: 0 auto

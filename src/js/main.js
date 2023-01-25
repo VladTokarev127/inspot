@@ -57,13 +57,44 @@ $(function() {
 		$(this).addClass('is-active');
 	})
 
-	const swiper = new Swiper('.swiper', {
+	const clubsSwiper = new Swiper('.clubs__swiper', {
 		autoHeight: false,
 		spaceBetween: 54,
 		pagination: {
-			el: ".swiper-pagination",
+			el: '.swiper-pagination',
 			clickable: true,
 		},
+	});
+
+	const clubSwiper = new Swiper('.club__hero-swiper', {
+		autoHeight: false,
+		spaceBetween: 90,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
+
+	clubSwiper.on('slideChange', function(e) {
+		let index = e.activeIndex;
+		$('.club__hero-thumb')
+			.removeClass('is-active')
+			.eq(index)
+			.addClass('is-active');
+	})
+
+	$('.club__hero-thumb').click(function(e) {
+		e.preventDefault();
+		let index = $(this).index();
+		clubSwiper.slideTo(index);
+	});
+
+	$('.club__hero-swiper-full').magnificPopup({
+		type: 'image',
+		fixedContentPos: false,
+		gallery: {
+			enabled:true
+		}
 	});
 
 });
