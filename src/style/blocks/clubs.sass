@@ -4,6 +4,8 @@
 	&__item
 		display: flex
 		margin-bottom: 150px
+		@include media-breakpoint-down(lg)
+			flex-wrap: wrap
 		&:nth-last-child(2)
 			margin-bottom: 0
 		&:hover
@@ -24,7 +26,6 @@
 				opacity: 0
 				visibility: hidden
 	&__swiper
-		height: 349px
 		flex: 0 907px
 		padding-right: 24px
 		margin-right: 76px
@@ -32,12 +33,29 @@
 		margin-left: -54px
 		padding-bottom: 56px
 		margin-bottom: -56px
+		@include media-breakpoint-down(xl)
+			flex: 0 557px
+			margin-right: 43px
+		@include media-breakpoint-down(lg)
+			flex: 1 100%
+			margin-right: 0
+			margin-bottom: 0
+			padding-bottom: 40px
+		@include media-breakpoint-down(sm)
+			padding-bottom: 30px
+		&-slide
+			height: 349px
+			@include media-breakpoint-down(sm)
+				height: 249px
 		.swiper-pagination
 			position: absolute
 			left: 94px
 			bottom: 78px
 			display: flex
 			align-items: center
+			@include media-breakpoint-down(sm)
+				left: 84px
+				bottom: 52px
 		.swiper-pagination-bullet
 			margin: 0
 			margin-right: 10px
@@ -73,8 +91,13 @@
 				margin-right: 0
 		&-slide
 			img
+				width: 100%
+				height: 100%
+				object-fit: cover
 				filter: saturate(0)
 				transition: .7s ease-in-out
+				@include media-breakpoint-down(lg)
+					filter: saturate(1)
 			&-mask
 				display: block
 				width: 100%
@@ -83,6 +106,12 @@
 				-webkit-mask-repeat: no-repeat
 				-webkit-mask-size: 100% 100%
 				position: relative
+				@include media-breakpoint-down(xl)
+					-webkit-mask-image: url(../img/club-mask-xl.png)
+				@include media-breakpoint-down(lg)
+					-webkit-mask-image: url(../img/club-mask-lg.png)
+				@include media-breakpoint-down(sm)
+					-webkit-mask-image: url(../img/club-mask-sm.png)
 				&:last-child
 					&::after
 						position: absolute
@@ -95,12 +124,16 @@
 						background: linear-gradient(180deg, #E02655 0%, #4BA1D9 100%)
 						background-repeat: no-repeat
 						transition: .7s ease-in-out
+						@include media-breakpoint-down(lg)
+							display: none
 			&-bg
 				position: absolute
 				left: 0
 				top: 0
 				z-index: -1
 				-webkit-mask-image: unset
+				@include media-breakpoint-down(lg)
+					display: none
 				span
 					position: absolute
 					z-index: -1
@@ -132,16 +165,38 @@
 		background-image: linear-gradient(268.42deg, #FF2F6E -8.98%, #C51B47 57.94%, #323232 57.95%, #323232 100%)
 		-webkit-background-clip: text
 		-webkit-text-fill-color: transparent
+		@include media-breakpoint-down(lg)
+			background-position: -100% center
+			margin-bottom: 14px
+		@include media-breakpoint-down(xs)
+			font-size: 18px
+			line-height: 22px
+			margin-bottom: 10px
 	&__loc
 		font-family: $it-font
 		font-style: italic
-		font-weight: 800
+		font-weight: 400
 		font-size: 50px
 		line-height: 60px
 		text-transform: uppercase
 		color: #323232
 		margin-bottom: auto
 		transition: .7s ease-in-out
+		@include media-breakpoint-down(xl)
+			font-size: 45px
+			line-height: 54px
+		@include media-breakpoint-down(lg)
+			margin-bottom: 40px
+			font-size: 40px
+			line-height: 48px
+			color: #e7e7e7
+		@include media-breakpoint-down(sm)
+			font-size: 30px
+			line-height: 36px
+	&__btn
+		@include media-breakpoint-down(lg)
+			background-position: -.1%
+			color: #e7e7e7
 	&__show-more
 		margin: 0 auto
 		margin-top: 100px

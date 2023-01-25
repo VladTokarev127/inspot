@@ -81,7 +81,16 @@ $(function() {
 			.removeClass('is-active')
 			.eq(index)
 			.addClass('is-active');
-	})
+	});
+
+	const heroSwiper = new Swiper('.hero__swiper', {
+		autoHeight: false,
+		spaceBetween: 15,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
 
 	$('.club__hero-thumb').click(function(e) {
 		e.preventDefault();
@@ -95,6 +104,12 @@ $(function() {
 		gallery: {
 			enabled:true
 		}
+	});
+
+	$('.header__btn').click(function(e) {
+		e.preventDefault();
+		$(this).toggleClass('is-active');
+		$('.header__nav').toggleClass('is-active');
 	});
 
 });

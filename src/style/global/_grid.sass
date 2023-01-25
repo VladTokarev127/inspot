@@ -75,6 +75,8 @@ h1,h2,h3,h4,h5,h6
 	max-width: 2100px
 	margin: 0 auto
 	padding: 0 50px
+	@include media-breakpoint-down(xl)
+		padding: 0 15px
 
 .wrapper
 	background: #000
@@ -98,6 +100,8 @@ h1,h2,h3,h4,h5,h6
 	padding-top: 237px
 	position: relative
 	z-index: 1
+	@include media-breakpoint-down(xl)
+		padding-top: 172px
 	&__circle
 		position: absolute
 		top: -387px
@@ -146,6 +150,14 @@ h1,h2,h3,h4,h5,h6
 	-webkit-mask-size: 100% 100%
 	background-position: -99.9% center
 	transition: .5s ease-in-out
+	@include media-breakpoint-down(lg)
+		width: 400px
+	@include media-breakpoint-down(xs)
+		max-width: 260px
+		width: 100%
+		-webkit-mask-image: url(../img/btn-mask-sm.svg)
+		font-size: 18px
+		line-height: 22px
 	&_white
 		background-size: 200%
 		background-image: linear-gradient(268.42deg, #E7E7E7 0, #E7E7E7 25%, #E7E7E7 49.9%, #FF2F6E 50.1%, #C51B47 100%)
