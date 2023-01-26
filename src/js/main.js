@@ -109,7 +109,14 @@ $(function() {
 	$('.header__btn').click(function(e) {
 		e.preventDefault();
 		$(this).toggleClass('is-active');
+		$('.header').toggleClass('is-active');
 		$('.header__nav').toggleClass('is-active');
+		$('body').toggleClass('is-fixed')
+	});
+
+	$('.menu-item-has-children > a').click(function(e) {
+		e.preventDefault();
+		$(this).next().slideToggle(300);
 	});
 
 });

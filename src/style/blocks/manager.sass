@@ -4,6 +4,8 @@
 	background-image: url(../img/manager-bg.png)
 	background-position: center 79px
 	background-repeat: no-repeat
+	@include media-breakpoint-down(xl)
+		padding-top: 200px
 	z-index: 4
 	.container
 		position: relative
@@ -33,3 +35,7 @@
 		margin-right: 110px
 		flex: 1
 		color: #e02656
+		@include media-breakpoint-down(xxl)
+			flex: 1 100%
+			margin-right: 0
+			margin-bottom: 40px

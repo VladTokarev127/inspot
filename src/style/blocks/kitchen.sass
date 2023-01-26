@@ -3,11 +3,18 @@
 	background-image: url(../img/kitchen-bg.png)
 	background-position: center 98px
 	background-repeat: no-repeat
+	@include media-breakpoint-down(xl)
+		padding-top: 200px
 	&__title
 		margin-bottom: 60px
+		@include media-breakpoint-down(md)
+			margin-bottom: 40px
 	&__list
 		min-width: 66.4%
 		margin-left: auto
+		@include media-breakpoint-down(xl)
+			min-width: none
+			width: 100%
 	&__item
 		margin-bottom: -1px
 		&:hover
@@ -69,6 +76,15 @@
 			display: flex
 			align-items: center
 			justify-content: space-between
+			@include media-breakpoint-down(lg)
+				padding: 34px 60px
+				padding-right: 50px
+			@include media-breakpoint-down(sm)
+				padding: 34px 45px
+				padding-right: 40px
+			@include media-breakpoint-down(xs)
+				padding: 25px 36px
+				padding-right: 0
 	&__img
 		position: absolute
 		left: 0
@@ -78,6 +94,15 @@
 		-webkit-mask-repeat: no-repeat
 		-webkit-mask-size: 100% 100%
 		height: 58px
+		@include media-breakpoint-down(lg)
+			height: 45px
+			-webkit-mask-image: url(../img/kitchen-mask-lg.png)
+		@include media-breakpoint-down(sm)
+			height: 35px
+			-webkit-mask-image: url(../img/kitchen-mask-sm.png)
+		@include media-breakpoint-down(xs)
+			height: 30px
+			-webkit-mask-image: url(../img/kitchen-mask-xs.png)
 		&::after
 			position: absolute
 			left: 0
@@ -110,24 +135,63 @@
 		text-transform: uppercase
 		color: #323232
 		transition: .7s ease-in-out
+		@include media-breakpoint-down(lg)
+			font-size: 40px
+			line-height: 48px
+		@include media-breakpoint-down(md)
+			font-size: 30px
+			line-height: 36px
+		@include media-breakpoint-down(sm)
+			font-size: 25px
+			line-height: 30px
+		@include media-breakpoint-down(xs)
+			font-size: 22px
+			line-height: 27px
 		&_red
 			color: #cd1e4c
 	&__arrow
 		fill: #323232
 		transition: .7s ease-in-out
+		svg
+			@include media-breakpoint-down(lg)
+				width: 35px
+				height: auto
+			@include media-breakpoint-down(md)
+				width: 25px
+			@include media-breakpoint-down(xs)
+				width: 20px
 	&__desc
 		display: none
 		padding-top: 60px
 		padding-bottom: 60px
 		padding-left: 91px
 		padding-right: 38px
+		@include media-breakpoint-down(lg)
+			padding-left: 40px
+			padding-top: 60px
+			padding-bottom: 60px
+			padding-right: 40px
+		@include media-breakpoint-down(md)
+			padding: 40px 60px
+			padding-right: 40px
+		@include media-breakpoint-down(sm)
+			padding: 40px
+		@include media-breakpoint-down(xs)
+			padding: 40px 0
 		&-name
 			margin-right: 35px
+			@include media-breakpoint-down(lg)
+				margin-right: 26px
+			@include media-breakpoint-down(md)
+				margin-right: 17px
 		&-price
 			margin-left: 15px
 			order: 2
 			flex: 0 120px
 			text-align: right
+			@include media-breakpoint-down(md)
+				margin-left: 0
+				flex: 0 90px
 	&__rows
 	&__row
 		display: flex
@@ -139,11 +203,15 @@
 		line-height: 24px
 		text-transform: uppercase
 		color: #E7E7E7
+		@include media-breakpoint-down(sm)
+			font-size: 18px
+			line-height: 22px
 		&::after
 			display: block
 			order: 1
 			flex: 1
 			content: ' '
 			border-bottom: 1px dashed #FFFFFF
+			opacity: 0.3
 		&:last-child
 			margin-bottom: 0

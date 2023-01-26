@@ -1,11 +1,19 @@
 .configuration
 	&__title
 		margin-bottom: 60px
+		@include media-breakpoint-down(md)
+			margin-bottom: 40px
 	&__grid
 		flex: 1 100%
 		display: grid
 		grid-template-columns: repeat(8,1fr)
 		grid-gap: 50px 0
+		@include media-breakpoint-down(xl)
+			grid-template-columns: repeat(4,1fr)
+		@include media-breakpoint-down(md)
+			grid-template-columns: repeat(3,1fr)
+		@include media-breakpoint-down(sm)
+			grid-template-columns: repeat(2,1fr)
 	&__item
 		text-align: center
 		&:hover
@@ -82,6 +90,10 @@
 		line-height: 24px
 		text-transform: uppercase
 		color: #E7E7E7
+		@include media-breakpoint-down(sm)
+			font-size: 18px
+			line-height: 22px
+			margin-bottom: 10px
 	&__name
 		font-family: $it-font
 		font-style: italic
@@ -90,6 +102,9 @@
 		line-height: 24px
 		text-align: center
 		color: #545454
+		@include media-breakpoint-down(sm)
+			font-size: 18px
+			line-height: 22px
 
 @keyframes conf-line
 	0%

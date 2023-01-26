@@ -4,6 +4,11 @@
 		background-image: url(../img/club-hero-bg.png)
 		background-repeat: no-repeat
 		background-position: center calc(100% - 60px)
+		@include media-breakpoint-down(xl)
+			padding-bottom: 103px
+			background-position: center 100%
+		@include media-breakpoint-down(lg)
+			padding-bottom: 117px
 		.container
 			position: relative
 		&-circle
@@ -26,6 +31,14 @@
 			flex: 1
 			margin-right: 50px
 			align-self: flex-start
+			@include media-breakpoint-down(xxl)
+				display: flex
+				flex-direction: column
+				flex: 1 100%
+				margin-right: 0
+				margin-bottom: 60px
+			@include media-breakpoint-down(md)
+				margin-bottom: 40px
 		&-title
 			font-family: $it-font
 			font-style: italic
@@ -35,6 +48,24 @@
 			text-transform: uppercase
 			color: #E7E7E7
 			margin-bottom: 21px
+			@include media-breakpoint-down(xxl)
+				order: 1
+				margin-bottom: 0
+			@include media-breakpoint-down(xl)
+				font-size: 60px
+				line-height: 73px
+			@include media-breakpoint-down(lg)
+				font-size: 50px
+				line-height: 60px
+			@include media-breakpoint-down(md)
+				font-size: 40px
+				line-height: 48px
+			@include media-breakpoint-down(sm)
+				font-size: 35px
+				line-height: 42px
+			@include media-breakpoint-down(xs)
+				font-size: 30px
+				line-height: 36px
 		&-loc
 			font-family: $it-font
 			font-style: italic
@@ -43,6 +74,20 @@
 			line-height: 60px
 			text-transform: uppercase
 			color: #C81C49
+			@include media-breakpoint-down(xxl)
+				margin-bottom: 10px
+			@include media-breakpoint-down(xl)
+				font-size: 30px
+				line-height: 36px
+			@include media-breakpoint-down(md)
+				font-size: 25px
+				line-height: 30px
+			@include media-breakpoint-down(sm)
+				font-size: 22px
+				line-height: 26px
+			@include media-breakpoint-down(xs)
+				font-size: 18px
+				line-height: 22px
 		&-swiper
 			margin: -90px
 			padding: 90px
@@ -50,6 +95,9 @@
 				flex: 0 57.5%
 				max-width: 57.5%
 				align-self: flex-start
+				@include media-breakpoint-down(xxl)
+					max-width: 100%
+					flex: 1 100%
 			.swiper-pagination
 				position: absolute
 				left: auto
@@ -105,6 +153,11 @@
 				font-size: 0
 				line-height: 0
 				align-items: center
+				@include media-breakpoint-down(md)
+					bottom: 19px
+					left: 30px
+					font-size: 16px
+					line-height: 20px
 				&:hover
 					color: #E02656
 					stroke: #E02656
@@ -118,8 +171,17 @@
 					text-transform: uppercase
 				svg
 					margin-right: 13px
+					@include media-breakpoint-down(md)
+						width: 20px
+						height: auto
+						margin-right: 10px
 			&-slide
 				position: relative
+				height: 550px
+				@include media-breakpoint-down(md)
+					height: 600px
+				@include media-breakpoint-down(xs)
+					height: 400px
 				&.swiper-slide-active
 					.club__hero-swiper-slide-bg span
 						opacity: 1
@@ -132,6 +194,16 @@
 					-webkit-mask-repeat: no-repeat
 					-webkit-mask-size: 100% 100%
 					position: relative
+					@include media-breakpoint-down(lg)
+						-webkit-mask-image: url(../img/club-hero-mask-lg.svg)
+					@include media-breakpoint-down(md)
+						-webkit-mask-image: url(../img/club-hero-mask-md.svg)
+					@include media-breakpoint-down(xs)
+						-webkit-mask-image: url(../img/club-hero-mask-xs.svg)
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
 					&:last-child
 						&::after
 							position: absolute
@@ -170,6 +242,18 @@
 			margin-top: 40px
 			position: relative
 			z-index: 9
+			@include media-breakpoint-down(xl)
+				display: flex
+				flex-wrap: wrap
+				grid-gap: 0
+				margin-bottom: -12px
+			@include media-breakpoint-down(sm)
+				margin-bottom: -8px
+			@include media-breakpoint-down(xs)
+				display: grid
+				margin-bottom: 0
+				grid-template-columns: repeat(3,1fr)
+				grid-gap: 7px
 		&-thumb
 			opacity: 0.5
 			-webkit-mask-image: url(../img/club-thumb-mask.svg)
@@ -177,6 +261,24 @@
 			-webkit-mask-size: 100% 100%
 			transition: .3s ease-in-out
 			cursor: pointer
+			@include media-breakpoint-down(xl)
+				width: 154px
+				height: 93px
+				margin-right: 12px
+				margin-bottom: 12px
+			@include media-breakpoint-down(md)
+				width: 117px
+				height: 70px
+			@include media-breakpoint-down(sm)
+				width: 109px
+				height: 84px
+				margin-right: 8px
+				margin-bottom: 8px
+			@include media-breakpoint-down(xs)
+				width: auto
+				height: 56px
+				margin-right: 0
+				margin-bottom: 0
 			&:hover,
 			&.is-active
 				opacity: 1

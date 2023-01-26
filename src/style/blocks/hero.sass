@@ -27,19 +27,20 @@
 			position: absolute
 			z-index: 9
 			left: 0
-			bottom: 0
+			bottom: 50%
+			transform: translate(0,50%)
 			content: ''
 			width: 100%
-			height: 100%
+			height: 190%
 			background-image: linear-gradient(to right, #01FF08 0%, #02FFFE 12.5%, #0006FF 25%, #FC00FF, 37.5%, #CA0707 50%, #01FF08 62.5%, #02FFFE 75%, #0006FF 87.5%, #FC00FF 100%)
 			background-repeat: repeat
 			background-size: 200% 100%
 			animation-name: rgbline
-			animation-duration: 40s
+			animation-duration: 10s
 			animation-iteration-count: infinite
 			animation-play-state: running
 			animation-fill-mode: both
-			filter: blur(12.5px)
+			filter: blur(12.5px) saturate(1)
 			z-index: -1
 			opacity: 0
 			visibility: hidden
@@ -58,7 +59,7 @@
 			background-repeat: repeat
 			background-size: 200% 100%
 			animation-name: rgbline
-			animation-duration: 40s
+			animation-duration: 10s
 			animation-iteration-count: infinite
 			animation-play-state: running
 			animation-fill-mode: both
@@ -107,7 +108,7 @@
 				width: calc(100% - 25.4%)
 			.hero__item-info
 				left: 33.6%
-				bottom: 241px
+				bottom: 261px
 				@include media-breakpoint-down(xl)
 					bottom: 191px
 					left: 29.6%
@@ -134,7 +135,7 @@
 				width: calc(100% - 15.4%)
 			.hero__item-info
 				left: 26.6%
-				bottom: 152px
+				bottom: 172px
 				@include media-breakpoint-down(xl)
 					bottom: 127px
 					left: 43.6%
@@ -190,7 +191,7 @@
 			width: max-content
 			font-family: $it-font
 			color: #E7E7E7
-			transform: rotate(-44.9deg)
+			transform: rotate(-50.9deg)
 			font-size: 25px
 			line-height: 30px
 			text-transform: uppercase
@@ -548,6 +549,9 @@
 				@include media-breakpoint-down(sm)
 					width: 88.1%
 			.hero__rgb span
+				opacity: 1
+				visibility: visible
+			.hero__rgb::after
 				opacity: 1
 				visibility: visible
 
