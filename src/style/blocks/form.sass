@@ -15,14 +15,14 @@
 		font-size: 80px
 		line-height: 97px
 		text-transform: uppercase
-		@include media-breakpoint-down(xxl)
-			margin-right: 0
-			flex: 1 100%
-			display: flex
-			align-items: center
-			margin-bottom: 60px
-			font-size: 60px
-			line-height: 73px
+		// @include media-breakpoint-down(xxl)
+		margin-right: 0
+		flex: 1 100%
+		display: flex
+		align-items: center
+		margin-bottom: 60px
+		font-size: 60px
+		line-height: 73px
 		@include media-breakpoint-down(lg)
 			font-size: 50px
 			line-height: 60px
@@ -37,9 +37,9 @@
 		p
 			margin: 0
 			margin-bottom: 33px
-			@include media-breakpoint-down(xxl)
-				margin-bottom: 0
-				margin-right: auto
+			// @include media-breakpoint-down(xxl)
+			margin-bottom: 0
+			margin-right: auto
 			@include media-breakpoint-down(md)
 				flex: 1 100%
 				margin-bottom: 15px
@@ -99,17 +99,17 @@
 						right: -25px
 		&-wrapper
 			flex: 0 49%
-			@include media-breakpoint-down(xxl)
-				flex: 1 100%
+			// @include media-breakpoint-down(xxl)
+			flex: 1 100%
 	&__btns
 		margin-top: 40px
 		display: grid
 		grid-template-columns: repeat(2,auto)
 		grid-gap: auto
 		justify-content: space-between
-		@include media-breakpoint-down(xxl)
-			justify-content: flex-start
-			grid-gap: 20px 40px
+		// @include media-breakpoint-down(xxl)
+		justify-content: flex-start
+		grid-gap: 20px 40px
 		@include media-breakpoint-down(md)
 			grid-template-columns: repeat(1,1fr)
 		@include media-breakpoint-down(xs)

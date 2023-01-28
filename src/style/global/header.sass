@@ -9,9 +9,9 @@
 	margin-bottom: -122px
 	&.is-active
 		background-color: #000
-	@include media-breakpoint-down(xl)
-		padding-top: 30px
-		margin-bottom: -84px
+	// @include media-breakpoint-down(xl)
+	padding-top: 30px
+	margin-bottom: -84px
 	@include media-breakpoint-down(lg)
 		position: relative
 		top: 0
@@ -23,14 +23,15 @@
 		background-color: #000
 	&__logo
 		margin-right: auto
-		@include media-breakpoint-down(xl)
-			max-width: 281px
+		// @include media-breakpoint-down(xl)
+		max-width: 281px
 		img
 			width: 100%
 			height: auto
 	&__nav
 		@include media-breakpoint-down(lg)
 			position: absolute
+			z-index: -1
 			left: 0
 			top: -100%
 			height: calc(100vh - 100%)

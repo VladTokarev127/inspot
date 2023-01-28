@@ -11,9 +11,9 @@
 		display: flex
 		height: 600px
 		position: relative
-		@include media-breakpoint-down(xl)
-			clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 62.5%,85.1% 100%,0 100%,0 70%,0 26.7%)
-			height: 469px
+		// @include media-breakpoint-down(xl)
+		clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 62.5%,85.1% 100%,0 100%,0 70%,0 26.7%)
+		height: 469px
 	&__rgb
 		position: absolute
 		z-index: 1
@@ -92,26 +92,26 @@
 			left: 0
 			width: 75.5%
 			clip-path: polygon(0 0, 100% 0, 63.6% 100%, 0% 100%)
-			@include media-breakpoint-down(xl)
-				clip-path: polygon(0 0,100% 0,47.4% 100%,0 100%)
+			// @include media-breakpoint-down(xl)
+			clip-path: polygon(0 0,100% 0,47.4% 100%,0 100%)
 			.hero__rgb
 				width: calc(100% - 34.4%)
 		&_2
 			left: 49.6%
 			width: 48.8%
 			clip-path: polygon(55.8% 0,100% 0,43.3% 100%,0 100%)
-			@include media-breakpoint-down(xl)
-				clip-path: polygon(65.8% 0,100% 0,34.3% 100%,0 100%)
-				left: 37.6%
-				width: 60.8%
+			// @include media-breakpoint-down(xl)
+			clip-path: polygon(65.8% 0,100% 0,34.3% 100%,0 100%)
+			left: 37.6%
+			width: 60.8%
 			.hero__rgb
 				width: calc(100% - 25.4%)
 			.hero__item-info
 				left: 33.6%
 				bottom: 261px
-				@include media-breakpoint-down(xl)
-					bottom: 191px
-					left: 29.6%
+				// @include media-breakpoint-down(xl)
+				bottom: 191px
+				left: 29.6%
 		&_2.hero__item_hide
 			left: 0
 			width: 0
@@ -119,27 +119,27 @@
 			left: 0
 			width: calc(48.8% + 49.6%)
 			clip-path: polygon(0 0,100% 0,72.1% 100%,0 100%)
-			@include media-breakpoint-down(xl)
-				clip-path: polygon(0 0,100% 0,60.1% 100%,0 100%)
+			// @include media-breakpoint-down(xl)
+			clip-path: polygon(0 0,100% 0,60.1% 100%,0 100%)
 			.hero__rgb
 				width: calc(100% - 25.4%)
 		&_3
 			left: 72.5%
 			width: 56.2%
 			clip-path: polygon(49% 0,100% 0,100% 100%,0 100%)
-			@include media-breakpoint-down(xl)
-				clip-path: polygon(71% 0,100% 0,100% 100%,0 100%)
-				left: 59.9%
-				width: 56.2%
+			// @include media-breakpoint-down(xl)
+			clip-path: polygon(71% 0,100% 0,100% 100%,0 100%)
+			left: 59.9%
+			width: 56.2%
 			.hero__rgb
 				width: calc(100% - 15.4%)
 			.hero__item-info
 				left: 26.6%
 				bottom: 172px
-				@include media-breakpoint-down(xl)
-					bottom: 127px
-					left: 43.6%
-					max-width: 190px
+				// @include media-breakpoint-down(xl)
+				bottom: 127px
+				left: 43.6%
+				max-width: 190px
 		&_3.hero__item_hide
 			left: 0
 			width: 0
@@ -184,21 +184,21 @@
 			opacity: 0
 			visibility: hidden
 			transition: opacity .7s .7s ease-in-out background .3s ease-in-out
-			@include media-breakpoint-down(xl)
-				left: 56px
+			// @include media-breakpoint-down(xl)
+			left: 56px
 		&-info
 			position: absolute
 			width: max-content
 			font-family: $it-font
 			color: #E7E7E7
-			transform: rotate(-50.9deg)
+			transform: rotate(-45.9deg)
 			font-size: 25px
 			line-height: 30px
 			text-transform: uppercase
 			transition: .7s ease-in-out
-			@include media-breakpoint-down(xl)
-				font-size: 18px
-				line-height: 22px
+			// @include media-breakpoint-down(xl)
+			font-size: 18px
+			line-height: 22px
 			b,strong
 				font-weight: 900
 	&__circle
@@ -252,8 +252,8 @@
 			margin-right: 1%
 			display: flex
 			align-items: center
-			@include media-breakpoint-down(xl)
-				flex-wrap: wrap
+			// @include media-breakpoint-down(xl)
+			flex-wrap: wrap
 			@include media-breakpoint-down(md)
 				flex: 1 100%
 				margin-bottom: 25px
@@ -272,10 +272,10 @@
 			color: #000
 			text-shadow: 0px 0px 1px #545454
 			transition: .7s ease-in-out
-			@include media-breakpoint-down(xl)
-				flex: 1 100%
-				font-size: 110px
-				line-height: 133px
+			// @include media-breakpoint-down(xl)
+			flex: 1 100%
+			font-size: 110px
+			line-height: 133px
 			@include media-breakpoint-down(lg)
 				margin-bottom: 10px
 				font-size: 80px
@@ -321,8 +321,8 @@
 			-webkit-mask-repeat: no-repeat
 			-webkit-mask-size: 100% 100%
 			position: relative
-			@include media-breakpoint-down(xl)
-				-webkit-mask-image: url(../img/club-mask-xl.png)
+			// @include media-breakpoint-down(xl)
+			-webkit-mask-image: url(../img/club-mask-xl.png)
 			@include media-breakpoint-down(md)
 				-webkit-mask-image: url(../img/club-mask-md.png)
 			&:last-child
@@ -364,9 +364,9 @@
 			transition: .7s ease-in-out
 			position: relative
 			z-index: 1
-			@include media-breakpoint-down(xl)
-				height: 216px
-				flex: 0 53.85%
+			// @include media-breakpoint-down(xl)
+			height: 216px
+			flex: 0 53.85%
 			@include media-breakpoint-down(lg)
 				height: 200px
 				flex: 0 54%
