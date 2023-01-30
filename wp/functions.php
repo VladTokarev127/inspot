@@ -1,5 +1,7 @@
 <?php
 
+	define( 'DISALLOW_FILE_EDIT', true );
+
 	add_action('wp_enqueue_scripts', 'inspot_media');
 
 	add_action('after_setup_theme', 'inspot_after_setup');
