@@ -1,0 +1,138 @@
+.franchise
+	&__hero
+		background-image: url(../img/franchise-bg.png)
+		background-repeat: no-repeat
+		padding-bottom: 200px
+		background-position: center bottom
+		@include media-breakpoint-down(lg)
+			padding-bottom: 120px
+		&-content
+			flex: 1 100%
+			margin-bottom: 100px
+			@include media-breakpoint-down(lg)
+				margin-bottom: 60px
+		&-title
+			font-style: italic
+			font-weight: 800
+			font-size: 45px
+			line-height: 60px
+			text-transform: uppercase
+			color: #e7e7e7
+			margin-bottom: 40px
+			@include media-breakpoint-down(lg)
+				font-size: 35px
+				line-height: 42px
+			@include media-breakpoint-down(sm)
+				font-size: 30px
+				line-height: 40px
+			@include media-breakpoint-down(xs)
+				line-height: 36px
+		&-subtitle
+			font-style: italic
+			font-weight: 800
+			font-size: 45px
+			line-height: 60px
+			text-transform: uppercase
+			color: #e02656
+			margin-bottom: 30px
+			@include media-breakpoint-down(lg)
+				font-size: 35px
+				line-height: 42px
+			@include media-breakpoint-down(sm)
+				font-size: 30px
+				line-height: 40px
+			@include media-breakpoint-down(xs)
+				line-height: 36px
+	&__advantages
+		flex: 1 100%
+		position: relative
+		&-bg
+			position: relative
+			z-index: 1
+			height: 205px
+			width: 100%
+			font-size: 0
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+			@include media-breakpoint-down(lg)
+				height: 295px
+			@include media-breakpoint-down(xs)
+				height: 345px
+		&-mask
+			display: block
+			width: 100%
+			height: 100%
+			-webkit-mask-image: url(../img/franchise-advantages-mask.svg)
+			-webkit-mask-repeat: no-repeat
+			-webkit-mask-size: 100% 100%
+			position: relative
+			@include media-breakpoint-down(lg)
+				-webkit-mask-image: url(../img/franchise-advantages-mask-lg.svg)
+			@include media-breakpoint-down(md)
+				-webkit-mask-image: url(../img/franchise-advantages-mask-md.svg)
+			@include media-breakpoint-down(xs)
+				-webkit-mask-image: url(../img/franchise-advantages-mask-xs.svg)
+			&::after
+				position: absolute
+				left: 0
+				top: 0
+				content: ''
+				width: 100%
+				height: 100%
+				background: linear-gradient(90.14deg, #E12555 0%, #4BA1D9 99.76%)
+				mix-blend-mode: multiply
+			&-bg
+				position: absolute
+				left: 20px
+				top: 20px
+				z-index: -1
+				-webkit-mask-image: unset
+				opacity: 0.3
+				filter: blur(25px)
+				mix-blend-mode: normal
+		&-list
+			display: grid
+			grid-template-columns: repeat(2,1fr)
+			grid-gap: 15px 50px
+			position: absolute
+			z-index: 1
+			left: 80px
+			bottom: 26px
+			@include media-breakpoint-down(lg)
+				grid-template-columns: repeat(1,1fr)
+				grid-gap: 15px
+				bottom: 38px
+			@include media-breakpoint-down(md)
+				bottom: 58px
+				left: 60px
+			@include media-breakpoint-down(sm)
+				bottom: 71px
+			@include media-breakpoint-down(xs)
+				bottom: 33px
+				left: 30px
+		&-item
+			position: relative
+			padding-left: 45px
+			font-weight: 700
+			font-size: 20px
+			line-height: 24px
+			text-transform: uppercase
+			color: #E7E7E7
+			@include media-breakpoint-down(sm)
+				font-size: 18px
+				line-height: 22px
+			&::after
+				position: absolute
+				left: 0
+				top: 5px
+				content: ''
+				width: 25px
+				height: 15px
+				background-image: url(../img/slide-dot-active.png)
+				background-repeat: no-repeat
+				background-position: center
+			b,strong
+				font-weight: 900
+				color: #e02656

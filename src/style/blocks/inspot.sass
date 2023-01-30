@@ -1,0 +1,63 @@
+.inspot
+	padding-top: 200px
+	background-image: url(../img/inspot-bg.png)
+	background-repeat: no-repeat
+	background-position: center top
+	@include media-breakpoint-down(lg)
+		padding-top: 150px
+	&__title
+		margin-bottom: 60px
+		@include media-breakpoint-down(md)
+			margin-bottom: 40px
+	&__list
+		width: 100%
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 80px
+	&__item
+		margin-bottom: 20px
+		margin-right: 80px
+		display: flex
+		align-items: flex-start
+		font-style: italic
+		font-weight: 800
+		font-size: 35px
+		text-transform: uppercase
+		color: #E7E7E7
+		@include media-breakpoint-down(lg)
+			flex: 1 100%
+		@include media-breakpoint-down(md)
+			font-size: 30px
+		@include media-breakpoint-down(sm)
+			font-size: 25px
+		&:nth-child(2n)
+			margin-right: 0
+		&:hover
+			.inspot__star span
+				background-position: 0 center
+	&__star
+		-webkit-mask-image: url(../img/star.svg)
+		-webkit-mask-repeat: no-repeat
+		-webkit-mask-size: 100% 100%
+		width: 41px
+		height: 39px
+		display: flex
+		align-items: center
+		justify-content: center
+		margin-right: 20px
+		@include media-breakpoint-down(sm)
+			width: 30px
+			height: 28px
+			margin-right: 15px
+		span
+			display: block
+			width: 100%
+			height: 100%
+			transition: .7s ease-in-out
+			background-size: 200% 100%
+			background-image: linear-gradient(90deg, #FF0000 0, #FF7A00 25%, #FFE600 50%, #323232 50.1%, #323232 100%)
+			background-position: 100% 0
+			@include media-breakpoint-down(md)
+				background-position: 0 0
+	&__text
+		flex: 1

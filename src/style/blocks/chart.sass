@@ -1,0 +1,34 @@
+.chart
+	padding-top: 100px
+	padding-bottom: 131px
+	background-color: #111
+	background-image: url(../img/chart-bg.png)
+	background-repeat: no-repeat
+	background-position: calc(100% - 17px) 100%
+	@include media-breakpoint-down(lg)
+		padding-top: 60px
+		padding-bottom: 117px
+	@include media-breakpoint-down(md)
+		padding-top: 60px
+		padding-bottom: 67px
+	@include media-breakpoint-down(sm)
+		background-size: contain
+	@include media-breakpoint-down(xs)
+		padding-top: 49px
+	&__title
+		font-style: italic
+		font-weight: 800
+		font-size: 60px
+		text-transform: uppercase
+		color: #FFFFFF
+		b,strong
+			color: #e02656
+			font-weight: 800
+		@include media-breakpoint-down(lg)
+			font-size: 50px
+		@include media-breakpoint-down(md)
+			font-size: 40px
+		@include media-breakpoint-down(sm)
+			font-size: 35px
+		@include media-breakpoint-down(xs)
+			font-size: 30px

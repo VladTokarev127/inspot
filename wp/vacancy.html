@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title></title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
+
+	<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<defs>
+			<filter id="round">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+				<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+			</filter>
+		</defs>
+	</svg>
+
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="container">
+
+				<div class="header__logo">
+					<a href="/">
+						<picture>
+							<source media="(min-width:565px)" srcset="img/logo.svg">
+							<img src="img/logo-mobile.svg" alt="Inspot">
+						</picture>
+					</a>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="current_page_item"><a href="#">о компании</a></li>
+						<li><a href="#">франшиза</a></li>
+						<li><a href="#">карьера</a></li>
+						<li><a href="#">галерея</a></li>
+						<li><a href="#">контакты</a></li>
+						<li class="menu-item-has-children">
+							<a href="#">соцсети</a>
+							<ul>
+								<li><a href="#">facebook</a></li>
+								<li><a href="#">youtube</a></li>
+								<li><a href="#">telegram</a></li>
+								<li><a href="#">instagram</a></li>
+								<li><a href="#">discord</a></li>
+								<li><a href="#">whatsapp</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<button class="header__btn"><img src="img/menu.svg" alt=""></button>
+
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__circle"></div>
+
+			<!-- start section vacancy -->
+			<section class="vacancy">
+				<div class="container">
+
+					<div class="vacancy__list">
+						<div class="vacancy__item">
+							<div class="vacancy__top" data-accordion-trigger>
+								<h2 class="vacancy__name">it специалист</h2>
+								<div class="vacancy__arrow">
+									<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+									</svg>
+								</div>
+							</div>
+							<div class="vacancy__desc" data-accordion-target>
+								<div class="vacancy__price">50 000 руб</div>
+								<div class="vacancy__text">
+									<h3>обязанности:</h3>
+									<ul>
+										<li>Организация и координация процесса разработки проекта;</li>
+										<li>Управление проектом от технического задания до сдачи проекта;</li>
+										<li>Подготовка технического задания для проекта;</li>
+										<li>Взаимодействие со специалистами, главным архитектором и смежными подрядчиками задействованными в работе проекта;</li>
+										<li>Контроль сроков и качества выполнения задач, оперативное решение возникающих технических вопросов;</li>
+										<li>Коммуникация с Заказчиками на всех этапах (от формулировки обязательств и условий до оценки рисков и защиты проекта/этапа);</li>
+										<li>Ведение документации и отчетности по проекту (работа в CRM системе).</li>
+									</ul>
+								</div>
+								<a href="#" class="vacancy__btn btn btn_red">откликнуться</a>
+							</div>
+						</div>
+						<div class="vacancy__item">
+							<div class="vacancy__top" data-accordion-trigger>
+								<h2 class="vacancy__name">Программист</h2>
+								<div class="vacancy__arrow">
+									<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+									</svg>
+								</div>
+							</div>
+							<div class="vacancy__desc" data-accordion-target>
+								<div class="vacancy__price">50 000 руб</div>
+								<div class="vacancy__text">
+									<h3>обязанности:</h3>
+									<ul>
+										<li>Организация и координация процесса разработки проекта;</li>
+										<li>Управление проектом от технического задания до сдачи проекта;</li>
+										<li>Подготовка технического задания для проекта;</li>
+										<li>Взаимодействие со специалистами, главным архитектором и смежными подрядчиками задействованными в работе проекта;</li>
+										<li>Контроль сроков и качества выполнения задач, оперативное решение возникающих технических вопросов;</li>
+										<li>Коммуникация с Заказчиками на всех этапах (от формулировки обязательств и условий до оценки рисков и защиты проекта/этапа);</li>
+										<li>Ведение документации и отчетности по проекту (работа в CRM системе).</li>
+									</ul>
+								</div>
+								<a href="#" class="vacancy__btn btn btn_red">откликнуться</a>
+							</div>
+						</div>
+						<div class="vacancy__item">
+							<div class="vacancy__top" data-accordion-trigger>
+								<h2 class="vacancy__name">Менеджер проектов</h2>
+								<div class="vacancy__arrow">
+									<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+									</svg>
+								</div>
+							</div>
+							<div class="vacancy__desc" data-accordion-target>
+								<div class="vacancy__price">50 000 руб</div>
+								<div class="vacancy__text">
+									<h3>обязанности:</h3>
+									<ul>
+										<li>Организация и координация процесса разработки проекта;</li>
+										<li>Управление проектом от технического задания до сдачи проекта;</li>
+										<li>Подготовка технического задания для проекта;</li>
+										<li>Взаимодействие со специалистами, главным архитектором и смежными подрядчиками задействованными в работе проекта;</li>
+										<li>Контроль сроков и качества выполнения задач, оперативное решение возникающих технических вопросов;</li>
+										<li>Коммуникация с Заказчиками на всех этапах (от формулировки обязательств и условий до оценки рисков и защиты проекта/этапа);</li>
+										<li>Ведение документации и отчетности по проекту (работа в CRM системе).</li>
+									</ul>
+								</div>
+								<a href="#" class="vacancy__btn btn btn_red">откликнуться</a>
+							</div>
+						</div>
+						<div class="vacancy__item">
+							<div class="vacancy__top" data-accordion-trigger>
+								<h2 class="vacancy__name">it специалист</h2>
+								<div class="vacancy__arrow">
+									<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+									</svg>
+								</div>
+							</div>
+							<div class="vacancy__desc" data-accordion-target>
+								<div class="vacancy__price">50 000 руб</div>
+								<div class="vacancy__text">
+									<h3>обязанности:</h3>
+									<ul>
+										<li>Организация и координация процесса разработки проекта;</li>
+										<li>Управление проектом от технического задания до сдачи проекта;</li>
+										<li>Подготовка технического задания для проекта;</li>
+										<li>Взаимодействие со специалистами, главным архитектором и смежными подрядчиками задействованными в работе проекта;</li>
+										<li>Контроль сроков и качества выполнения задач, оперативное решение возникающих технических вопросов;</li>
+										<li>Коммуникация с Заказчиками на всех этапах (от формулировки обязательств и условий до оценки рисков и защиты проекта/этапа);</li>
+										<li>Ведение документации и отчетности по проекту (работа в CRM системе).</li>
+									</ul>
+								</div>
+								<a href="#" class="vacancy__btn btn btn_red">откликнуться</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- end section vacancy -->
+
+			<!-- start section form -->
+			<section class="form">
+				<div class="container">
+
+					<div class="form__content">
+						<p><a href="tel:">+7 999 123 45 67</a></p>
+						<p><a href="mailto:">info@inspot.gr</a></p>
+					</div>
+
+					<div class="form__block-wrapper">
+						<form class="form__block">
+							<div class="form__block-input">
+								<input type="text" name="name" placeholder="Имя">
+							</div>
+							<div class="form__block-input">
+								<input type="tel" name="tel" placeholder="Телефон" required>
+							</div>
+							<div class="form__block-input form__block-input_pol">
+								<input type="link" name="link" placeholder="ссылка на резюме" required>
+							</div>
+							<div class="form__btns">
+								<div class="form__file">
+									<label for="file-1" class="form__file-btn btn btn_grey">прикрепить резюме</label>
+									<input type="file" name="file" id="file-1">
+								</div>
+								<button type="submit" class="form__btn btn btn_red">отправить</button>
+							</div>
+						</form>
+					</div>
+
+				</div>
+			</section>
+			<!-- end section form -->
+
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+
+				<div class="footer__grid">
+					<div class="footer__item">
+						<p>ОГРН 1182375044697</p>
+						<p>ИНН 2z368010296</p>
+						<p>Москва, Профсоюзная, 56.</p>
+					</div>
+					<div class="footer__item">
+						<p><a href="mailto:">example@mail.ru</a></p>
+						<p><a href="tel:">8 800 888 99 77</a></p>
+						<p><a href="#">политика конфиденциальности</a></p>
+					</div>
+					<div class="footer__item">
+						<p>example@mail.ru</p>
+						<p>8 800 888 99 77</p>
+						<p>соцсети</p>
+					</div>
+					<div class="footer__item">
+						<p>© INSPOT 2022</p>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+	</div>
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title></title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
+
+	<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<defs>
+			<filter id="round">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+				<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+			</filter>
+		</defs>
+	</svg>
+
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="container">
+
+				<div class="header__logo">
+					<a href="/">
+						<picture>
+							<source media="(min-width:565px)" srcset="img/logo.svg">
+							<img src="img/logo-mobile.svg" alt="Inspot">
+						</picture>
+					</a>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="current_page_item"><a href="#">о компании</a></li>
+						<li><a href="#">франшиза</a></li>
+						<li><a href="#">карьера</a></li>
+						<li><a href="#">галерея</a></li>
+						<li><a href="#">контакты</a></li>
+						<li class="menu-item-has-children">
+							<a href="#">соцсети</a>
+							<ul>
+								<li><a href="#">facebook</a></li>
+								<li><a href="#">youtube</a></li>
+								<li><a href="#">telegram</a></li>
+								<li><a href="#">instagram</a></li>
+								<li><a href="#">discord</a></li>
+								<li><a href="#">whatsapp</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<button class="header__btn"><img src="img/menu.svg" alt=""></button>
+
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__circle"></div>
+
+			<!-- start section contacts -->
+			<section class="contacts">
+				<div class="container">
+
+					<div class="contacts__top">
+						<div class="contacts__info">
+							<h1 class="contacts__title">Центральный офис <span>INSPOT</span></h1>
+							<div class="contacts__text contacts__text_desc">
+								<p>г. Москва, улица Складочная, дом 1, строение 9</p>
+								<p><b><a href="tel:">+7 499 455-67-75</a></b> /  с 10:00 до 19:00 / <a href="mailto:">info@inspot.gg</a></p>
+							</div>
+							<div class="contacts__text contacts__text_mob">
+								<p>г. Москва, улица Складочная, дом 1, строение 9</p>
+								<p><b><a href="tel:">+7 499 455-67-75</a></b> <br>с 10:00 до 19:00 <br><a href="mailto:">info@inspot.gg</a></p>
+							</div>
+						</div>
+						<div class="contacts__socials contacts__socials_desc">
+							<a href="#" target="_blank" class="contacts__item">
+								<div class="contacts__item-icon contacts__item-icon_fb"><img src="img/soc-icon-1.svg" alt="facebook"></div>
+								<div class="contacts__item-name">facebook</div>
+							</a>
+							<a href="#" target="_blank" class="contacts__item">
+								<div class="contacts__item-icon contacts__item-icon_yt"><img src="img/soc-icon-2.svg" alt="youtube"></div>
+								<div class="contacts__item-name">youtube</div>
+							</a>
+							<a href="#" target="_blank" class="contacts__item">
+								<div class="contacts__item-icon contacts__item-icon_tg"><img src="img/soc-icon-3.svg" alt="telegram"></div>
+								<div class="contacts__item-name">telegram</div>
+							</a>
+							<a href="#" target="_blank" class="contacts__item">
+								<div class="contacts__item-icon contacts__item-icon_inst"><img src="img/soc-icon-4.svg" alt="Instagram"></div>
+								<div class="contacts__item-name">Instagram</div>
+							</a>
+							<a href="#" target="_blank" class="contacts__item">
+								<div class="contacts__item-icon contacts__item-icon_dis"><img src="img/soc-icon-5.svg" alt="discord"></div>
+								<div class="contacts__item-name">discord</div>
+							</a>
+							<a href="#" target="_blank" class="contacts__item">
+								<div class="contacts__item-icon contacts__item-icon_wa"><img src="img/soc-icon-6.svg" alt="whatsapp"></div>
+								<div class="contacts__item-name">whatsapp</div>
+							</a>
+						</div>
+					</div>
+
+					<div class="contacts__form-mob">
+						<div class="contacts__form-list">
+							<div class="contacts__form-accordion">
+								<button class="contacts__form-tab" data-accordion-trigger>
+									Франшиза
+									<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+									</svg>
+								</button>
+								<div class="contacts__form-content" data-accordion-target>
+									<div class="contacts__form-bg"><img src="img/contacts-form-img.jpg" alt=""></div>
+									<div class="contacts__form-calls">
+										<p><a href="tel:">+7 900 123 45 67</a></p>
+										<p><a href="mailto:">info@inspot.gr</a></p>
+									</div>
+									<form class="contacts__form">
+										<div class="form__block-input contacts__form-input">
+											<input type="text" name="name" placeholder="Имя">
+										</div>
+										<div class="form__block-input contacts__form-input">
+											<input type="tel" name="tel" placeholder="Телефон" required>
+										</div>
+										<div class="form__block-input contacts__form-input contacts__form-input_pol form__block-input_pol">
+											<textarea name="Комментарий" placeholder="комментарии"></textarea>
+										</div>
+										<button type="submit" class="contacts__form-btn btn btn_grey">отправить</button>
+									</form>
+								</div>
+							</div>
+							<div class="contacts__form-accordion">
+								<button class="contacts__form-tab" data-accordion-trigger>
+									посетителям
+									<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+									</svg>
+								</button>
+								<div class="contacts__form-content" data-accordion-target>
+									<div class="contacts__form-bg"><img src="img/contacts-form-img.jpg" alt=""></div>
+									<div class="contacts__form-calls">
+										<p><a href="tel:">+7 900 123 45 67</a></p>
+										<p><a href="mailto:">info@inspot.gr</a></p>
+									</div>
+									<form class="contacts__form">
+										<div class="form__block-input contacts__form-input">
+											<input type="text" name="name" placeholder="Имя">
+										</div>
+										<div class="form__block-input contacts__form-input">
+											<input type="tel" name="tel" placeholder="Телефон" required>
+										</div>
+										<div class="form__block-input contacts__form-input contacts__form-input_pol form__block-input_pol">
+											<textarea name="Комментарий" placeholder="комментарии"></textarea>
+										</div>
+										<button type="submit" class="contacts__form-btn btn btn_grey">отправить</button>
+									</form>
+								</div>
+							</div>
+							<div class="contacts__form-accordion">
+								<button class="contacts__form-tab" data-accordion-trigger>
+									Поставщикам
+									<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+									</svg>
+								</button>
+								<div class="contacts__form-content" data-accordion-target>
+									<div class="contacts__form-bg"><img src="img/contacts-form-img.jpg" alt=""></div>
+									<div class="contacts__form-calls">
+										<p><a href="tel:">+7 900 123 45 67</a></p>
+										<p><a href="mailto:">info@inspot.gr</a></p>
+									</div>
+									<form class="contacts__form">
+										<div class="form__block-input contacts__form-input">
+											<input type="text" name="name" placeholder="Имя">
+										</div>
+										<div class="form__block-input contacts__form-input">
+											<input type="tel" name="tel" placeholder="Телефон" required>
+										</div>
+										<div class="form__block-input contacts__form-input contacts__form-input_pol form__block-input_pol">
+											<textarea name="Комментарий" placeholder="комментарии"></textarea>
+										</div>
+										<button type="submit" class="contacts__form-btn btn btn_grey">отправить</button>
+									</form>
+								</div>
+							</div>
+							<div class="contacts__form-accordion">
+								<button class="contacts__form-tab" data-accordion-trigger>
+									Сотрудничество
+									<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+									</svg>
+								</button>
+								<div class="contacts__form-content" data-accordion-target>
+									<div class="contacts__form-bg"><img src="img/contacts-form-img.jpg" alt=""></div>
+									<div class="contacts__form-calls">
+										<p><a href="tel:">+7 900 123 45 67</a></p>
+										<p><a href="mailto:">info@inspot.gr</a></p>
+									</div>
+									<form class="contacts__form">
+										<div class="form__block-input contacts__form-input">
+											<input type="text" name="name" placeholder="Имя">
+										</div>
+										<div class="form__block-input contacts__form-input">
+											<input type="tel" name="tel" placeholder="Телефон" required>
+										</div>
+										<div class="form__block-input contacts__form-input contacts__form-input_pol form__block-input_pol">
+											<textarea name="Комментарий" placeholder="комментарии"></textarea>
+										</div>
+										<button type="submit" class="contacts__form-btn btn btn_grey">отправить</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="contacts__form-wrapper">
+						<div class="contacts__form-circle"></div>
+						<div class="contacts__form-tabs" data-tabs>
+							<button class="contacts__form-tab is-active" data-tab>
+								Франшиза
+								<svg width="42" height="24" viewBox="0 0 42 24" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M26.3553 8.23145L18.1131 0H29.4342L41.6614 12.2113L29.8574 24H18.5363L26.315 16.2314H0V8.23145H26.3553Z"/>
+								</svg>
+							</button>
+							<button class="contacts__form-tab" data-tab>
+								посетителям
+								<svg width="42" height="24" viewBox="0 0 42 24" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M26.3553 8.23145L18.1131 0H29.4342L41.6614 12.2113L29.8574 24H18.5363L26.315 16.2314H0V8.23145H26.3553Z"/>
+								</svg>
+							</button>
+							<button class="contacts__form-tab" data-tab>
+								Поставщикам
+								<svg width="42" height="24" viewBox="0 0 42 24" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M26.3553 8.23145L18.1131 0H29.4342L41.6614 12.2113L29.8574 24H18.5363L26.315 16.2314H0V8.23145H26.3553Z"/>
+								</svg>
+							</button>
+							<button class="contacts__form-tab" data-tab>
+								Сотрудничество
+								<svg width="42" height="24" viewBox="0 0 42 24" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M26.3553 8.23145L18.1131 0H29.4342L41.6614 12.2113L29.8574 24H18.5363L26.315 16.2314H0V8.23145H26.3553Z"/>
+								</svg>
+							</button>
+						</div>
+						<div class="contacts__form-contents" data-tab-contents>
+							<div class="contacts__form-content is-active" data-tab-content>
+								<div class="contacts__form-bg"><img src="img/contacts-form-img.jpg" alt=""></div>
+								<div class="contacts__form-calls">
+									<p><a href="tel:">+7 900 123 45 67</a></p>
+									<p><a href="mailto:">info@inspot.gr</a></p>
+								</div>
+								<form class="contacts__form">
+									<div class="form__block-input contacts__form-input">
+										<input type="text" name="name" placeholder="Имя">
+									</div>
+									<div class="form__block-input contacts__form-input">
+										<input type="tel" name="tel" placeholder="Телефон" required>
+									</div>
+									<div class="form__block-input contacts__form-input contacts__form-input_pol form__block-input_pol">
+										<textarea name="Комментарий" placeholder="комментарии"></textarea>
+									</div>
+									<button type="submit" class="contacts__form-btn btn btn_grey">отправить</button>
+								</form>
+							</div>
+							<div class="contacts__form-content" data-tab-content>
+								<div class="contacts__form-bg"><img src="img/contacts-form-img.jpg" alt=""></div>
+								<div class="contacts__form-calls">
+									<p><a href="tel:">+7 900 123 45 67</a></p>
+									<p><a href="mailto:">info@inspot.gr</a></p>
+								</div>
+								<form class="contacts__form">
+									<div class="form__block-input contacts__form-input">
+										<input type="text" name="name" placeholder="Имя">
+									</div>
+									<div class="form__block-input contacts__form-input">
+										<input type="tel" name="tel" placeholder="Телефон" required>
+									</div>
+									<div class="form__block-input contacts__form-input contacts__form-input_pol form__block-input_pol">
+										<textarea name="Комментарий" placeholder="комментарии"></textarea>
+									</div>
+									<button type="submit" class="contacts__form-btn btn btn_grey">отправить</button>
+								</form>
+							</div>
+							<div class="contacts__form-content" data-tab-content>
+								<div class="contacts__form-bg"><img src="img/contacts-form-img.jpg" alt=""></div>
+								<div class="contacts__form-calls">
+									<p><a href="tel:">+7 900 123 45 67</a></p>
+									<p><a href="mailto:">info@inspot.gr</a></p>
+								</div>
+								<form class="contacts__form">
+									<div class="form__block-input contacts__form-input">
+										<input type="text" name="name" placeholder="Имя">
+									</div>
+									<div class="form__block-input contacts__form-input">
+										<input type="tel" name="tel" placeholder="Телефон" required>
+									</div>
+									<div class="form__block-input contacts__form-input contacts__form-input_pol form__block-input_pol">
+										<textarea name="Комментарий" placeholder="комментарии"></textarea>
+									</div>
+									<button type="submit" class="contacts__form-btn btn btn_grey">отправить</button>
+								</form>
+							</div>
+							<div class="contacts__form-content" data-tab-content>
+								<div class="contacts__form-bg"><img src="img/contacts-form-img.jpg" alt=""></div>
+								<div class="contacts__form-calls">
+									<p><a href="tel:">+7 900 123 45 67</a></p>
+									<p><a href="mailto:">info@inspot.gr</a></p>
+								</div>
+								<form class="contacts__form">
+									<div class="form__block-input contacts__form-input">
+										<input type="text" name="name" placeholder="Имя">
+									</div>
+									<div class="form__block-input contacts__form-input">
+										<input type="tel" name="tel" placeholder="Телефон" required>
+									</div>
+									<div class="form__block-input contacts__form-input contacts__form-input_pol form__block-input_pol">
+										<textarea name="Комментарий" placeholder="комментарии"></textarea>
+									</div>
+									<button type="submit" class="contacts__form-btn btn btn_grey">отправить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<div class="contacts__socials contacts__socials_mob">
+						<a href="#" target="_blank" class="contacts__item">
+							<div class="contacts__item-icon contacts__item-icon_fb">
+								<img src="img/soc-icon-1.svg" alt="facebook">
+								<img src="img/soc-icon-mob-1.svg" alt="facebook">
+							</div>
+							<div class="contacts__item-name">facebook</div>
+						</a>
+						<a href="#" target="_blank" class="contacts__item">
+							<div class="contacts__item-icon contacts__item-icon_yt">
+								<img src="img/soc-icon-2.svg" alt="youtube">
+								<img src="img/soc-icon-mob-2.svg" alt="youtube">
+							</div>
+							<div class="contacts__item-name">youtube</div>
+						</a>
+						<a href="#" target="_blank" class="contacts__item">
+							<div class="contacts__item-icon contacts__item-icon_tg">
+								<img src="img/soc-icon-3.svg" alt="telegram">
+								<img src="img/soc-icon-mob-3.svg" alt="telegram">
+							</div>
+							<div class="contacts__item-name">telegram</div>
+						</a>
+						<a href="#" target="_blank" class="contacts__item">
+							<div class="contacts__item-icon contacts__item-icon_inst">
+								<img src="img/soc-icon-4.svg" alt="Instagram">
+								<img src="img/soc-icon-mob-4.svg" alt="Instagram">
+							</div>
+							<div class="contacts__item-name">Instagram</div>
+						</a>
+						<a href="#" target="_blank" class="contacts__item">
+							<div class="contacts__item-icon contacts__item-icon_dis">
+								<img src="img/soc-icon-5.svg" alt="discord">
+								<img src="img/soc-icon-mob-5.svg" alt="discord">
+							</div>
+							<div class="contacts__item-name">discord</div>
+						</a>
+						<a href="#" target="_blank" class="contacts__item">
+							<div class="contacts__item-icon contacts__item-icon_wa">
+								<img src="img/soc-icon-6.svg" alt="whatsapp">
+								<img src="img/soc-icon-mob-6.svg" alt="whatsapp">
+							</div>
+							<div class="contacts__item-name">whatsapp</div>
+						</a>
+					</div>
+
+				</div>
+			</section>
+			<!-- end section contacts -->
+
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+
+				<div class="footer__grid">
+					<div class="footer__item">
+						<p>ОГРН 1182375044697</p>
+						<p>ИНН 2z368010296</p>
+						<p>Москва, Профсоюзная, 56.</p>
+					</div>
+					<div class="footer__item">
+						<p><a href="mailto:">example@mail.ru</a></p>
+						<p><a href="tel:">8 800 888 99 77</a></p>
+						<p><a href="#">политика конфиденциальности</a></p>
+					</div>
+					<div class="footer__item">
+						<p>example@mail.ru</p>
+						<p>8 800 888 99 77</p>
+						<p>соцсети</p>
+					</div>
+					<div class="footer__item">
+						<p>© INSPOT 2022</p>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+	</div>
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>

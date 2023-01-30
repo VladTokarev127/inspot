@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title></title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+
+</head>
+
+<body>
+
+	<svg style="visibility: hidden; position: absolute;" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+		<defs>
+			<filter id="round">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />    
+				<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+				<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+			</filter>
+		</defs>
+	</svg>
+
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="container">
+
+				<div class="header__logo">
+					<a href="/">
+						<picture>
+							<source media="(min-width:565px)" srcset="img/logo.svg">
+							<img src="img/logo-mobile.svg" alt="Inspot">
+						</picture>
+					</a>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="current_page_item"><a href="#">о компании</a></li>
+						<li><a href="#">франшиза</a></li>
+						<li><a href="#">карьера</a></li>
+						<li><a href="#">галерея</a></li>
+						<li><a href="#">контакты</a></li>
+						<li class="menu-item-has-children">
+							<a href="#">соцсети</a>
+							<ul>
+								<li><a href="#">facebook</a></li>
+								<li><a href="#">youtube</a></li>
+								<li><a href="#">telegram</a></li>
+								<li><a href="#">instagram</a></li>
+								<li><a href="#">discord</a></li>
+								<li><a href="#">whatsapp</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<button class="header__btn"><img src="img/menu.svg" alt=""></button>
+
+			</div>
+		</header>
+
+		<main class="main">
+			<div class="main__circle"></div>
+
+			<!-- start section club__hero -->
+			<section class="club__hero">
+				<div class="container">
+					<div class="club__hero-circle"></div>
+
+					<div class="club__hero-info">
+						<h1 class="club__hero-title">ул. Володи Головатого, 84</h1>
+						<div class="club__hero-loc">Краснодар</div>
+					</div>
+					<div class="club__hero-swiper-container">
+						<div class="club__hero-swiper swiper">
+							<div class="club__hero-swiper-wrapper swiper-wrapper">
+								<div class="club__hero-swiper-slide swiper-slide">
+									<span class="club__hero-swiper-slide-mask club__hero-swiper-slide-bg">
+										<span style="background-image: url(img/club-swiper-img.jpg);"></span>
+									</span>
+									<span class="club__hero-swiper-slide-mask">
+										<img src="img/club-swiper-img.jpg" alt="">
+									</span>
+									<a href="img/club-swiper-img.jpg" class="club__hero-swiper-full">
+										<svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.3542 3.64138L16.5273 10.4683" stroke-width="3"/>
+											<path d="M16.0742 3.64209L23.3562 3.64209L23.3562 10.9241" stroke-width="3"/>
+											<path d="M3.64577 23.3537L10.4727 16.5269" stroke-width="3"/>
+											<path d="M10.9297 23.353L3.64768 23.353L3.64768 16.071" stroke-width="3"/>
+											<path d="M23.3601 23.3547L16.5332 16.5278" stroke-width="3"/>
+											<path d="M23.3594 16.0728L23.3594 23.3548L16.0774 23.3548" stroke-width="3"/>
+											<path d="M3.64089 3.64138L10.4678 10.4683" stroke-width="3"/>
+											<path d="M3.6416 10.9233L3.6416 3.64133L10.9236 3.64133" stroke-width="3"/>
+										</svg>
+										<span>на весь экран</span>
+									</a>
+								</div>
+								<div class="club__hero-swiper-slide swiper-slide">
+									<span class="club__hero-swiper-slide-mask club__hero-swiper-slide-bg">
+										<span style="background-image: url(img/club-swiper-img.jpg);"></span>
+									</span>
+									<span class="club__hero-swiper-slide-mask">
+										<img src="img/club-swiper-img.jpg" alt="">
+									</span>
+									<a href="img/club-swiper-img.jpg" class="club__hero-swiper-full">
+										<svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.3542 3.64138L16.5273 10.4683" stroke-width="3"/>
+											<path d="M16.0742 3.64209L23.3562 3.64209L23.3562 10.9241" stroke-width="3"/>
+											<path d="M3.64577 23.3537L10.4727 16.5269" stroke-width="3"/>
+											<path d="M10.9297 23.353L3.64768 23.353L3.64768 16.071" stroke-width="3"/>
+											<path d="M23.3601 23.3547L16.5332 16.5278" stroke-width="3"/>
+											<path d="M23.3594 16.0728L23.3594 23.3548L16.0774 23.3548" stroke-width="3"/>
+											<path d="M3.64089 3.64138L10.4678 10.4683" stroke-width="3"/>
+											<path d="M3.6416 10.9233L3.6416 3.64133L10.9236 3.64133" stroke-width="3"/>
+										</svg>
+										<span>на весь экран</span>
+									</a>
+								</div>
+								<div class="club__hero-swiper-slide swiper-slide">
+									<span class="club__hero-swiper-slide-mask club__hero-swiper-slide-bg">
+										<span style="background-image: url(img/club-swiper-img.jpg);"></span>
+									</span>
+									<span class="club__hero-swiper-slide-mask">
+										<img src="img/club-swiper-img.jpg" alt="">
+									</span>
+									<a href="img/club-swiper-img.jpg" class="club__hero-swiper-full">
+										<svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.3542 3.64138L16.5273 10.4683" stroke-width="3"/>
+											<path d="M16.0742 3.64209L23.3562 3.64209L23.3562 10.9241" stroke-width="3"/>
+											<path d="M3.64577 23.3537L10.4727 16.5269" stroke-width="3"/>
+											<path d="M10.9297 23.353L3.64768 23.353L3.64768 16.071" stroke-width="3"/>
+											<path d="M23.3601 23.3547L16.5332 16.5278" stroke-width="3"/>
+											<path d="M23.3594 16.0728L23.3594 23.3548L16.0774 23.3548" stroke-width="3"/>
+											<path d="M3.64089 3.64138L10.4678 10.4683" stroke-width="3"/>
+											<path d="M3.6416 10.9233L3.6416 3.64133L10.9236 3.64133" stroke-width="3"/>
+										</svg>
+										<span>на весь экран</span>
+									</a>
+								</div>
+								<div class="club__hero-swiper-slide swiper-slide">
+									<span class="club__hero-swiper-slide-mask club__hero-swiper-slide-bg">
+										<span style="background-image: url(img/club-swiper-img.jpg);"></span>
+									</span>
+									<span class="club__hero-swiper-slide-mask">
+										<img src="img/club-swiper-img.jpg" alt="">
+									</span>
+									<a href="img/club-swiper-img.jpg" class="club__hero-swiper-full">
+										<svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.3542 3.64138L16.5273 10.4683" stroke-width="3"/>
+											<path d="M16.0742 3.64209L23.3562 3.64209L23.3562 10.9241" stroke-width="3"/>
+											<path d="M3.64577 23.3537L10.4727 16.5269" stroke-width="3"/>
+											<path d="M10.9297 23.353L3.64768 23.353L3.64768 16.071" stroke-width="3"/>
+											<path d="M23.3601 23.3547L16.5332 16.5278" stroke-width="3"/>
+											<path d="M23.3594 16.0728L23.3594 23.3548L16.0774 23.3548" stroke-width="3"/>
+											<path d="M3.64089 3.64138L10.4678 10.4683" stroke-width="3"/>
+											<path d="M3.6416 10.9233L3.6416 3.64133L10.9236 3.64133" stroke-width="3"/>
+										</svg>
+										<span>на весь экран</span>
+									</a>
+								</div>
+								<div class="club__hero-swiper-slide swiper-slide">
+									<span class="club__hero-swiper-slide-mask club__hero-swiper-slide-bg">
+										<span style="background-image: url(img/club-swiper-img.jpg);"></span>
+									</span>
+									<span class="club__hero-swiper-slide-mask">
+										<img src="img/club-swiper-img.jpg" alt="">
+									</span>
+									<a href="img/club-swiper-img.jpg" class="club__hero-swiper-full">
+										<svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.3542 3.64138L16.5273 10.4683" stroke-width="3"/>
+											<path d="M16.0742 3.64209L23.3562 3.64209L23.3562 10.9241" stroke-width="3"/>
+											<path d="M3.64577 23.3537L10.4727 16.5269" stroke-width="3"/>
+											<path d="M10.9297 23.353L3.64768 23.353L3.64768 16.071" stroke-width="3"/>
+											<path d="M23.3601 23.3547L16.5332 16.5278" stroke-width="3"/>
+											<path d="M23.3594 16.0728L23.3594 23.3548L16.0774 23.3548" stroke-width="3"/>
+											<path d="M3.64089 3.64138L10.4678 10.4683" stroke-width="3"/>
+											<path d="M3.6416 10.9233L3.6416 3.64133L10.9236 3.64133" stroke-width="3"/>
+										</svg>
+										<span>на весь экран</span>
+									</a>
+								</div>
+								<div class="club__hero-swiper-slide swiper-slide">
+									<span class="club__hero-swiper-slide-mask club__hero-swiper-slide-bg">
+										<span style="background-image: url(img/club-swiper-img.jpg);"></span>
+									</span>
+									<span class="club__hero-swiper-slide-mask">
+										<img src="img/club-swiper-img.jpg" alt="">
+									</span>
+									<a href="img/club-swiper-img.jpg" class="club__hero-swiper-full">
+										<svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.3542 3.64138L16.5273 10.4683" stroke-width="3"/>
+											<path d="M16.0742 3.64209L23.3562 3.64209L23.3562 10.9241" stroke-width="3"/>
+											<path d="M3.64577 23.3537L10.4727 16.5269" stroke-width="3"/>
+											<path d="M10.9297 23.353L3.64768 23.353L3.64768 16.071" stroke-width="3"/>
+											<path d="M23.3601 23.3547L16.5332 16.5278" stroke-width="3"/>
+											<path d="M23.3594 16.0728L23.3594 23.3548L16.0774 23.3548" stroke-width="3"/>
+											<path d="M3.64089 3.64138L10.4678 10.4683" stroke-width="3"/>
+											<path d="M3.6416 10.9233L3.6416 3.64133L10.9236 3.64133" stroke-width="3"/>
+										</svg>
+										<span>на весь экран</span>
+									</a>
+								</div>
+								<div class="club__hero-swiper-slide swiper-slide">
+									<span class="club__hero-swiper-slide-mask club__hero-swiper-slide-bg">
+										<span style="background-image: url(img/club-swiper-img.jpg);"></span>
+									</span>
+									<span class="club__hero-swiper-slide-mask">
+										<img src="img/club-swiper-img.jpg" alt="">
+									</span>
+									<a href="img/club-swiper-img.jpg" class="club__hero-swiper-full">
+										<svg width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg">
+											<path d="M23.3542 3.64138L16.5273 10.4683" stroke-width="3"/>
+											<path d="M16.0742 3.64209L23.3562 3.64209L23.3562 10.9241" stroke-width="3"/>
+											<path d="M3.64577 23.3537L10.4727 16.5269" stroke-width="3"/>
+											<path d="M10.9297 23.353L3.64768 23.353L3.64768 16.071" stroke-width="3"/>
+											<path d="M23.3601 23.3547L16.5332 16.5278" stroke-width="3"/>
+											<path d="M23.3594 16.0728L23.3594 23.3548L16.0774 23.3548" stroke-width="3"/>
+											<path d="M3.64089 3.64138L10.4678 10.4683" stroke-width="3"/>
+											<path d="M3.6416 10.9233L3.6416 3.64133L10.9236 3.64133" stroke-width="3"/>
+										</svg>
+										<span>на весь экран</span>
+									</a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<div class="club__hero-thumbs">
+							<div class="club__hero-thumb is-active">
+								<img src="img/club-swiper-img.jpg">
+							</div>
+							<div class="club__hero-thumb">
+								<img src="img/club-swiper-img.jpg">
+							</div>
+							<div class="club__hero-thumb">
+								<img src="img/club-swiper-img.jpg">
+							</div>
+							<div class="club__hero-thumb">
+								<img src="img/club-swiper-img.jpg">
+							</div>
+							<div class="club__hero-thumb">
+								<img src="img/club-swiper-img.jpg">
+							</div>
+							<div class="club__hero-thumb">
+								<img src="img/club-swiper-img.jpg">
+							</div>
+							<div class="club__hero-thumb">
+								<img src="img/club-swiper-img.jpg">
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- end section club__hero -->
+
+			<!-- start section configuration -->
+			<section class="configuration">
+				<div class="container">
+
+					<h2 class="title configuration__title">конфигурации</h2>
+					<div class="configuration__grid">
+						<div class="configuration__item">
+							<div class="configuration__icon">
+								<div class="configuration__icon-bg"><span></span></div>
+								<img src="img/configuration-1.svg" alt="">
+							</div>
+							<div class="configuration__info">
+								<div class="configuration__type">процессор</div>
+								<div class="configuration__name">AMD Ryzen 7 2700X</div>
+							</div>
+						</div>
+						<div class="configuration__item">
+							<div class="configuration__icon">
+								<div class="configuration__icon-bg"><span></span></div>
+								<img src="img/configuration-2.svg" alt="">
+							</div>
+							<div class="configuration__info">
+								<div class="configuration__type">видеокарта</div>
+								<div class="configuration__name">GeForce GTX 1080</div>
+							</div>
+						</div>
+						<div class="configuration__item">
+							<div class="configuration__icon">
+								<div class="configuration__icon-bg"><span></span></div>
+								<img src="img/configuration-3.svg" alt="">
+							</div>
+							<div class="configuration__info">
+								<div class="configuration__type">память</div>
+								<div class="configuration__name">DDR4 16GB</div>
+							</div>
+						</div>
+						<div class="configuration__item">
+							<div class="configuration__icon">
+								<div class="configuration__icon-bg"><span></span></div>
+								<img src="img/configuration-4.svg" alt="">
+							</div>
+							<div class="configuration__info">
+								<div class="configuration__type">накопитель</div>
+								<div class="configuration__name">NVMe SSD</div>
+							</div>
+						</div>
+						<div class="configuration__item">
+							<div class="configuration__icon">
+								<div class="configuration__icon-bg"><span></span></div>
+								<img src="img/configuration-5.svg" alt="">
+							</div>
+							<div class="configuration__info">
+								<div class="configuration__type">монитор</div>
+								<div class="configuration__name">27" 144Hz</div>
+							</div>
+						</div>
+						<div class="configuration__item">
+							<div class="configuration__icon">
+								<div class="configuration__icon-bg"><span></span></div>
+								<img src="img/configuration-6.svg" alt="">
+							</div>
+							<div class="configuration__info">
+								<div class="configuration__type">клавиатура</div>
+								<div class="configuration__name">Gamdias Hermes E2</div>
+							</div>
+						</div>
+						<div class="configuration__item">
+							<div class="configuration__icon">
+								<div class="configuration__icon-bg"><span></span></div>
+								<img src="img/configuration-7.svg" alt="">
+							</div>
+							<div class="configuration__info">
+								<div class="configuration__type">мышка</div>
+								<div class="configuration__name">Logitech G403</div>
+							</div>
+						</div>
+						<div class="configuration__item">
+							<div class="configuration__icon">
+								<div class="configuration__icon-bg"><span></span></div>
+								<img src="img/configuration-8.svg" alt="">
+							</div>
+							<div class="configuration__info">
+								<div class="configuration__type">наушники</div>
+								<div class="configuration__name">Corsair HS50</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- end section configuration -->
+
+			<!-- start section prices -->
+			<section class="prices">
+				<div class="prices__circle"></div>
+				<div class="container">
+
+					<h2 class="title prices__title">тарифы и цены</h2>
+					<div class="prices__grid">
+						<div class="prices__item">
+							<div class="prices__content">
+								<div class="prices__img-bg"></div>
+								<div class="prices__img"><img src="img/prices-img-1.jpg" alt=""></div>
+								<div class="prices__top">
+									<div class="prices__time">1 час</div>
+									<div class="prices__desc">один час = 65 ₽</div>
+								</div>
+								<div class="prices__val">690 ₽</div>
+							</div>
+						</div>
+						<div class="prices__item">
+							<div class="prices__content">
+								<div class="prices__img-bg"></div>
+								<div class="prices__img"><img src="img/prices-img-1.jpg" alt=""></div>
+								<div class="prices__top">
+									<div class="prices__time">3 часа</div>
+									<div class="prices__desc">один час = 65 ₽</div>
+								</div>
+								<div class="prices__val">690 ₽</div>
+							</div>
+						</div>
+						<div class="prices__item">
+							<div class="prices__content">
+								<div class="prices__img-bg"></div>
+								<div class="prices__img"><img src="img/prices-img-1.jpg" alt=""></div>
+								<div class="prices__top">
+									<div class="prices__time">5 часов</div>
+									<div class="prices__desc">один час = 65 ₽</div>
+								</div>
+								<div class="prices__val">690 ₽</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="prices__text">
+						<p>ежедневно ПО УТРАМ С 05:00 ДО 13:00 — <b>СКИДКА 40 %</b></p>
+						<p>С ПОНЕДЕЛЬНИКА ПО СРЕДУ — <b>СКИДКА 20 %</b></p>
+					</div>
+
+					<a href="#" class="btn btn_red prices__btn">Смотреть полный прайс</a>
+
+				</div>
+			</section>
+			<!-- end section prices -->
+
+			<!-- start section kitchen -->
+			<section class="kitchen">
+				<div class="container">
+
+					<h2 class="title kitchen__title">бар / кухня</h2>
+					<div class="kitchen__list">
+						<div class="kitchen__item">
+							<div class="kitchen__top" data-accordion-trigger>
+								<div class="kitchen__top-content">
+									<div class="kitchen__img"><img src="img/kitchen-img.jpg" alt=""></div>
+									<h3 class="kitchen__name">Напитки</h3>
+									<div class="kitchen__arrow">
+										<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="kitchen__desc" data-accordion-target>
+								<div class="kitchen__rows">
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Газированые напитки</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Энергетические напитки</div>
+										<div class="kitchen__desc-price">от 200 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Соки и чай холодный</div>
+										<div class="kitchen__desc-price">от 300 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Вода</div>
+										<div class="kitchen__desc-price">от 100 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Пиво</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Газированые напитки</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Энергетические напитки</div>
+										<div class="kitchen__desc-price">от 200 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Соки и чай холодный</div>
+										<div class="kitchen__desc-price">от 300 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Вода</div>
+										<div class="kitchen__desc-price">от 100 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Пиво</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="kitchen__item">
+							<div class="kitchen__top" data-accordion-trigger>
+								<div class="kitchen__top-content">
+									<div class="kitchen__img"><img src="img/kitchen-img.jpg" alt=""></div>
+									<h3 class="kitchen__name">Еда</h3>
+									<div class="kitchen__arrow">
+										<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="kitchen__desc" data-accordion-target>
+								<div class="kitchen__rows">
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Газированые напитки</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Энергетические напитки</div>
+										<div class="kitchen__desc-price">от 200 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Соки и чай холодный</div>
+										<div class="kitchen__desc-price">от 300 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Вода</div>
+										<div class="kitchen__desc-price">от 100 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Пиво</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Газированые напитки</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Энергетические напитки</div>
+										<div class="kitchen__desc-price">от 200 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Соки и чай холодный</div>
+										<div class="kitchen__desc-price">от 300 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Вода</div>
+										<div class="kitchen__desc-price">от 100 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Пиво</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="kitchen__item">
+							<div class="kitchen__top" data-accordion-trigger>
+								<div class="kitchen__top-content">
+									<div class="kitchen__img"><img src="img/kitchen-img.jpg" alt=""></div>
+									<h3 class="kitchen__name">снеки</h3>
+									<div class="kitchen__arrow">
+										<svg width="47" height="60" viewBox="0 0 47 60" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M27.8623 40.1646L27.8623 0H17.8623L17.8623 39.8202L0.5625 22.4979V36.6492L19.4965 55.6078L23.0343 59.1503L26.5721 55.6078L46.3125 35.8418V21.6904L27.8623 40.1646Z" />
+										</svg>
+									</div>
+								</div>
+							</div>
+							<div class="kitchen__desc" data-accordion-target>
+								<div class="kitchen__rows">
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Газированые напитки</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Энергетические напитки</div>
+										<div class="kitchen__desc-price">от 200 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Соки и чай холодный</div>
+										<div class="kitchen__desc-price">от 300 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Вода</div>
+										<div class="kitchen__desc-price">от 100 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Пиво</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Газированые напитки</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Энергетические напитки</div>
+										<div class="kitchen__desc-price">от 200 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Соки и чай холодный</div>
+										<div class="kitchen__desc-price">от 300 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Вода</div>
+										<div class="kitchen__desc-price">от 100 ₽</div>
+									</div>
+									<div class="kitchen__row">
+										<div class="kitchen__desc-name">Пиво</div>
+										<div class="kitchen__desc-price">от 400 ₽</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="kitchen__item">
+							<div class="kitchen__top">
+								<div class="kitchen__top-content">
+									<h3 class="kitchen__name kitchen__name_red">Можете заказать еду к нам</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<!-- end section kitchen -->
+
+			<!-- start section manager -->
+			<section class="manager">
+				<div class="container">
+					<div class="manager__circle"></div>
+
+					<div class="manager__content">
+						<h2 class="title manager__title">связаться с управляющим</h2>
+						<a href="#" class="btn btn_red manager__btn">Связаться</a>
+					</div>
+
+				</div>
+			</section>
+			<!-- end section manager -->
+
+		</main>
+
+		<footer class="footer">
+			<div class="container">
+
+				<div class="footer__grid">
+					<div class="footer__item">
+						<p>ОГРН 1182375044697</p>
+						<p>ИНН 2z368010296</p>
+						<p>Москва, Профсоюзная, 56.</p>
+					</div>
+					<div class="footer__item">
+						<p><a href="mailto:">example@mail.ru</a></p>
+						<p><a href="tel:">8 800 888 99 77</a></p>
+						<p><a href="#">политика конфиденциальности</a></p>
+					</div>
+					<div class="footer__item">
+						<p>example@mail.ru</p>
+						<p>8 800 888 99 77</p>
+						<p>соцсети</p>
+					</div>
+					<div class="footer__item">
+						<p>© INSPOT 2022</p>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+
+	</div>
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="js/main.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+.offer
+	padding-top: 200px
+	margin-bottom: 200px
+	margin-bottom: -60px
+	background-image: url(../img/offer-bg.png)
+	background-repeat: no-repeat
+	background-position: left top
+	@include media-breakpoint-down(md)
+		padding-top: 140px
+		padding-bottom: 140px
+		margin-bottom: -60px
+	&__mask
+		display: flex
+		flex-direction: column
+		justify-content: center
+		background-image: url(../img/offer-mask.svg)
+		background-repeat: no-repeat
+		background-position: center
+		background-size: 100% 100%
+		min-height: 267px
+		width: 100%
+		padding-top: 40px
+		padding-bottom: 40px
+		padding-left: 151px
+		padding-right: 150px
+		@include media-breakpoint-down(lg)
+			padding-left: 111px
+			padding-right: 111px
+		@include media-breakpoint-down(md)
+			background-image: url(../img/offer-mask-md.svg)
+			padding-left: 80px
+			padding-right: 80px
+			min-height: 296px
+		@include media-breakpoint-down(sm)
+			padding-left: 30px
+			padding-right: 30px
+		@include media-breakpoint-down(xs)
+			padding-left: 20px
+			padding-right: 20px
+			min-height: 326px
+			background-image: url(../img/offer-mask-xs.svg)
+	&__title
+		font-weight: 800
+		font-style: italic
+		text-transform: uppercase
+		color: #fff
+		font-size: 35px
+		margin-bottom: 30px
+		@include media-breakpoint-down(md)
+			font-size: 30px
+		@include media-breakpoint-down(sm)
+			margin-bottom: 20px
+		b,strong
+			color: #e02656

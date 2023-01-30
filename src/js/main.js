@@ -55,7 +55,16 @@ $(function() {
 			currentContent.fadeIn(300).addClass('is-active');
 		}, 300)
 		$(this).addClass('is-active');
-	})
+	});
+
+	const tournamentSwiper = new Swiper('.tournament__swiper', {
+		autoHeight: false,
+		spaceBetween: 64,
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		},
+	});
 
 	const clubsSwiper = new Swiper('.clubs__swiper', {
 		autoHeight: false,
