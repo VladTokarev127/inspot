@@ -47,8 +47,8 @@
 				<div class="header__logo">
 					<a href="/">
 						<picture>
-							<source media="(min-width:565px)" srcset="/wp-content/themes/inspot/img/logo.svg">
-							<img src="/wp-content/themes/inspot/img/logo-mobile.svg" alt="Inspot">
+							<source media="(min-width:565px)" srcset="<?php echo esc_url(get_field('logo', 'options')['url']); ?>">
+							<img src="<?php echo esc_url(get_field('logo_mobile', 'options')['url']); ?>" alt="<?php echo get_field('logo_mobile', 'options')['alt']; ?>">
 						</picture>
 					</a>
 				</div>

@@ -39,6 +39,9 @@ $(function() {
 			.toggleClass('is-active')
 			.next('[data-accordion-target]')
 			.slideToggle(700);
+		if($(this).is('.contacts__form-tab')) {
+			$(this).next().find('.form_type').val($(this).text());
+		}
 	});
 
 	$('[data-tab-content]').hide();
@@ -49,12 +52,19 @@ $(function() {
 		let parent = $(this).parents('[data-tabs]');
 		let contents = parent.next('[data-tab-contents]');
 		let currentContent = contents.find('[data-tab-content]:eq('+ index +')');
+		currentContent.find('.form_type').val($(this).text());
 		parent.find('[data-tab]').removeClass('is-active');
 		contents.find('[data-tab-content]').removeClass('is-active').fadeOut(300);
 		setTimeout(() => {
 			currentContent.fadeIn(300).addClass('is-active');
 		}, 300)
 		$(this).addClass('is-active');
+	});
+
+	$('.marquee').marquee({
+		duration: 15000,
+		gap: 0,
+		duplicated: true
 	});
 
 	const tournamentSwiper = new Swiper('.tournament__swiper', {
@@ -127,5 +137,41 @@ $(function() {
 		e.preventDefault();
 		$(this).next().slideToggle(300);
 	});
+
+	$(document).on('click', '.clubs__show-more', function(e) {
+		e.preventDefault();
+		let ajaxurl = window.location.origin + '/wp-admin/admin-ajax.php';
+		let paged = $(this).data('paged');
+		let ths = $(this);
+		$.ajax({
+			url: ajaxurl,
+			type: "post",
+			data: {
+				action: 'get_clubs',
+				paged: paged,
+			},
+			beforeSend: function() {
+				
+			},
+			success: function (html) {
+				console.log(html.slice(0, -1));
+				ths.remove();
+				$('.clubs__list').append(html.slice(0,-1));
+			},
+			error: function() {
+				console.log('Ошибка');
+			},
+			complete: function() {
+				const clubsSwiper = new Swiper('.clubs__swiper', {
+					autoHeight: false,
+					spaceBetween: 54,
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true,
+					},
+				});
+			}
+		});
+	})
 
 });

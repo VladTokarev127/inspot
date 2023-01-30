@@ -87,6 +87,75 @@ h1,h2,h3,h4,h5,h6
 	min-height: 100%
 	overflow: hidden
 
+.text
+	width: 100%
+	h2
+		font-style: italic
+		font-weight: 800
+		font-size: 45px
+		text-transform: uppercase
+		color: #e7e7e7
+		margin-bottom: 40px
+		@include media-breakpoint-down(lg)
+			font-size: 35px
+		@include media-breakpoint-down(sm)
+			font-size: 30px
+	h3
+		font-style: italic
+		font-weight: 800
+		font-size: 35px
+		text-transform: uppercase
+		color: #e7e7e7
+		margin-bottom: 30px
+		@include media-breakpoint-down(lg)
+			font-size: 30px
+		@include media-breakpoint-down(sm)
+			font-size: 25px
+	p
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		margin-bottom: 40px
+		& > li
+			position: relative
+			padding-left: 50px
+			font-size: 20px
+			line-height: 1.2
+			color: #e7e7e7
+			margin-bottom: 15px
+			&:last-child
+				margin-bottom: 0
+			@include media-breakpoint-down(sm)
+				font-size: 16px
+			&::after
+				position: absolute
+				left: 0
+				top: 5px
+				content: ''
+				width: 25px
+				height: 15px
+				background-image: url(../img/results-marker.png)
+				background-repeat: no-repeat
+				background-position: center
+	p
+		font-style: italic
+		font-weight: 500
+		font-size: 20px
+		text-transform: uppercase
+		color: #e7e7e7
+		margin: 0
+		margin-bottom: 15px
+		@include media-breakpoint-down(sm)
+			font-size: 16px
+	a
+		color: #e7e7e7
+		&:hover,
+		&:focus-visible
+			color: #e02656
+	*:last-child
+		margin-bottom: 0
+
 .title
 	font-family: $it-font
 	font-style: italic
@@ -196,3 +265,13 @@ h1,h2,h3,h4,h5,h6
 		&:hover
 			background-position: -99.9% center
 			color: #000
+
+.wpcf7-response-output
+	border: 0 !important
+	padding: 0 !important
+	font-size: 20px
+	color: #e7e7e7
+
+form
+	p
+		margin: 0

@@ -52,3 +52,67 @@
 			'redirect'    => false
 		));
 	}
+
+	add_action( 'init', 'tpl_clubs' );
+	function tpl_clubs() {
+		register_post_type( 'clubs', array(
+			'public' => true,
+			'has_archive' => false,
+			'show_in_nav_menus' => true,
+			'labels' => array(
+				'name' => 'Клубы',
+				'all_items' => 'Все Клубы',
+				'add_new' => 'Добавить Клуб',
+				'add_new_item' => 'Добавление Клуба'
+				),
+			'supports' => array( 'title', 'thumbnail' ),
+			)
+		);
+	};
+
+	add_action('wp_ajax_get_clubs', 'get_clubs');
+	add_action('wp_ajax_nopriv_get_clubs', 'get_clubs');
+	function get_clubs() { ?>
+	<?php
+		$paged = $_POST['paged'];
+		$args = array(
+			'post_type' => 'clubs',
+			'post_status' => 'publish',
+			'paged' => $paged,
+			'order' => 'ASC',
+			'posts_per_page' => '4',
+		);
+		$clubs = new WP_Query( $args );
+		?>
+		<?php if($clubs->have_posts()):
+		while($clubs->have_posts()): $clubs->the_post(); ?>
+			<div class="clubs__item">
+				<div class="clubs__swiper swiper">
+					<div class="clubs__swiper-wrapper swiper-wrapper">
+						<?php $images = get_field('gallery'); foreach( $images as $key=>$image ): ?>
+							<div class="clubs__swiper-slide swiper-slide">
+								<span class="clubs__swiper-slide-mask clubs__swiper-slide-bg">
+									<span style="background-image: url(<?php echo esc_url($image['url']); ?>);"></span>
+								</span>
+								<span class="clubs__swiper-slide-mask">
+									<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo $image['alt']; ?>">
+								</span>
+							</div>
+						<?php endforeach; ?>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+				<div class="clubs__content">
+					<div class="clubs__country"><?php the_field('country'); ?></div>
+					<div class="clubs__loc"><b><?php the_field('preview_title'); ?></b> <?php the_field('preview_text'); ?></div>
+					<a href="<?php the_permalink(); ?>" class="clubs__btn btn btn_grey">подробнее</a>
+				</div>
+			</div>
+		<?php endwhile; ?>
+		<?php else: ?>
+			Записей нет!
+		<?php endif; wp_reset_query(); ?>
+		<?php if($clubs->max_num_pages > $paged): ?>
+			<button class="clubs__show-more">показать больше клубов</button>
+		<?php endif; ?>
+	<?php }

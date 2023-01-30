@@ -1,0 +1,146 @@
+.map
+	padding-top: 300px
+	position: relative
+	@include media-breakpoint-down(md)
+		padding-top: 150px
+	&__marquee
+		position: absolute
+		z-index: 5
+		overflow: hidden
+		left: 0
+		top: 260px
+		font-family: $j-font
+		height: 55px
+		width: 100%
+		display: flex
+		align-items: center
+		backdrop-filter: blur(10px)
+		border: 1px solid rgba(95, 95, 95, 0.7)
+		background: rgba(27, 27, 27, 0.2)
+		font-style: normal
+		font-weight: 700
+		font-size: 23px
+		line-height: 27px
+		text-transform: uppercase
+		color: #4A4A4A
+		transform: rotate(-3.47deg)
+		@include media-breakpoint-down(md)
+			top: 110px
+		@include media-breakpoint-down(sm)
+			height: 40px
+			font-size: 18px
+			ransform: rotate(-6.47deg)
+		&_1
+			transform: rotate(3.47deg)
+			@include media-breakpoint-down(sm)
+				transform: rotate(6.47deg)
+		> div
+			display: flex
+			align-items: center
+		.js-marquee
+			white-space: nowrap
+	.container
+		position: relative
+		z-index: 1
+	&__circle
+		position: absolute
+		z-index: -1
+		left: 200px
+		top: -100px
+		width: 560px
+		height: 560px
+		border-radius: 50%
+		background: #4BA1D9
+		opacity: 0.2
+		filter: blur(125px)
+		animation-name: cicrle-animation
+		animation-duration: 20s
+		animation-iteration-count: infinite
+		animation-play-state: running
+		animation-fill-mode: both
+		&_2
+			left: auto
+			top: auto
+			background: linear-gradient(268.42deg, #FF2F6E -8.98%, #C51B47 97.94%)
+			right: -200px
+			bottom: -100px
+	&__container
+		height: 600px
+		width: 100%
+		background: #262626 !important
+		filter: url(#round)
+		clip-path: polygon(20.7% 0,100% 0,100% 30%,100% 72.5%,79.6% 100%,0 100%,0 70%,0 27.9%)
+		@include media-breakpoint-down(lg)
+			clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 80.5%,88.3% 100%,0 100%,0 70%,0 26.7%)
+		@include media-breakpoint-down(sm)
+				height: 500px
+				clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 86.5%,90.3% 100%,0 100%,0 70%,0 11.7%)
+		.leaflet-popup
+			width: 300px !important
+			max-width: calc(100vw - 40px) !important
+			min-height: 107px !important
+			height: auto !important
+		.leaflet-popup-content-wrapper
+			width: 100%
+			height: 100%
+			background: 0
+			background-image: url(../img/map-bg.png)
+			background-position: center
+			background-repeat: no-repeat
+			background-size: 100% 100%
+			border-radius: 0
+		.leaflet-control-container
+			display: none
+		.leaflet-popup-content
+			height: 100%
+			width: 100% !important
+			margin: 0
+			padding: 20px 40px
+			font-family: $it-font
+			font-size: 16px
+			color: #E7E7E7
+			@include media-breakpoint-down(sm)
+				padding: 20px
+			a
+				color: #e7275e
+				text-decoration: none
+				display: block
+				margin-top: 10px
+		.leaflet-popup-tip-container
+			display: none
+		.leaflet-tile-pane
+			display: none
+		.leaflet-interactive
+			transition: .3s ease-in-out
+			&:hover
+				z-index: 999 !important
+				stroke: #e02656
+		.marker-cluster
+			background: 0
+			z-index: 999 !important
+			span
+				font-family: $it-font
+				font-style: italic
+				font-weight: 700
+				font-size: 20px
+				text-transform: uppercase
+				color: #090909
+			div
+				position: relative
+				margin: 0
+				width: 100%
+				height: 100%
+				border-radius: 50%
+				display: flex
+				align-items: center
+				justify-content: center
+				background: linear-gradient(90.14deg, #E12555 0%, #4BA1D9 99.76%)
+				&::after
+					position: absolute
+					left: 4px
+					top: 4px
+					content: ''
+					width: calc(100% - 8px)
+					height: calc(100% - 8px)
+					border-radius: 50%
+					border: 2px solid #000
