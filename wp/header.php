@@ -41,6 +41,17 @@
 
 	<div class="wrapper">
 
+		<?php if(is_front_page()): ?>
+			<div class="preloader">
+				<div class="preloader__circle preloader__circle_1"></div>
+				<div class="preloader__wrapper">
+					<div class="preloader__logo"><img src="/wp-content/themes/inspot/img/preloader-logo-1.png" alt=""></div>
+					<div class="preloader__sublogo"><img src="/wp-content/themes/inspot/img/preloader-logo-2.svg" alt=""></div>
+				</div>
+				<div class="preloader__circle preloader__circle_2"></div>
+			</div>
+		<?php endif; ?>
+
 		<header class="header">
 			<div class="container">
 

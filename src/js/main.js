@@ -78,7 +78,7 @@ $(function() {
 
 	const clubsSwiper = new Swiper('.clubs__swiper', {
 		autoHeight: false,
-		spaceBetween: 54,
+		spaceBetween: 90,
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,

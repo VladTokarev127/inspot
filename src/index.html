@@ -42,6 +42,15 @@
 
 	<div class="wrapper">
 
+		<div class="preloader">
+			<div class="preloader__circle preloader__circle_1"></div>
+			<div class="preloader__wrapper">
+				<div class="preloader__logo"><img src="img/preloader-logo-1.png" alt=""></div>
+				<div class="preloader__sublogo"><img src="img/preloader-logo-2.svg" alt=""></div>
+			</div>
+			<div class="preloader__circle preloader__circle_2"></div>
+		</div>
+
 		<header class="header">
 			<div class="container">
 
@@ -260,6 +269,12 @@
 					<script src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
 					<script>
 						document.addEventListener('DOMContentLoaded',function() {
+							$('.preloader__circle, .preloader__logo, .preloader__sublogo').addClass('is-active');
+							window.onload = function(){
+								setTimeout(function() {
+									$('.preloader').fadeOut(700);
+								}, 2500)
+							}
 							var tiles = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 								maxZoom: 18,
 								attribution: '&copy; <a href="//openstreetmap.org/copyright">OpenStreetMap</a> contributors, Points &copy 2012 LINZ'

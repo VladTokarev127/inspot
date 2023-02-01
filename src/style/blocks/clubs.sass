@@ -25,20 +25,21 @@
 				visibility: hidden
 	&__swiper
 		flex: 0 907px
-		padding-right: 24px
-		margin-right: 76px
-		padding-left: 54px
-		margin-left: -54px
-		padding-bottom: 56px
-		margin-bottom: -56px
+		margin: -90px
+		padding: 90px
 		// @include media-breakpoint-down(xl)
-		flex: 0 557px
+		flex: 0 calc(557px + 180px)
 		margin-right: 43px
 		@include media-breakpoint-down(lg)
 			flex: 1 100%
 			margin-right: 0
+			margin-left: 0
+			padding-right: 0
+			padding-left: 0
 			margin-bottom: 0
 			padding-bottom: 40px
+			padding-top: 0
+			margin-top: 0
 		@include media-breakpoint-down(sm)
 			padding-bottom: 30px
 		&-slide
@@ -47,12 +48,15 @@
 				height: 249px
 		.swiper-pagination
 			position: absolute
-			left: 94px
-			bottom: 78px
+			left: 124px
+			bottom: 118px
 			display: flex
 			align-items: center
+			@include media-breakpoint-down(lg)
+				left: 40px
+				bottom: 78px
 			@include media-breakpoint-down(sm)
-				left: 84px
+				left: 20px
 				bottom: 52px
 		.swiper-pagination-bullet
 			margin: 0
