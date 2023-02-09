@@ -7,6 +7,8 @@ get_header();
 	<section class="vacancy">
 		<div class="container">
 
+			<h1 class="title vacancy__title">наши вакансии</h1>
+
 			<div class="vacancy__list">
 				<?php while( the_repeater_field('list') ): ?>
 					<div class="vacancy__item">
