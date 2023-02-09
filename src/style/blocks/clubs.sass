@@ -6,6 +6,31 @@
 		margin-bottom: 150px
 		@include media-breakpoint-down(lg)
 			flex-wrap: wrap
+		&:nth-child(1)
+			.clubs__swiper-slide-mask
+				&:last-child
+					&::after
+						background: #D33060
+		&:nth-child(2)
+			.clubs__swiper-slide-mask
+				&:last-child
+					&::after
+						background: #B34A7C
+		&:nth-child(3)
+			.clubs__swiper-slide-mask
+				&:last-child
+					&::after
+						background: #946498
+		&:nth-child(4)
+			.clubs__swiper-slide-mask
+				&:last-child
+					&::after
+						background: #767DB2
+		&:nth-child(5)
+			.clubs__swiper-slide-mask
+				&:last-child
+					&::after
+						background: #5598CF
 		&:hover
 			.clubs__country
 				color: #d72152
@@ -43,9 +68,9 @@
 		@include media-breakpoint-down(sm)
 			padding-bottom: 30px
 		&-slide
-			height: 349px
+			height: 300px
 			@include media-breakpoint-down(sm)
-				height: 249px
+				height: 250px
 		.swiper-pagination
 			position: absolute
 			left: 124px
@@ -123,7 +148,6 @@
 						width: 100%
 						height: 100%
 						mix-blend-mode: multiply
-						background: linear-gradient(180deg, #E02655 0%, #4BA1D9 100%)
 						background-repeat: no-repeat
 						transition: .7s ease-in-out
 						@include media-breakpoint-down(lg)
@@ -156,12 +180,11 @@
 	&__country
 		font-family: $it-font
 		font-style: italic
-		font-weight: 800
+		font-weight: 400
 		font-size: 20px
-		line-height: 24px
 		text-transform: uppercase
 		color: #323232
-		margin-bottom: 24px
+		margin-bottom: 14px
 		transition: .7s ease-in-out
 		background-size: 200% 100%
 		background-image: linear-gradient(268.42deg, #FF2F6E -8.98%, #C51B47 57.94%, #323232 57.95%, #323232 100%)
@@ -170,34 +193,29 @@
 		@include media-breakpoint-down(lg)
 			background-position: -100% center
 			margin-bottom: 14px
-		@include media-breakpoint-down(xs)
-			font-size: 18px
-			line-height: 22px
+		@include media-breakpoint-down(md)
 			margin-bottom: 10px
+		@include media-breakpoint-down(sm)
+			font-size: 18px
 	&__loc
 		font-family: $it-font
 		font-style: italic
-		font-weight: 400
-		font-size: 50px
-		line-height: 60px
+		font-weight: 700
+		font-size: 30px
+		max-width: 360px
 		text-transform: uppercase
 		color: #323232
 		margin-bottom: auto
 		transition: .7s ease-in-out
-		// @include media-breakpoint-down(xl)
-		font-size: 45px
-		line-height: 54px
 		@include media-breakpoint-down(lg)
-			margin-bottom: 40px
+			margin-bottom: 19px
 			font-size: 40px
-			line-height: 48px
 			color: #e7e7e7
 		@include media-breakpoint-down(sm)
-			font-size: 30px
-			line-height: 36px
+			font-size: 25px
 	&__btn
 		@include media-breakpoint-down(lg)
-			background-position: -.1%
+			background-position: 0%
 			color: #e7e7e7
 	&__show-more
 		margin: 0 auto

@@ -70,6 +70,7 @@ $(function() {
 	const tournamentSwiper = new Swiper('.tournament__swiper', {
 		autoHeight: false,
 		spaceBetween: 64,
+		effect: 'fade',
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -79,6 +80,7 @@ $(function() {
 	const clubsSwiper = new Swiper('.clubs__swiper', {
 		autoHeight: false,
 		spaceBetween: 90,
+		effect: 'fade',
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -88,6 +90,7 @@ $(function() {
 	const clubSwiper = new Swiper('.club__hero-swiper', {
 		autoHeight: false,
 		spaceBetween: 90,
+		effect: 'fade',
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -175,6 +178,7 @@ $(function() {
 				const clubsSwiper = new Swiper('.clubs__swiper', {
 					autoHeight: false,
 					spaceBetween: 54,
+					effect: 'fade',
 					pagination: {
 						el: '.swiper-pagination',
 						clickable: true,

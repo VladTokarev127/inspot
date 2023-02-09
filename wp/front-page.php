@@ -49,14 +49,11 @@
 
 			<div class="hero__info-img">
 				<picture>
-					<source media="(min-width:565px)" srcset="/wp-content/themes/inspot/img/info.png">
+					<source media="(min-width:565px)" srcset="<?php echo esc_url(get_field('info_img')['url']); ?>">
 					<img src="<?php echo esc_url(get_field('logo_mobile', 'options')['url']); ?>" alt="<?php echo get_field('logo_mobile', 'options')['alt']; ?>">
 				</picture>
 			</div>
-			<div class="hero__info-content">
-				<p>Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan  Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan  Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan</p>
-				<p>Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan  Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan Nunc lectus fringilla tempus, auctor accumsan  </p>
-			</div>
+			<div class="hero__info-content"><?php the_field('info_text'); ?></div>
 
 		</div>
 	</section>
