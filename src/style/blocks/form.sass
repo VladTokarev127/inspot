@@ -6,45 +6,40 @@
 	background-position: center
 	background-size: cover
 	&__content
-		align-self: flex-start
+		align-self: stretch
 		flex: 1
 		margin-right: 1%
 		font-family: $it-font
 		font-style: italic
 		font-weight: 800
-		font-size: 80px
-		line-height: 97px
+		font-size: 35px
 		text-transform: uppercase
-		// @include media-breakpoint-down(xxl)
-		margin-right: 0
-		flex: 1 100%
-		display: flex
-		align-items: center
-		margin-bottom: 60px
-		font-size: 60px
-		line-height: 73px
+		background-image: url(../img/form-bg.png)
+		background-repeat: no-repeat
+		background-position: left bottom
 		@include media-breakpoint-down(lg)
-			font-size: 50px
-			line-height: 60px
+			background-image: url('')
+			margin-right: 0
+			flex: 1 100%
+			display: flex
+			align-items: center
+			margin-bottom: 40px
+			font-size: 40px
 		@include media-breakpoint-down(md)
 			flex-wrap: wrap
-			font-size: 40px
-			line-height: 48px
+			font-size: 30px
 		@include media-breakpoint-down(xs)
 			font-size: 30px
 			line-height: 36px
 			margin-bottom: 40px
 		p
 			margin: 0
-			margin-bottom: 33px
-			// @include media-breakpoint-down(xxl)
-			margin-bottom: 0
-			margin-right: auto
-			@include media-breakpoint-down(md)
+			margin-bottom: 15px
+			@include media-breakpoint-down(lg)
+				margin-right: auto
+			@include media-breakpoint-down(sm)
 				flex: 1 100%
-				margin-bottom: 15px
 				margin-right: 0
-			@include media-breakpoint-down(xs)
 				margin-bottom: 10px
 			&:last-child
 				margin-bottom: 0
@@ -61,21 +56,16 @@
 			input,
 			textarea
 				width: 100%
-				margin-bottom: 25px
-				padding: 25px 42px
+				margin-bottom: 20px
+				padding: 21px 42px
 				font-family: $it-font
 				font-style: normal
 				font-weight: 400
-				font-size: 20px
-				line-height: 24px
+				font-size: 18px
 				text-transform: uppercase
 				background: transparent
 				border: 1px solid #545454
 				color: #e7e7e7
-				@include media-breakpoint-down(xs)
-					padding: 21px 30px
-					font-size: 18px
-					line-height: 22px
 			textarea
 				height: 135px
 				margin-bottom: 20px
@@ -83,26 +73,22 @@
 			&_pol
 				position: relative
 				&::after
-					transform: rotate(47deg)
+					transform: rotate(40deg)
 					position: absolute
-					right: -11px
-					bottom: -5px
 					content: ''
 					border: 1px solid transparent
 					border-left: 1px solid #545454
 					width: 48px
-					height: 79px
 					background: #000
-					@include media-breakpoint-down(xs)
-						bottom: 1px
-						height: 39px
-						right: -25px
+					bottom: 1px
+					height: 39px
+					right: -30px
 		&-wrapper
 			flex: 0 49%
-			// @include media-breakpoint-down(xxl)
-			flex: 1 100%
+			@include media-breakpoint-down(lg)
+				flex: 1 100%
 	&__btns
-		margin-top: 40px
+		margin-top: 20px
 		display: grid
 		grid-template-columns: repeat(2,auto)
 		grid-gap: auto
