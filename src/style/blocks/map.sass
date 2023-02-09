@@ -161,7 +161,10 @@
 			// display: none
 		.leaflet-interactive
 			transition: .3s ease-in-out
+			opacity: 0
 			&:hover
+				opacity: 1
+				fill: rgba(#090909, .2)
 				z-index: 999 !important
 				stroke: #e02656
 		.marker-cluster

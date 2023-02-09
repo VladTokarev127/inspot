@@ -88,7 +88,7 @@
 					<div class="franchise__hero-content">
 						<h1 class="franchise__hero-title">Открой свой <span>InSpot</span> за 45 дней и зарабатывай чистыми от 350 000 рублей уже со второго месяца</h1>
 						<h2 class="franchise__hero-subtitle">Скачайте бизнес-план и убедитесь сами</h2>
-						<a href="#" class="franchise__hero-btn btn btn_red" download>Скачать бизнес-план</a>
+						<a href="#" class="franchise__hero-btn btn btn_red popup-link" data-popup="popup-download">Скачать бизнес-план</a>
 					</div>
 					<div class="franchise__advantages">
 						<div class="franchise__advantages-bg">
@@ -150,7 +150,7 @@
 					<div class="results__bottom">
 						<div class="results__bottom-title">Ответьте на 5 вопросов и рассчитайте финансовые показатели для своего клуба *</div>
 						<div class="results__bottom-text">* на основе клубов, открытых по нашей франшизе</div>
-						<a href="#" class="btn btn_red results__bottom-btn">Рассчитать</a>
+						<a href="#" class="btn btn_red results__bottom-btn popup-link" data-popup="popup-quiz">Рассчитать</a>
 					</div>
 
 					<div class="results__circle"></div>
@@ -591,6 +591,183 @@
 			</div>
 		</footer>
 
+	</div>
+
+	<div class="popup-wrapper" id="popup-download">
+		<div class="overlay"></div>
+		<div class="popup">
+			<div class="popup__logo">
+				<picture>
+					<source media="(min-width:565px)" srcset="img/popup-logo.png">
+					<img src="img/popup-logo-xs.png" alt="Inspot">
+				</picture>
+			</div>
+			<div class="popup__title">Куда вам отправить франчайзи-кит?</div>
+			<form action="" class="popup__form">
+				<div class="form__block-input popup__form-input">
+					<input type="text" name="name" placeholder="Имя">
+				</div>
+				<div class="form__block-input popup__form-input">
+					<input type="tel" name="tel" placeholder="Телефон" required>
+				</div>
+				<div class="popup__form-checks">
+					<div class="popup__form-check">
+						<input type="radio" name="type" value="whatsapp" id="radio-1-1" checked>
+						<label for="radio-1-1">whatsapp</label>
+					</div>
+					<div class="popup__form-check">
+						<input type="radio" name="type" value="telegram" id="radio-1-2" checked>
+						<label for="radio-1-2">telegram</label>
+					</div>
+				</div>
+				<button type="submit" class="popup__form-btn btn btn_red">Получить</button>
+				<div class="popup__form-bottom">Нажимая на кнопку, вы соглашаетесь с <a href="/privacy-policy">политикой конфиденциальности</a>.</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="popup-quiz">
+		<div class="overlay"></div>
+		<div class="popup">
+			<div class="popup__logo">
+				<picture>
+					<source media="(min-width:565px)" srcset="img/popup-logo.png">
+					<img src="img/popup-logo-xs.png" alt="Inspot">
+				</picture>
+			</div>
+			<form action="" class="popup__form">
+				<div class="popup__quiz">
+					<div class="popup__step">
+						<div class="popup__row">
+							<div class="popup__quest">кОЛИЧЕСТВО КОМПЬЮТЕРОВ:</div>
+							<div class="popup__answer">
+								<div class="popup__form-check">
+									<input type="radio" name="comps" value="30" id="radio-2-1" checked>
+									<label for="radio-2-1">30</label>
+								</div>
+								<div class="popup__form-check">
+									<input type="radio" name="comps" value="40" id="radio-2-2">
+									<label for="radio-2-2">40</label>
+								</div>
+								<div class="popup__form-check">
+									<input type="radio" name="comps" value="50" id="radio-2-3">
+									<label for="radio-2-3">50</label>
+								</div>
+								<div class="popup__form-check">
+									<input type="radio" name="comps" value="60" id="radio-2-4">
+									<label for="radio-2-4">60</label>
+								</div>
+							</div>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_prev btn btn_grey" disabled>НАЗАД</button>
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_next btn btn_red">ДАЛЕЕ</button>
+						</div>
+					</div>
+					<div class="popup__step">
+						<div class="popup__row">
+							<div class="popup__quest">Проходимость локации:</div>
+							<div class="popup__answer">
+								<div class="popup__form-check">
+									<input type="radio" name="steps" value="Высокая" id="radio-3-1" checked>
+									<label for="radio-3-1">Высокая</label>
+								</div>
+								<div class="popup__form-check">
+									<input type="radio" name="steps" value="Средняя" id="radio-3-2">
+									<label for="radio-3-2">Средняя</label>
+								</div>
+								<div class="popup__form-check">
+									<input type="radio" name="steps" value="Низкая" id="radio-3-3">
+									<label for="radio-3-3">Низкая</label>
+								</div>
+							</div>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_prev btn btn_grey">НАЗАД</button>
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_next btn btn_red">ДАЛЕЕ</button>
+						</div>
+					</div>
+					<div class="popup__step">
+						<div class="popup__step-wrap">
+							<div class="popup__quest">Финансовые показатели за какой месяц рассчитать для вас?</div>
+							<div class="popup__answer">
+								<input type="hidden" name="fin" id="amount" readonly>
+								<div class="popup__slider">
+									<div class="popup__slider-inner" id="slider">
+										<div id="custom-handle" class="ui-slider-handle"><span></span></div>
+									</div>
+									<p>3</p>
+									<p>36</p>
+								</div>
+							</div>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_prev btn btn_grey">НАЗАД</button>
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_next btn btn_red">ДАЛЕЕ</button>
+						</div>
+					</div>
+					<div class="popup__step">
+						<div class="popup__row">
+							<div class="popup__quest">Будет бар?</div>
+							<div class="popup__answer">
+								<div class="popup__form-check">
+									<input type="radio" name="bar" value="Да" id="radio-4-1" checked>
+									<label for="radio-4-1">Да</label>
+								</div>
+								<div class="popup__form-check">
+									<input type="radio" name="bar" value="Нет" id="radio-4-2">
+									<label for="radio-4-2">Нет</label>
+								</div>
+							</div>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_prev btn btn_grey">НАЗАД</button>
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_next btn btn_red">ДАЛЕЕ</button>
+						</div>
+					</div>
+					<div class="popup__step">
+						<div class="popup__row">
+							<div class="popup__quest">Куда вам направить результаты?</div>
+							<div class="popup__answer">
+								<div class="popup__form-check">
+									<input type="radio" name="res" value="WhatsApp" id="radio-5-1" checked>
+									<label for="radio-5-1">WhatsApp</label>
+								</div>
+								<div class="popup__form-check">
+									<input type="radio" name="res" value="Telegram" id="radio-5-2">
+									<label for="radio-5-2">Telegram</label>
+								</div>
+								<div class="popup__form-check">
+									<input type="radio" name="res" value="Позвоните мне" id="radio-5-3">
+									<label for="radio-5-3">Позвоните мне</label>
+								</div>
+								<div class="popup__form-check">
+									<input type="radio" name="res" value="SMS" id="radio-5-4">
+									<label for="radio-5-4">SMS</label>
+								</div>
+							</div>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_prev btn btn_grey">НАЗАД</button>
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_next btn btn_red">ДАЛЕЕ</button>
+						</div>
+					</div>
+					<div class="popup__step">
+						<div class="form__block-input popup__form-input">
+							<input type="text" name="name" placeholder="Имя">
+						</div>
+						<div class="form__block-input popup__form-input">
+							<input type="tel" name="tel" placeholder="Телефон" required>
+						</div>
+						<div class="popup__btns">
+							<button type="button" class="popup__quiz-btn popup__quiz-btn_prev btn btn_grey">НАЗАД</button>
+							<button type="submit" class="popup__quiz-btn btn btn_red">Отправить</button>
+						</div>
+						<div class="popup__form-bottom">Нажимая на кнопку, вы соглашаетесь с <a href="/privacy-policy">политикой конфиденциальности</a>.</div>
+					</div>
+				</div>
+			</form>
+		</div>
 	</div>
 
 	<link rel="stylesheet" href="css/main.min.css">

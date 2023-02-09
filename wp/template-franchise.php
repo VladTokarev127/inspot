@@ -10,7 +10,7 @@ get_header();
 			<div class="franchise__hero-content">
 				<h1 class="franchise__hero-title"><?php the_field('title_1'); ?></h1>
 				<h2 class="franchise__hero-subtitle"><?php the_field('subtitle_1'); ?></h2>
-				<a href="<?php the_field('file_1'); ?>" class="franchise__hero-btn btn btn_red" download>Скачать бизнес-план</a>
+				<a href="<?php the_field('file_1'); ?>" class="franchise__hero-btn btn btn_red popup-link" data-popup="popup-download">Скачать бизнес-план</a>
 			</div>
 			<div class="franchise__advantages">
 				<div class="franchise__advantages-bg">
@@ -59,7 +59,7 @@ get_header();
 			<div class="results__bottom">
 				<div class="results__bottom-title"><?php the_field('subtitle_2'); ?></div>
 				<div class="results__bottom-text"><?php the_field('text_1'); ?></div>
-				<a href="<?php the_field('link_1'); ?>" class="btn btn_red results__bottom-btn">Рассчитать</a>
+				<a href="<?php the_field('link_1'); ?>" class="btn btn_red results__bottom-btn popup-link" data-popup="popup-quiz">Рассчитать</a>
 			</div>
 
 			<div class="results__circle"></div>

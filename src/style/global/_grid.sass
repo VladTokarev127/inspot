@@ -234,6 +234,8 @@ h1,h2,h3,h4,h5,h6
 	-webkit-mask-size: 100% 100%
 	background-position: -100% center
 	transition: .5s ease-in-out
+	&[disabled]
+		cursor: default
 	@include media-breakpoint-down(xs)
 		max-width: 100%
 		width: 100%
@@ -241,14 +243,14 @@ h1,h2,h3,h4,h5,h6
 	&_white
 		background-size: 200%
 		background-image: linear-gradient(to left, #E7E7E7 0, #E7E7E7 25%, #E7E7E7 50%, #FF2F6E 50.01%, #C51B47 100%)
-		&:hover
+		&:hover:not([disabled])
 			background-position: 0% center
 			color: #e7e7e7
 	&_grey
 		color: #e7e7e7
 		background-size: 200%
 		background-image: linear-gradient(to left, #323232 0, #323232 25%, #323232 50%, #FF2F6E 50.01%, #C51B47 100%)
-		&:hover
+		&:hover:not([disabled])
 			background-position: 0% center
 			color: #e7e7e7
 	&_red
@@ -256,7 +258,7 @@ h1,h2,h3,h4,h5,h6
 		background-position: 0% center
 		background-size: 200%
 		background-image: linear-gradient(to left, #E7E7E7 0, #E7E7E7 25%, #E7E7E7 50%, #FF2F6E 50.01%, #C51B47 100%)
-		&:hover
+		&:hover:not([disabled])
 			background-position: -99.9% center
 			color: #000
 
@@ -356,3 +358,282 @@ form
 			transition-delay: 1.5s
 			@include media-breakpoint-down(lg)
 				max-width: 160px
+
+.popup
+	max-width: 760px
+	width: 100%
+	margin: 0 15px
+	position: relative
+	opacity: 0
+	transform: translateY(30%) scale(.9)
+	background-size: 100% 100%
+	transition: .3s
+	background-image: url(../img/popup-bg.png)
+	background-size: 100% 100%
+	background-position: center
+	padding: 0
+	margin-top: auto
+	margin-bottom: auto
+	padding: 100px 60px 20px
+	z-index: 9999
+	@include media-breakpoint-down(lg)
+		max-width: 620px
+		background-image: url(../img/popup-bg-md.png)
+		padding: 93px 60px 30px
+	@include media-breakpoint-down(sm)
+		max-width: 460px
+		padding: 80px 50px 35px
+		background-image: url(../img/popup-bg-sm.png)
+	@include media-breakpoint-down(xs)
+		max-width: 300px
+		padding: 40px 20px 35px
+		background-image: url(../img/popup-bg-xs.png)
+	&__quiz
+		min-height: 338px
+		.popup__form-check
+			margin-right: 0
+			margin-bottom: 15px
+		&-btn
+			max-width: 260px
+			-webkit-mask-image: url(../img/btn-mask-sm.svg)
+			@include media-breakpoint-down(lg)
+				max-width: 120px
+				font-size: 16px
+				-webkit-mask-image: url(../img/popup-btn-mask.svg)
+			&:first-child
+				color: rgba(#fff, .2)
+	&__step
+		display: flex
+		flex-direction: column
+		min-height: 271px
+		p
+			margin: 0
+		br
+			display: none
+		@include media-breakpoint-down(lg)
+			min-height: 319px
+		.popup__form-bottom
+			@include media-breakpoint-down(lg)
+				margin-top: 0
+		&:last-child
+			.popup__btns
+				margin-top: 42px
+				@include media-breakpoint-down(lg)
+					margin-top: 53px
+	&__row
+		display: flex
+		flex-wrap: wrap
+	&__quest
+		flex: 0 275px
+		margin-right: 20px
+		font-size: 18px
+		font-weight: 700
+		text-transform: uppercase
+		font-style: italic
+		color: #e7e7e7
+		@include media-breakpoint-down(lg)
+			flex: 1 100%
+			margin-right: 0
+			margin-bottom: 24px
+	&__btns
+		margin-top: auto
+		display: flex
+		justify-content: space-between
+		@include media-breakpoint-down(lg)
+			order: 1
+	&__slider
+		margin-top: 60px
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		.ui-slider-horizontal .ui-slider-range-min
+			background-color: #e02656
+		&-inner.ui-widget.ui-widget-content
+			flex: 1 100%
+			margin-bottom: 10px
+			border: 0
+			background: #545454
+			height: 1px
+			.ui-slider-handle
+				top: calc(50% - 8px)
+				display: flex
+				align-items: center
+				justify-content: center
+				padding-bottom: 27px
+				transform: translate(0, -50%)
+				width: 16px
+				height: auto
+				border-radius: 0
+				background: 0
+				border: 0
+				background-image: url(../img/check-active.svg)
+				background-repeat: no-repeat
+				background-position: center 24px
+				cursor: grab
+				font-family: inherit
+				font-size: 18px
+				text-align: center
+				text-transform: uppercase
+				color: #e7e7e7
+		p
+			margin: 0
+			font-size: 18px
+			color: #545454
+	&__form
+		&-checks
+			display: flex
+			justify-content: center
+			flex-wrap: wrap
+			margin-bottom: 40px
+		&-check
+			position: relative
+			margin-right: 60px
+			@include media-breakpoint-down(xs)
+				flex: 1 100%
+				margin-bottom: 15px
+				margin-right: 0
+			&:last-child
+				margin-right: 0
+				margin-bottom: 0
+			input
+				position: absolute
+				left: 0
+				top: 0
+				opacity: 0
+				&:checked ~ label::before
+					opacity: 1
+					visibility: visible
+			label
+				position: relative
+				padding-left: 45px
+				font-size: 18px
+				text-transform: uppercase
+				color: #e7e7e7
+				font-family: inherit
+				cursor: pointer
+				&::after
+					position: absolute
+					left: 0
+					top: -4px
+					content: ''
+					width: 30px
+					height: 30px
+					background-image: url(../img/check.svg)
+					background-repeat: no-repeat
+					background-position: center
+				&::before
+					position: absolute
+					left: 0
+					top: -4px
+					content: ''
+					width: 30px
+					height: 30px
+					background-image: url(../img/check-active.svg)
+					background-repeat: no-repeat
+					background-position: center
+					opacity: 0
+					visibility: hidden
+					transition: .3s ease-in-out
+		&-bottom
+			margin-top: 40px
+			font-size: 14px
+			color: #e7e7e7
+			text-align: center
+			@include media-breakpoint-down(lg)
+				max-width: 250px
+				margin: 0 auto
+				margin-top: 35px
+			@include media-breakpoint-down(lg)
+				font-size: 12px
+				max-width: 210px
+			a
+				color: #e2255a
+		&-btn
+			margin: 0 auto
+			margin-bottom: 40px
+			@include media-breakpoint-down(lg)
+				margin-bottom: 35px
+	&__title
+		margin-bottom: 40px
+		font-style: italic
+		font-weight: 800
+		font-size: 50px
+		text-align: center
+		text-transform: uppercase
+		color: #323232
+		@include media-breakpoint-down(lg)
+			font-size: 40px
+		@include media-breakpoint-down(md)
+			font-size: 35px
+		@include media-breakpoint-down(sm)
+			font-size: 30px
+			margin-bottom: 30px
+		@include media-breakpoint-down(xs)
+			max-width: 100%
+			font-size: 25px
+			margin-bottom: 20px
+	&__logo
+		display: block
+		text-align: center
+		font-size: 0
+		margin-bottom: 80px
+		@include media-breakpoint-down(lg)
+			margin-bottom: 40px
+		img
+			max-width: 100%
+			height: auto
+	&-wrapper
+		position: fixed
+		z-index: 99999
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		display: flex
+		flex-direction: column
+		align-items: center
+		overflow: auto
+		overflow-x: hidden
+		&.active
+			.popup
+				opacity: 1
+				transform: translateY(0%) scale(1)
+			.overlay
+				opacity: 1
+		&.hide
+			.popup
+				opacity: 0
+				transform: translateY(30%) scale(.9)
+			.overlay
+				opacity: 0
+		.overlay
+			position: fixed
+			z-index: -1
+			left: 0
+			top: 0
+			width: 100vw
+			height: 100vh
+			background-color: rgba(#000, .8)
+			transition: .3s
+			opacity: 0
+
+/* overlay animate out */
+.mfp-fade.mfp-bg.mfp-removing
+	opacity: 0
+	transform: translateY(30%) scale(.9)
+
+/* content at start */
+.mfp-fade.mfp-wrap .mfp-content
+	opacity: 0
+	transform: translateY(30%) scale(.9)
+	transition: all 0.25s
+
+/* content animate it */
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content
+	opacity: 1
+	transform: translateY(0%) scale(1)
+
+/* content animate out */
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content
+	opacity: 0
+	transform: translateY(30%) scale(.9)

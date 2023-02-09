@@ -80,6 +80,33 @@
 
 	</div>
 
+	<div class="popup-wrapper" id="popup-download">
+		<div class="overlay"></div>
+		<div class="popup">
+			<div class="popup__logo">
+				<picture>
+					<source media="(min-width:565px)" srcset="/wp-content/themes/inspot/img/popup-logo.png">
+					<img src="/wp-content/themes/inspot/img/popup-logo-xs.png" alt="Inspot">
+				</picture>
+			</div>
+			<div class="popup__title">Куда вам отправить франчайзи-кит?</div>
+			<?php echo do_shortcode('[contact-form-7 id="306" title="Форма попап" html_class="popup__form"]'); ?>
+		</div>
+	</div>
+
+	<div class="popup-wrapper" id="popup-quiz">
+		<div class="overlay"></div>
+		<div class="popup">
+			<div class="popup__logo">
+				<picture>
+					<source media="(min-width:565px)" srcset="/wp-content/themes/inspot/img/popup-logo.png">
+					<img src="/wp-content/themes/inspot/img/popup-logo-xs.png" alt="Inspot">
+				</picture>
+			</div>
+			<?php echo do_shortcode('[contact-form-7 id="309" title="Форма квиз" html_class="popup__form"]'); ?>
+		</div>
+	</div>
+
 	<?php wp_footer(); ?>
 	<?php if(is_front_page()): ?>
 		<script>

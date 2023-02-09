@@ -73,6 +73,20 @@
 				}
 
 				greece.addLayer(mcg);
+
+				$.getJSON('/wp-content/themes/inspot/custom.geo.json', function (geojson) { // load file
+					L.geoJson(geojson, { // initialize layer with data
+						style: function (feature) { // Style option
+							return {
+								'weight': 2,
+								'color': '#262626',
+								fill: true,
+								'fillColor': '#090909',
+								'fillOpacity': .8,
+							}
+						}
+					}).addTo(greece); // Add layer to map
+				});
 			});
 		</script>
 
