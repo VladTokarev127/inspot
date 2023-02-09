@@ -24,14 +24,12 @@
 			position: relative
 			padding-left: 50px
 			margin-bottom: 15px
-			font-size: 20px
+			font-size: 18px
 			color: #e7e7e7
-			@include media-breakpoint-down(md)
-				font-size: 18px
 			&::after
 				position: absolute
 				left: 0
-				top: 5px
+				top: 4px
 				content: ''
 				width: 25px
 				height: 15px
@@ -99,7 +97,7 @@
 	&__link
 		display: flex
 		align-items: center
-		font-size: 30px
+		font-size: 25px
 		font-weight: 800
 		font-style: italic
 		text-transform: uppercase
@@ -110,7 +108,7 @@
 		transition: .3s ease-in-out
 		@include media-breakpoint-down(md)
 			font-size: 30px
-		@include media-breakpoint-down(sm)
+		@include media-breakpoint-down(xs)
 			font-size: 25px
 		&:hover,
 		&:focus-visible

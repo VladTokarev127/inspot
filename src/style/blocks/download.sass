@@ -46,12 +46,15 @@
 		@include media-breakpoint-down(xs)
 			-webkit-mask-image: url(../img/download-mask-xs.png)
 	&__title
-		font-size: 35px
+		font-size: 40px
+		max-width: 849px
 		font-weight: 800
 		font-style: italic
 		text-transform: uppercase
 		color: #fff
 		margin-bottom: 30px
+		@include media-breakpoint-down(lg)
+			font-size: 35px
 		@include media-breakpoint-down(md)
 			font-size: 30px
 			br
@@ -61,3 +64,7 @@
 			margin-bottom: 25px
 	&__btn
 		color: #000
+		&:hover,
+		&:focus-visible
+			background-position: -100%
+			color: #000

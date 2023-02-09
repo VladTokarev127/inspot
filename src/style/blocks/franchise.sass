@@ -9,40 +9,45 @@
 		&-content
 			flex: 1 100%
 			margin-bottom: 100px
+			display: flex
+			flex-wrap: wrap
 			@include media-breakpoint-down(lg)
 				margin-bottom: 60px
 		&-title
 			font-style: italic
 			font-weight: 800
-			font-size: 45px
-			line-height: 60px
+			font-size: 40px
 			text-transform: uppercase
 			color: #e7e7e7
 			margin-bottom: 40px
-			@include media-breakpoint-down(lg)
+			flex: 1 100%
+			span
+				display: inline-block
+				background-image: linear-gradient(to right, #E12555 0%, #4BA1D9 100%)
+				-webkit-background-clip: text
+				-webkit-text-fill-color: transparent
+			@include media-breakpoint-down(md)
 				font-size: 35px
-				line-height: 42px
 			@include media-breakpoint-down(sm)
 				font-size: 30px
-				line-height: 40px
 			@include media-breakpoint-down(xs)
-				line-height: 36px
+				font-size: 22px
 		&-subtitle
 			font-style: italic
-			font-weight: 800
-			font-size: 45px
-			line-height: 60px
+			font-size: 30px
 			text-transform: uppercase
-			color: #e02656
-			margin-bottom: 30px
-			@include media-breakpoint-down(lg)
-				font-size: 35px
-				line-height: 42px
+			color: #E7E7E7
+			margin-right: 12px
+			max-width: 392px
+			@include media-breakpoint-down(md)
+				font-size: 25px
+				flex: 1 100%
+				margin-right: 0
+				margin-bottom: 25px
 			@include media-breakpoint-down(sm)
-				font-size: 30px
-				line-height: 40px
+				max-width: 320px
 			@include media-breakpoint-down(xs)
-				line-height: 36px
+				font-size: 22px
 	&__advantages
 		flex: 1 100%
 		position: relative
@@ -115,18 +120,13 @@
 		&-item
 			position: relative
 			padding-left: 45px
-			font-weight: 700
-			font-size: 20px
-			line-height: 24px
+			font-size: 18px
 			text-transform: uppercase
 			color: #E7E7E7
-			@include media-breakpoint-down(sm)
-				font-size: 18px
-				line-height: 22px
 			&::after
 				position: absolute
 				left: 0
-				top: 5px
+				top: 4px
 				content: ''
 				width: 25px
 				height: 15px
@@ -134,5 +134,5 @@
 				background-repeat: no-repeat
 				background-position: center
 			b,strong
-				font-weight: 900
+				font-weight: 800
 				color: #e02656

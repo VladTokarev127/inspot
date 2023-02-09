@@ -9,9 +9,19 @@ get_header();
 
 			<div class="contacts__top">
 				<div class="contacts__info">
-					<h1 class="contacts__title"><?php the_field('title'); ?></h1>
-					<div class="contacts__text contacts__text_desc"><?php the_field('text'); ?></div>
-					<div class="contacts__text contacts__text_mob"><?php the_field('text_mobile'); ?></div>
+					<div class="contacts__info-imgs">
+						<img class="contacts__info-img contacts__info-img_desc" src="/wp-content/themes/inspot/img/contacts-info-img.png" alt="">
+						<img class="contacts__info-img contacts__info-img_md" src="/wp-content/themes/inspot/img/contacts-info-img-md.png" alt="">
+						<img class="contacts__info-img contacts__info-img_xs" src="/wp-content/themes/inspot/img/contacts-info-img-xs.png" alt="">
+					</div>
+					<div class="contacts__text contacts__text_desc">
+						<h1 class="contacts__title"><?php the_field('title'); ?></h1>
+						<?php the_field('text'); ?>
+					</div>
+					<div class="contacts__text contacts__text_mob">
+						<h1 class="contacts__title"><?php the_field('title'); ?></h1>
+						<?php the_field('text_mobile'); ?>
+					</div>
 				</div>
 				<div class="contacts__socials contacts__socials_desc">
 					<?php if(get_field('facebook')): ?>
