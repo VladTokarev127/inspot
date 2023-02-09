@@ -217,6 +217,29 @@
 		animation-iteration-count: infinite
 		animation-play-state: running
 		animation-fill-mode: both
+	&__info
+		margin-bottom: 194px
+		@include media-breakpoint-down(lg)
+			margin-bottom: 140px
+		&-img
+			width: 100%
+			text-align: center
+			margin-bottom: 80px
+			font-size: 0
+			img
+				max-width: 100%
+				height: auto
+		&-content
+			font-style: italic
+			font-weight: 400
+			font-size: 18px
+			text-align: center
+			color: #e7e7e7
+			p
+				margin: 0
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 0
 	&__clubs
 		&-list
 			width: 100%
@@ -225,6 +248,26 @@
 			align-items: center
 			margin-bottom: 20px
 			text-decoration: none
+			&:nth-child(1)
+				.hero__clubs-mask
+					&:last-child
+						&::after
+							background: #D33060
+			&:nth-child(2)
+				.hero__clubs-mask
+					&:last-child
+						&::after
+							background: #A95385
+			&:nth-child(3)
+				.hero__clubs-mask
+					&:last-child
+						&::after
+							background: #7E76AB
+			&:nth-child(4)
+				.hero__clubs-mask
+					&:last-child
+						&::after
+							background: #5598CF
 			@include media-breakpoint-down(md)
 				flex-wrap: wrap
 				margin-bottom: 60px
@@ -269,8 +312,8 @@
 			font-size: 130px
 			line-height: 157px
 			text-transform: uppercase
-			color: #000
-			text-shadow: 0px 0px 1px #545454
+			color: #171717
+			text-shadow: 0px 0px 1px #171717
 			transition: .7s ease-in-out
 			// @include media-breakpoint-down(xl)
 			flex: 1 100%
@@ -334,7 +377,6 @@
 					width: 100%
 					height: 100%
 					mix-blend-mode: multiply
-					background: linear-gradient(180deg, #E02655 0%, #4BA1D9 100%)
 					background-repeat: no-repeat
 					transition: .7s ease-in-out
 		&-bg
@@ -381,8 +423,20 @@
 				transition: .7s ease-in-out
 
 	&__mobile
-		display: none
 		position: relative
+		padding: 0 50px
+		margin-bottom: 150px
+		@include media-breakpoint-down(lg)
+			margin-left: auto
+			margin-right: auto
+			padding: 0 15px
+			max-width: 970px
+		@include media-breakpoint-down(md)
+			max-width: 650px
+		@include media-breakpoint-down(sm)
+			max-width: 490px
+		@include media-breakpoint-down(xs)
+			max-width: 330px
 		.hero__circle
 			width: 453px
 			height: 453px
@@ -391,12 +445,59 @@
 			filter: blur(125px)
 			left: 0
 			bottom: -36px
-		@include media-breakpoint-down(lg)
-			display: block
-			margin-bottom: 150px
 	&__swiper
 		margin: -90px
 		padding: 90px
+		&-play
+			position: absolute
+			right: 90px
+			top: -72px
+			width: 80px
+			height: 80px
+			fill: #fff
+			display: flex
+			align-items: center
+			justify-content: center
+			cursor: pointer
+			border-radius: 50%
+			transition: .3s ease-in-out
+			@include media-breakpoint-down(lg)
+				right: 50px
+				width: 70px
+				height: 70px
+			@include media-breakpoint-down(md)
+				top: -208px
+			@include media-breakpoint-down(xs)
+				top: -66px
+				right: 20px
+			&::before
+				position: absolute
+				left: 0
+				top: 0
+				content: ''
+				width: 100%
+				height: 100%
+				border-radius: 50%
+				border: 1px solid #fff
+				transition: .3s ease-in-out
+			&::after
+				position: absolute
+				left: 50%
+				top: 50%
+				transform: translate(-50%, -50%)
+				content: ''
+				width: calc(100% - 12px)
+				height: calc(100% - 12px)
+				border-radius: 50%
+				border: 1px dashed #fff
+				transition: .3s ease-in-out
+				@include media-breakpoint-down(lg)
+					width: calc(100% - 10px)
+					height: calc(100% - 10px)
+			&:hover
+				fill: #e02656
+				&::after, &::before
+					border-color: #e02656
 		&-slide
 			position: relative
 			z-index: 1
@@ -412,19 +513,29 @@
 				background: #000000
 				opacity: 0.8
 				filter: blur(125px)
+		.swiper-pagination-container
+			.container
+				width: 100%
+				position: absolute
+				z-index: 9
+				left: calc(50% - 90px)
+				transform: translate(-50%, 0)
+				bottom: 137px
+				@include media-breakpoint-down(lg)
+					padding-right: 40px
+				@include media-breakpoint-down(md)
+					left: 50%
+					padding-right: 15px
+					padding-left: 30px
+					bottom: 131px
 		.swiper-pagination
-			position: absolute
-			left: auto
-			bottom: auto
-			width: auto
-			right: 138px
-			bottom: 137px
 			display: flex
 			align-items: center
-			@include media-breakpoint-down(sm)
-				bottom: auto
-				right: 126px
-				top: 125px
+			width: 100%
+			justify-content: flex-end
+			position: static
+			@include media-breakpoint-down(md)
+				justify-content: flex-start
 		.swiper-pagination-bullet
 			margin: 0
 			margin-right: 10px
@@ -459,49 +570,48 @@
 			&:last-child
 				margin-right: 0
 		&-content
-			position: absolute
-			left: 56px
-			bottom: 46px
-			z-index: 9
-			max-width: 400px
-			@include media-breakpoint-down(sm)
-				left: 57px
-				bottom: 50px
-			@include media-breakpoint-down(xs)
-				left: 20px
-				bottom: 48px
-				max-width: calc(100% - 40px)
+			position: relative
+			display: flex
+			justify-content: center
+			.container
+				position: absolute
+				left: 50%
+				transform: translate(-50%, 0)
+				bottom: 46px
+				z-index: 9
+				width: 100%
+				@include media-breakpoint-down(md)
+					bottom: 96px
+			&-wrapper
+				max-width: 448px
+				@include media-breakpoint-down(xs)
+					max-width: 100%
 		&-title
 			margin-bottom: 6px
 			font-family: $it-font
 			font-style: italic
 			font-weight: 800
-			font-size: 35px
-			line-height: 42px
+			font-size: 40px
 			text-transform: uppercase
 			color: #E7E7E7
-			@include media-breakpoint-down(sm)
+			@include media-breakpoint-down(md)
 				font-size: 35px
-				line-height: 42px
+			@include media-breakpoint-down(sm)
+				font-size: 30px
 			@include media-breakpoint-down(xs)
 				font-size: 25px
-				line-height: 30px
 		&-desc
 			margin-bottom: 27px
 			font-family: $it-font
 			font-style: normal
 			font-weight: 400
 			font-size: 18px
-			line-height: 22px
 			color: #E7E7E7
-			@include media-breakpoint-down(sm)
-				font-size: 18px
-				line-height: 22px
 		&-img
 			position: relative
 			z-index: 1
 			height: 416px
-			@include media-breakpoint-down(sm)
+			@include media-breakpoint-down(md)
 				height: 566px
 			@include media-breakpoint-down(xs)
 				height: 510px
@@ -511,12 +621,32 @@
 				object-fit: cover
 		&-mask
 			display: block
-			clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 80.5%,88.3% 100%,0 100%,0 70%,0 26.7%)
-			filter: url(#round)
+			// clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 80.5%,88.3% 100%,0 100%,0 70%,0 26.7%)
+			// filter: url(#round)
 			overflow: hidden
 			height: 100%
+			-webkit-mask-image: url(../img/hero-slider-mask.png)
+			-webkit-mask-repeat: no-repeat
+			-webkit-mask-size: 100% 100%
+			@include media-breakpoint-down(x5l)
+				-webkit-mask-image: url(../img/hero-slider-mask-x5l.png)
+			@include media-breakpoint-down(xxxxl)
+				-webkit-mask-image: url(../img/hero-slider-mask-xxxxl.png)
+			@include media-breakpoint-down(xxxl)
+				-webkit-mask-image: url(../img/hero-slider-mask-xxxl.png)
+			@include media-breakpoint-down(xxl)
+				-webkit-mask-image: url(../img/hero-slider-mask-xxl.png)
+			@include media-breakpoint-down(xl)
+				-webkit-mask-image: url(../img/hero-slider-mask-xl.png)
+			@include media-breakpoint-down(lg)
+				-webkit-mask-image: url(../img/hero-slider-mask-lg.png)
+			@include media-breakpoint-down(md)
+				-webkit-mask-image: url(../img/hero-slider-mask-md.png)
 			@include media-breakpoint-down(sm)
-				clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 86.5%,90.3% 100%,0 100%,0 70%,0 11.7%)
+				-webkit-mask-image: url(../img/hero-slider-mask-sm.png)
+			@include media-breakpoint-down(xs)
+				-webkit-mask-image: url(../img/hero-slider-mask-xs.png)
+				// clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 86.5%,90.3% 100%,0 100%,0 70%,0 11.7%)
 		// &-bg
 		// 	position: absolute
 		// 	left: -20px
@@ -543,14 +673,28 @@
 			position: relative
 			padding-bottom: 33px
 			.hero__rgb
+				background: 0
 				bottom: 0
-				width: 86.9%
-				clip-path: polygon(0 0,100% 0,100% 30%,100% -9.5%,97.7% 100%,0 100%,0 70%,0 26.7%)
+				width: 92.9%
+				overflow: visible
+				@include media-breakpoint-down(lg)
+					width: 85.9%
+				@include media-breakpoint-down(md)
+					width: 88.9%
 				@include media-breakpoint-down(sm)
-					width: 88.1%
+					width: 84.9%
+				@include media-breakpoint-down(xs)
+					width: 74.9%
 			.hero__rgb span
 				opacity: 1
 				visibility: visible
+				clip-path: polygon(0 0,100% 0,100% 30%,100% -9.5%,98.7% 100%,0 100%,0 70%,0 26.7%)
+				@include media-breakpoint-down(md)
+					clip-path: polygon(0 0,100% 0,100% 30%,100% -9.5%,97.7% 100%,0 100%,0 70%,0 26.7%)
+				@include media-breakpoint-down(sm)
+					clip-path: polygon(0 0,100% 0,100% 30%,100% -9.5%,95.7% 100%,0 100%,0 70%,0 26.7%)
+				@include media-breakpoint-down(xs)
+					clip-path: polygon(0 0,100% 0,100% 30%,100% -9.5%,92.7% 100%,0 100%,0 70%,0 26.7%)
 			.hero__rgb::after
 				opacity: 1
 				visibility: visible

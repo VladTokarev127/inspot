@@ -3,19 +3,24 @@
 	position: relative
 	@include media-breakpoint-down(md)
 		padding-top: 150px
+	.container
+		padding: 0 50px
+		max-width: 100%
 	&__marquee
 		position: absolute
 		z-index: 5
 		overflow: hidden
 		left: 0
-		top: 260px
+		top: 217px
 		font-family: $j-font
-		height: 55px
+		height: 53px
 		width: 100%
 		display: flex
 		align-items: center
 		backdrop-filter: blur(10px)
 		border: 1px solid rgba(95, 95, 95, 0.7)
+		border-left: 0
+		border-right: 0
 		background: rgba(27, 27, 27, 0.2)
 		font-style: normal
 		font-weight: 700
@@ -23,14 +28,13 @@
 		line-height: 27px
 		text-transform: uppercase
 		color: #4A4A4A
-		transform: rotate(-3.47deg)
 		@include media-breakpoint-down(md)
-			top: 110px
+			top: 80px
 		@include media-breakpoint-down(sm)
 			height: 40px
 			font-size: 18px
-			ransform: rotate(-6.47deg)
 		&_1
+			display: none
 			transform: rotate(3.47deg)
 			@include media-breakpoint-down(sm)
 				transform: rotate(6.47deg)
@@ -67,14 +71,55 @@
 	&__container
 		height: 600px
 		width: 100%
-		background: #262626 !important
-		filter: url(#round)
-		clip-path: polygon(20.7% 0,100% 0,100% 30%,100% 72.5%,79.6% 100%,0 100%,0 70%,0 27.9%)
+		position: relative
+		-webkit-mask-image: url(../img/hero-slider-mask.png)
+		-webkit-mask-repeat: no-repeat
+		-webkit-mask-size: 100% 100%
+		@include media-breakpoint-down(x5l)
+			-webkit-mask-image: url(../img/hero-slider-mask-x5l.png)
+		@include media-breakpoint-down(xxxxl)
+			-webkit-mask-image: url(../img/hero-slider-mask-xxxxl.png)
+		@include media-breakpoint-down(xxxl)
+			-webkit-mask-image: url(../img/hero-slider-mask-xxxl.png)
+		@include media-breakpoint-down(xxl)
+			-webkit-mask-image: url(../img/hero-slider-mask-xxl.png)
+		@include media-breakpoint-down(xl)
+			-webkit-mask-image: url(../img/hero-slider-mask-xl.png)
 		@include media-breakpoint-down(lg)
-			clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 80.5%,88.3% 100%,0 100%,0 70%,0 26.7%)
+			-webkit-mask-image: url(../img/hero-slider-mask-lg.png)
+		@include media-breakpoint-down(md)
+			-webkit-mask-image: url(../img/hero-slider-mask-md.png)
 		@include media-breakpoint-down(sm)
-				height: 500px
-				clip-path: polygon(10.7% 0,100% 0,100% 30%,100% 86.5%,90.3% 100%,0 100%,0 70%,0 11.7%)
+			-webkit-mask-image: url(../img/hero-slider-mask-sm.png)
+		@include media-breakpoint-down(xs)
+			-webkit-mask-image: url(../img/hero-slider-mask-xs.png)
+		@include media-breakpoint-down(sm)
+			height: 500px
+		&-mask
+			width: 100%
+			-webkit-mask-image: url(../img/hero-slider-mask.png)
+			-webkit-mask-repeat: no-repeat
+			-webkit-mask-size: 100% 100%
+			padding: 2px
+			background-image: linear-gradient(to right, #E12555 0%, #4BA1D9 100%)
+			@include media-breakpoint-down(x5l)
+				-webkit-mask-image: url(../img/hero-slider-mask-x5l.png)
+			@include media-breakpoint-down(xxxxl)
+				-webkit-mask-image: url(../img/hero-slider-mask-xxxxl.png)
+			@include media-breakpoint-down(xxxl)
+				-webkit-mask-image: url(../img/hero-slider-mask-xxxl.png)
+			@include media-breakpoint-down(xxl)
+				-webkit-mask-image: url(../img/hero-slider-mask-xxl.png)
+			@include media-breakpoint-down(xl)
+				-webkit-mask-image: url(../img/hero-slider-mask-xl.png)
+			@include media-breakpoint-down(lg)
+				-webkit-mask-image: url(../img/hero-slider-mask-lg.png)
+			@include media-breakpoint-down(md)
+				-webkit-mask-image: url(../img/hero-slider-mask-md.png)
+			@include media-breakpoint-down(sm)
+				-webkit-mask-image: url(../img/hero-slider-mask-sm.png)
+			@include media-breakpoint-down(xs)
+				-webkit-mask-image: url(../img/hero-slider-mask-xs.png)
 		.leaflet-popup
 			width: 300px !important
 			max-width: calc(100vw - 40px) !important
@@ -89,6 +134,7 @@
 			background-repeat: no-repeat
 			background-size: 100% 100%
 			border-radius: 0
+			box-shadow: unset
 		.leaflet-control-container
 			display: none
 		.leaflet-popup-content
@@ -109,7 +155,7 @@
 		.leaflet-popup-tip-container
 			display: none
 		.leaflet-tile-pane
-			display: none
+			// display: none
 		.leaflet-interactive
 			transition: .3s ease-in-out
 			&:hover

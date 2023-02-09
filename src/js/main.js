@@ -62,7 +62,7 @@ $(function() {
 	});
 
 	$('.marquee').marquee({
-		duration: 15000,
+		duration: 25000,
 		gap: 0,
 		duplicated: true
 	});
@@ -105,6 +105,7 @@ $(function() {
 	const heroSwiper = new Swiper('.hero__swiper', {
 		autoHeight: false,
 		spaceBetween: 15,
+		effect: 'fade',
 		pagination: {
 			el: '.swiper-pagination',
 			clickable: true,
@@ -133,10 +134,19 @@ $(function() {
 		$('body').toggleClass('is-fixed')
 	});
 
-	$('.menu-item-has-children > a').click(function(e) {
-		e.preventDefault();
-		$(this).next().slideToggle(300);
-	});
+	if($(window).width() < 1200) {
+		$('.menu-item-has-children > a').click(function(e) {
+			e.preventDefault();
+			$(this).toggleClass('is-active');
+			$(this).next().stop().slideToggle(300);
+		});
+	} else {
+		$('.menu-item-has-children').hover(function(e) {
+			$(this).find('ul').stop().slideDown(300);
+		}, function() {
+			$(this).find('ul').stop().slideUp(300);
+		});
+	}
 
 	$(document).on('click', '.clubs__show-more', function(e) {
 		e.preventDefault();

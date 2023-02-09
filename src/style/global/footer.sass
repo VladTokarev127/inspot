@@ -1,7 +1,10 @@
 .footer
-	margin-top: 250px
+	margin-top: 200px
 	@include media-breakpoint-down(sm)
 		margin-top: 150px
+	.container
+		max-width: 100%
+		padding: 0 50px
 	&__grid
 		border-top: 1px solid #323232
 		display: grid
@@ -13,7 +16,7 @@
 		padding-bottom: 50px
 		// @include media-breakpoint-down(xl)
 		grid-gap: 25px 0
-		grid-template-columns: repeat(3,auto)
+		grid-template-columns: repeat(4,auto)
 		@include media-breakpoint-down(lg)
 			grid-gap: 10px 0
 			grid-template-columns: repeat(2,auto)
@@ -21,11 +24,94 @@
 			grid-template-columns: repeat(1,auto)
 			grid-gap: 30px 0
 	&__item
-		font-size: 20px
-		line-height: 25px
-		font-weight: 300
+		font-size: 18px
 		text-transform: uppercase
 		color: #e7e7e7
+		& > ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			& > li
+				&.menu-item-has-children
+					position: relative
+					display: inline-block
+					padding-right: 20px
+					@include media-breakpoint-down(lg)
+						display: inline-block
+					&:hover,
+					&:focus-visible,
+					&.is-active
+						& > a
+							color: #e02656
+						&::before
+							opacity: 1
+							visibility: visible
+						&::after,
+						&::before
+							transform: rotate(180deg)
+					&::before
+						position: absolute
+						z-index: 1
+						right: 0
+						top: 7px
+						content: ''
+						width: 12px
+						height: 7px
+						background-image: url(../img/menu-arrow-active.svg)
+						background-repeat: no-repeat
+						background-position: center
+						opacity: 0
+						visibility: hidden
+						transition: .3s ease-in-out
+					&::after
+						position: absolute
+						right: 0
+						top: 7px
+						content: ''
+						width: 12px
+						height: 7px
+						background-image: url(../img/menu-arrow.svg)
+						background-repeat: no-repeat
+						background-position: center
+						transition: .3s ease-in-out
+					ul
+						display: none
+						position: absolute
+						bottom: calc(15px + 100%)
+						left: 50%
+						transform: translate(-50%, 0)
+						background-color: #000
+						list-style-type: none
+						padding: 20px
+						margin: 0
+						@include media-breakpoint-down(lg)
+							padding: 15px 0
+							position: static
+							transform: none
+							margin-right: -20px
+						& > li
+							margin-bottom: 10px
+							font-style: normal
+							font-weight: 400
+							font-size: 14px
+							line-height: 18px
+							text-align: center
+							text-transform: uppercase
+							&:last-child
+								margin-bottom: 0
+							& > a
+								color: #545454
+								text-decoration: none
+								transition: .3s ease-in-out
+								&:hover
+									color: #e02656
+				& > a
+					color: #fff
+					text-decoration: none
+					transition: .3s ease-in-out
+					&:hover,
+					&:focus-visible
+						color: #e02656
 		p
 			margin: 0
 			margin-bottom: 10px

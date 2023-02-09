@@ -79,6 +79,14 @@ h1,h2,h3,h4,h5,h6
 	padding: 0 50px
 	// @include media-breakpoint-down(xl)
 	padding: 0 15px
+	@include media-breakpoint-down(lg)
+		max-width: 970px
+	@include media-breakpoint-down(md)
+		max-width: 650px
+	@include media-breakpoint-down(sm)
+		max-width: 490px
+	@include media-breakpoint-down(xs)
+		max-width: 330px
 
 .wrapper
 	background: #000
@@ -216,8 +224,8 @@ h1,h2,h3,h4,h5,h6
 		transform: translate(calc(-50% + 40px), 0px)
 
 .btn
-	width: 412px
-	height: 75px
+	width: 360px
+	height: 65px
 	display: flex
 	align-items: center
 	justify-content: center
@@ -226,42 +234,36 @@ h1,h2,h3,h4,h5,h6
 	border: 0
 	text-transform: uppercase
 	text-align: center
-	color: #00407a
-	font-weight: 400
-	font-size: 20px
-	line-height: 25px
+	color: #000000
+	font-size: 18px
 	text-decoration: none
 	padding: 0
 	-webkit-mask-image: url(../img/btn-mask.svg)
 	-webkit-mask-size: 100% 100%
-	background-position: -99.9% center
+	background-position: -100% center
 	transition: .5s ease-in-out
-	@include media-breakpoint-down(lg)
-		width: 400px
 	@include media-breakpoint-down(xs)
-		max-width: 260px
+		max-width: 100%
 		width: 100%
 		-webkit-mask-image: url(../img/btn-mask-sm.svg)
-		font-size: 18px
-		line-height: 22px
 	&_white
 		background-size: 200%
-		background-image: linear-gradient(268.42deg, #E7E7E7 0, #E7E7E7 25%, #E7E7E7 49.9%, #FF2F6E 50.1%, #C51B47 100%)
+		background-image: linear-gradient(to left, #E7E7E7 0, #E7E7E7 25%, #E7E7E7 50%, #FF2F6E 50.01%, #C51B47 100%)
 		&:hover
-			background-position: -0.1% center
+			background-position: 0% center
 			color: #e7e7e7
 	&_grey
 		color: #e7e7e7
 		background-size: 200%
-		background-image: linear-gradient(268.42deg, #323232 0, #323232 25%, #323232 49.9%, #FF2F6E 50.1%, #C51B47 100%)
+		background-image: linear-gradient(to left, #323232 0, #323232 25%, #323232 50%, #FF2F6E 50.01%, #C51B47 100%)
 		&:hover
-			background-position: -0.1% center
+			background-position: 0% center
 			color: #e7e7e7
 	&_red
 		color: #e7e7e7
-		background-position: -0.1% center
+		background-position: 0% center
 		background-size: 200%
-		background-image: linear-gradient(268.42deg, #E7E7E7 0, #E7E7E7 25%, #E7E7E7 49.9%, #FF2F6E 50.1%, #C51B47 100%)
+		background-image: linear-gradient(to left, #E7E7E7 0, #E7E7E7 25%, #E7E7E7 50%, #FF2F6E 50.01%, #C51B47 100%)
 		&:hover
 			background-position: -99.9% center
 			color: #000
@@ -301,7 +303,7 @@ form
 		background: linear-gradient(268.42deg, #FF2F6E -8.98%, #C51B47 97.94%)
 		opacity: 0.3
 		filter: blur(125px)
-		transition: 1.5s ease-in-out
+		transition: transform 5s ease-in-out
 		z-index: 2
 		&_1
 			&.is-active
@@ -318,6 +320,8 @@ form
 		display: flex
 		flex: 1 100%
 		overflow: hidden
+		max-width: 850px
+		margin: 0 auto
 	&__logo
 		display: flex
 		align-items: center
@@ -330,6 +334,8 @@ form
 		max-width: 100%
 		background: #000
 		z-index: 1
+		img
+			max-width: 300px
 		&.is-active
 			opacity: 1
 			visibility: visible
@@ -348,6 +354,7 @@ form
 			img
 				transform: translate(0,0)
 		img
+			max-width: 500px
 			transform: translate(-100%, 0)
 			transition: 1.5s ease-in-out
 			transition-delay: 1.5s
