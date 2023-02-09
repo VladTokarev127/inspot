@@ -18,20 +18,21 @@
 	&__item
 		margin-bottom: -1px
 		&:hover
-			position: relative
-			z-index: 3
-			.kitchen__top::after
-				left: 0
-				opacity: 1
-				visibility: visible
-			.kitchen__img:before
-				left: 100%
-			.kitchen__name
-				color: #fff
-				&_red
-					color: #cd1e4c
-			.kitchen__arrow
-				fill: #fff
+			@include media-breakpoint-up(xl)
+				position: relative
+				z-index: 3
+				.kitchen__top::after
+					left: 0
+					opacity: 1
+					visibility: visible
+				.kitchen__img:before
+					left: 100%
+				.kitchen__name
+					color: #fff
+					&_red
+						color: #cd1e4c
+				.kitchen__arrow
+					fill: #fff
 	&__top
 		padding-top: 1px
 		padding-bottom: 1px
@@ -130,32 +131,24 @@
 		font-family: $it-font
 		font-style: italic
 		font-weight: 800
-		font-size: 50px
-		line-height: 60px
+		font-size: 40px
 		text-transform: uppercase
 		color: #323232
 		transition: .7s ease-in-out
-		@include media-breakpoint-down(lg)
-			font-size: 40px
-			line-height: 48px
 		@include media-breakpoint-down(md)
 			font-size: 30px
-			line-height: 36px
 		@include media-breakpoint-down(sm)
 			font-size: 25px
-			line-height: 30px
 		@include media-breakpoint-down(xs)
 			font-size: 22px
-			line-height: 27px
 		&_red
 			color: #cd1e4c
 	&__arrow
 		fill: #323232
 		transition: .7s ease-in-out
 		svg
-			@include media-breakpoint-down(lg)
-				width: 35px
-				height: auto
+			width: 33px
+			height: auto
 			@include media-breakpoint-down(md)
 				width: 25px
 			@include media-breakpoint-down(xs)

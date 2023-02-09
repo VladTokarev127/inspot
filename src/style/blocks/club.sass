@@ -1,10 +1,8 @@
 .club
 	&__hero
-		padding-bottom: 250px
 		background-image: url(../img/club-hero-bg.png)
 		background-repeat: no-repeat
 		background-position: center calc(100% - 60px)
-		// @include media-breakpoint-down(xl)
 		padding-bottom: 103px
 		background-position: center 100%
 		@include media-breakpoint-down(lg)
@@ -28,66 +26,37 @@
 			animation-play-state: running
 			animation-fill-mode: both
 		&-info
-			flex: 1
-			margin-right: 50px
-			align-self: flex-start
-			// @include media-breakpoint-down(xxl)
 			display: flex
-			flex-direction: column
+			align-items: center
+			z-index: 1
 			flex: 1 100%
-			margin-right: 0
-			margin-bottom: 60px
+			margin-top: 40px
 			@include media-breakpoint-down(md)
-				margin-bottom: 40px
+				align-items: flex-start
+				flex-direction: column
+			@include media-breakpoint-down(sm)
+				margin-top: 30px
 		&-title
 			font-family: $it-font
 			font-style: italic
 			font-weight: 800
-			font-size: 80px
-			line-height: 97px
+			font-size: 35px
 			text-transform: uppercase
 			color: #E7E7E7
-			margin-bottom: 21px
-			// @include media-breakpoint-down(xxl)
-			order: 1
-			margin-bottom: 0
-			// @include media-breakpoint-down(xl)
-			font-size: 60px
-			line-height: 73px
-			@include media-breakpoint-down(lg)
-				font-size: 50px
-				line-height: 60px
-			@include media-breakpoint-down(md)
-				font-size: 40px
-				line-height: 48px
 			@include media-breakpoint-down(sm)
-				font-size: 35px
-				line-height: 42px
-			@include media-breakpoint-down(xs)
-				font-size: 30px
-				line-height: 36px
+				font-size: 25px
 		&-loc
 			font-family: $it-font
 			font-style: italic
 			font-weight: 400
-			font-size: 50px
-			line-height: 60px
+			font-size: 35px
 			text-transform: uppercase
 			color: #C81C49
-			// @include media-breakpoint-down(xxl)
-			margin-bottom: 10px
-			// @include media-breakpoint-down(xl)
-			font-size: 30px
-			line-height: 36px
+			margin-right: 5px
 			@include media-breakpoint-down(md)
-				font-size: 25px
-				line-height: 30px
+				margin-right: 0
 			@include media-breakpoint-down(sm)
-				font-size: 22px
-				line-height: 26px
-			@include media-breakpoint-down(xs)
-				font-size: 18px
-				line-height: 22px
+				font-size: 25px
 		&-swiper
 			margin: -90px
 			padding: 90px
@@ -103,7 +72,7 @@
 				left: auto
 				bottom: auto
 				width: auto
-				right: 134px
+				right: 130px
 				top: 136px
 				display: flex
 				align-items: center
@@ -145,6 +114,7 @@
 				bottom: 32px
 				left: 40px
 				z-index: 1
+				fill: none
 				stroke: #E7E7E7
 				color: #E7E7E7
 				text-decoration: none
@@ -163,11 +133,10 @@
 					stroke: #E02656
 				span
 					position: relative
-					top: 2px
-					font-style: normal
-					font-weight: 900
-					font-size: 20px
-					line-height: 25px
+					top: 0
+					font-style: italic
+					font-weight: 800
+					font-size: 18px
 					text-transform: uppercase
 				svg
 					margin-right: 13px
@@ -177,12 +146,14 @@
 						margin-right: 10px
 			&-slide
 				position: relative
-				height: 550px
+				height: 500px
+				@include media-breakpoint-down(lg)
+					height: 420px
 				@include media-breakpoint-down(md)
-					height: 600px
-				@include media-breakpoint-down(xs)
-					height: 400px
+					height: 500px
 				&.swiper-slide-active
+					.club__hero-swiper-slide-mask:not(:first-child) img
+						animation-play-state: running
 					.club__hero-swiper-slide-bg span
 						opacity: 1
 						visibility: visible
@@ -204,7 +175,10 @@
 						width: 100%
 						height: 100%
 						object-fit: cover
-					&:last-child
+					&:not(:first-child)
+						img
+							animation: zoom 80s ease-in-out infinite forwards
+							animation-play-state: paused
 						&::after
 							position: absolute
 							left: 0
@@ -286,3 +260,11 @@
 				width: 100%
 				height: 100%
 				object-fit: cover
+
+@keyframes zoom
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(1.2)
+	100%
+		transform: scale(1)

@@ -7,10 +7,6 @@ get_header();
 		<div class="container">
 			<div class="club__hero-circle"></div>
 
-			<div class="club__hero-info">
-				<h1 class="club__hero-title"><?php the_field('address'); ?></h1>
-				<div class="club__hero-loc"><?php the_field('city'); ?></div>
-			</div>
 			<div class="club__hero-swiper-container">
 				<div class="club__hero-swiper swiper">
 					<div class="club__hero-swiper-wrapper swiper-wrapper">
@@ -40,13 +36,10 @@ get_header();
 					</div>
 					<div class="swiper-pagination"></div>
 				</div>
-				<div class="club__hero-thumbs">
-					<?php $images = get_field('gallery'); foreach( $images as $key=>$image ): ?>
-						<div class="club__hero-thumb <?php echo $key == 0 ? 'is-active' : ''; ?>">
-							<img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo $image['alt']; ?>">
-						</div>
-					<?php endforeach; ?>
-				</div>
+			</div>
+			<div class="club__hero-info">
+				<div class="club__hero-loc"><?php the_field('city'); ?></div>
+				<h1 class="club__hero-title"><?php the_field('address'); ?></h1>
 			</div>
 
 		</div>
@@ -58,16 +51,27 @@ get_header();
 		<div class="container">
 
 			<h2 class="title configuration__title"><?php the_field('title_1'); ?></h2>
-			<div class="configuration__grid">
+			<div class="configuration__tabs" data-tabs>
 				<?php while( the_repeater_field('conf_list_1') ): ?>
-					<div class="configuration__item">
-						<div class="configuration__icon">
-							<div class="configuration__icon-bg"><span></span></div>
-							<img src="<?php echo esc_url(get_sub_field('img')['url']); ?>" alt="<?php echo get_sub_field('img')['alt']; ?>">
-						</div>
-						<div class="configuration__info">
-							<div class="configuration__type"><?php the_sub_field('title'); ?></div>
-							<div class="configuration__name"><?php the_sub_field('text'); ?></div>
+					<button class="configuration__tab <?php echo get_row_index() === 1 ? 'is-active' : ''; ?>" data-tab><?php the_sub_field('title'); ?></button>
+				<?php endwhile; ?>
+			</div>
+			<div class="configuration__tab-contents" data-tab-contents>
+				<?php while( the_repeater_field('conf_list_1') ): ?>
+					<div class="configuration__tab-content" data-tab-content>
+						<div class="configuration__grid">
+							<?php while( the_repeater_field('list') ): ?>
+								<div class="configuration__item <?php echo get_row_index() === 1 ? 'is-active' : ''; ?>">
+									<div class="configuration__icon">
+										<div class="configuration__icon-bg"><span></span></div>
+										<img src="<?php echo esc_url(get_sub_field('img')['url']); ?>" alt="<?php echo get_sub_field('img')['alt']; ?>">
+									</div>
+									<div class="configuration__info">
+										<div class="configuration__type"><?php the_sub_field('title'); ?></div>
+										<div class="configuration__name"><?php the_sub_field('text'); ?></div>
+									</div>
+								</div>
+							<?php endwhile; ?>
 						</div>
 					</div>
 				<?php endwhile; ?>
@@ -83,25 +87,40 @@ get_header();
 		<div class="container">
 
 			<h2 class="title prices__title"><?php the_field('title_2'); ?></h2>
-			<div class="prices__grid">
+			<div class="configuration__tabs" data-tabs>
 				<?php while( the_repeater_field('price_list_1') ): ?>
-					<div class="prices__item">
-						<div class="prices__content">
-							<div class="prices__img-bg"></div>
-							<div class="prices__img"><img src="<?php echo esc_url(get_sub_field('img')['url']); ?>" alt="<?php echo get_sub_field('img')['alt']; ?>"></div>
-							<div class="prices__top">
-								<div class="prices__time"><?php the_sub_field('time'); ?></div>
-								<div class="prices__desc"><?php the_sub_field('price'); ?></div>
-							</div>
-							<div class="prices__val"><?php the_sub_field('total'); ?></div>
+					<button class="configuration__tab <?php echo get_row_index() === 1 ? 'is-active' : ''; ?>" data-tab><?php the_sub_field('title'); ?></button>
+				<?php endwhile; ?>
+			</div>
+			<div class="configuration__tab-contents" data-tab-contents>
+				<?php while( the_repeater_field('price_list_1') ): ?>
+					<div class="configuration__tab-content" data-tab-content>
+						<div class="prices__grid">
+							<?php while( the_repeater_field('list') ): ?>
+								<div class="prices__item">
+									<div class="prices__content">
+										<div class="prices__img-bg"></div>
+										<div class="prices__img"><img src="<?php echo esc_url(get_sub_field('img')['url']); ?>" alt="<?php echo get_sub_field('img')['alt']; ?>"></div>
+										<div class="prices__top">
+											<div class="prices__time"><?php the_sub_field('time'); ?></div>
+											<div class="prices__desc"><?php the_sub_field('price'); ?></div>
+										</div>
+										<div class="prices__val"><?php the_sub_field('total'); ?></div>
+									</div>
+								</div>
+							<?php endwhile; ?>
 						</div>
 					</div>
 				<?php endwhile; ?>
 			</div>
-			
+
 			<div class="prices__text"><?php the_field('text_1'); ?></div>
 
-			<a href="<?php the_field('link_1'); ?>" class="btn btn_red prices__btn">Смотреть полный прайс</a>
+			<div class="prices__btns">
+				<a href="<?php the_field('link_1'); ?>" class="btn btn_grey prices__btn" download>Смотреть полный прайс</a>
+				<a href="<?php the_field('link_1_2'); ?>" class="btn btn_red prices__btn" download>список всех акций</a>
+			</div>
+			
 
 		</div>
 	</section>

@@ -44,8 +44,8 @@ get_header();
 							<div class="swiper-pagination"></div>
 						</div>
 						<div class="clubs__content">
-							<div class="clubs__country"><?php the_field('country'); ?></div>
-							<div class="clubs__loc"><b><?php the_field('preview_title'); ?></b> <?php the_field('preview_text'); ?></div>
+							<div class="clubs__country"><?php the_field('city'); ?></div>
+							<div class="clubs__loc"><?php the_field('preview_text'); ?></div>
 							<a href="<?php the_permalink(); ?>" class="clubs__btn btn btn_grey">подробнее</a>
 						</div>
 					</div>

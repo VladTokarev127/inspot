@@ -5,26 +5,66 @@
 			margin-bottom: 40px
 	&__grid
 		flex: 1 100%
-		display: grid
-		grid-template-columns: repeat(8,1fr)
-		grid-gap: 50px 0
-		// @include media-breakpoint-down(xl)
-		grid-template-columns: repeat(4,1fr)
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin-bottom: -50px
+	&__tabs
+		flex: 1 100%
+		display: flex
+		align-items: center
+		margin-bottom: 40px
+	&__tab
+		flex: 1
+		background: 0
+		border: 0
+		border-bottom: 1px solid #222323
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		padding-bottom: 20px
+		font-size: 25px
+		font-weight: 800
+		font-style: italic
+		text-transform: uppercase
+		color: #323232
+		transition: .3s ease-in-out
+		cursor: pointer
+		&.is-active
+			color: #e7e7e7
+			border-color: #e7e7e7
 		@include media-breakpoint-down(md)
-			grid-template-columns: repeat(3,1fr)
+			font-size: 22px
 		@include media-breakpoint-down(sm)
-			grid-template-columns: repeat(2,1fr)
+			font-size: 18px
+		@include media-breakpoint-down(xs)
+			font-size: 14px
+		@include media-breakpoint-up(xl)
+			&:hover
+				color: #e7e7e7
+				border-color: #e7e7e7
+	&__tab
+		&-contents
+			width: 100%
 	&__item
 		text-align: center
-		&:hover
-			.configuration__icon-bg span
-				opacity: 1
-				visibility: visible
-				animation-play-state: running
-			.configuration__icon-bg::after
-				opacity: 1
-				visibility: visible
-				animation-play-state: running
+		flex: 0 25%
+		margin-bottom: 50px
+		@include media-breakpoint-down(md)
+			flex: 0 33%
+		@include media-breakpoint-down(sm)
+			flex: 0 50%
+		@include media-breakpoint-up(xl)
+			&:hover
+				.configuration__icon-bg span
+					opacity: 1
+					visibility: visible
+					animation-play-state: running
+				.configuration__icon-bg::after
+					opacity: 1
+					visibility: visible
+					animation-play-state: running
 	&__icon
 		position: relative
 		width: 100%
@@ -52,9 +92,9 @@
 				width: 100%
 				height: 100%
 				background-position: 0 center
-				background-image: linear-gradient(to right, #01FF08 0%, #02FFFE 12.5%, #0006FF 25%, #FC00FF, 37.5%, #CA0707 50%, #01FF08 62.5%, #02FFFE 75%, #0006FF 87.5%, #FC00FF 100%)
+				background-image: linear-gradient(to right, #FF0000 0.85%, #FFA800 15.5%, #FAFF00 29.17%, #05FF00 43.71%, #00FFFF 58.68%, #000AFF 72.35%, #FF00FF 86.02%, #FF0000 99.35%)
 				background-repeat: repeat
-				background-size: 600% 100%
+				background-size: 400% 100%
 				animation-name: conf-line
 				animation-duration: 80s
 				animation-iteration-count: infinite
@@ -67,9 +107,9 @@
 				content: ''
 				width: 100%
 				height: 100%
-				background-image: linear-gradient(to right, #01FF08 0%, #02FFFE 12.5%, #0006FF 25%, #FC00FF, 37.5%, #CA0707 50%, #01FF08 62.5%, #02FFFE 75%, #0006FF 87.5%, #FC00FF 100%)
+				background-image: linear-gradient(to right, #FF0000 0.85%, #FFA800 15.5%, #FAFF00 29.17%, #05FF00 43.71%, #00FFFF 58.68%, #000AFF 72.35%, #FF00FF 86.02%, #FF0000 99.35%)
 				background-repeat: repeat
-				background-size: 600% 100%
+				background-size: 400% 100%
 				animation-name: conf-line
 				animation-duration: 80s
 				animation-iteration-count: infinite
@@ -86,38 +126,32 @@
 		font-family: $it-font
 		font-style: normal
 		font-weight: 400
-		font-size: 20px
-		line-height: 24px
+		font-size: 18px
 		text-transform: uppercase
 		color: #E7E7E7
-		@include media-breakpoint-down(sm)
-			font-size: 18px
-			line-height: 22px
-			margin-bottom: 10px
+		@include media-breakpoint-down(xs)
+			font-size: 14px
 	&__name
 		font-family: $it-font
 		font-style: italic
 		font-weight: 700
-		font-size: 20px
-		line-height: 24px
+		font-size: 18px
 		text-align: center
 		color: #545454
-		@include media-breakpoint-down(sm)
-			font-size: 18px
-			line-height: 22px
+		@include media-breakpoint-down(xs)
+			font-size: 14px
 	&__grid_inspot
-		grid-template-columns: repeat(3,1fr)
-		@include media-breakpoint-down(lg)
-			grid-template-columns: repeat(2,1fr)
-		@include media-breakpoint-down(md)
-			grid-template-columns: repeat(1,1fr)
+		.configuration__item
+			flex: 0 33%
+			@include media-breakpoint-down(sm)
+				flex: 0 50%
 		.configuration__type
 			font-weight: 400
 
 @keyframes conf-line
 	0%
-		background-position: -100% center
+		background-position: 0 center
 	50%
-		background-position: -20% center
+		background-position: 100% center
 	100%
-		background-position: -100% center
+		background-position: 0 center

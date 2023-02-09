@@ -83,12 +83,7 @@
 		position: relative
 		z-index: 1
 		overflow: hidden
-		padding-top: 39px
-		padding-left: 60px
-		padding-right: 60px
-		padding-bottom: 23px
 		min-height: 240px
-		// @include media-breakpoint-down(xl)
 		padding-top: 30px
 		padding-left: 40px
 		padding-bottom: 30px
@@ -168,7 +163,7 @@
 		z-index: -1
 		left: -1px
 		bottom: -1px
-		width: 177px
+		width: 227px
 		height: 51px
 		-webkit-mask-image: url(../img/prices-mask.svg)
 		-webkit-mask-repeat: no-repeat
@@ -247,26 +242,21 @@
 		font-family: $it-font
 		font-style: italic
 		font-weight: 800
-		font-size: 50px
-		line-height: 60px
+		font-size: 35px
 		margin-bottom: 60px
 		text-align: center
 		text-transform: uppercase
 		color: #323232
-		// @include media-breakpoint-down(xl)
-		font-size: 40px
-		line-height: 48px
 		@include media-breakpoint-down(lg)
 			font-size: 30px
-			line-height: 36px
 		@include media-breakpoint-down(sm)
 			max-width: 433px
 			margin-left: auto
 			margin-right: auto
 			font-size: 25px
-			line-height: 30px
 		@include media-breakpoint-down(xs)
 			margin-bottom: 40px
+			font-size: 22px
 		b,strong
 			color: #cd1e4d
 			font-weight: inherit
@@ -277,5 +267,14 @@
 			margin-bottom: 20px
 			&:last-child
 				margin-bottom: 0
-	&__btn
+	&__btns
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		max-width: 760px
+		width: 100%
+		justify-content: space-between
 		margin: 0 auto
+	&__btn
+		@include media-breakpoint-down(md)
+			margin-bottom: 20px
