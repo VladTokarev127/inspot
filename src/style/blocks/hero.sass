@@ -218,9 +218,14 @@
 		animation-play-state: running
 		animation-fill-mode: both
 	&__info
+		padding-top: 200px
 		margin-bottom: 194px
+		background-image: url(../img/info-line.png)
+		background-repeat: no-repeat
+		background-position: left 55px
 		@include media-breakpoint-down(lg)
 			margin-bottom: 140px
+			padding-top: 150px
 		&-img
 			width: 100%
 			text-align: center
@@ -342,20 +347,12 @@
 			font-family: $it-font
 			font-style: italic
 			font-weight: 400
-			font-size: 25px
-			line-height: 30px
+			font-size: 20px
 			text-transform: uppercase
 			color: #545454
 			transition: .7s ease-in-out
-			@include media-breakpoint-down(lg)
-				font-size: 22px
-				line-height: 27px
 			@include media-breakpoint-down(md)
-				font-size: 20px
-				line-height: 24px
-			@include media-breakpoint-down(sm)
 				font-size: 18px
-				line-height: 22px
 		&-mask
 			display: block
 			width: 100%
@@ -425,7 +422,6 @@
 	&__mobile
 		position: relative
 		padding: 0 50px
-		margin-bottom: 150px
 		@include media-breakpoint-down(lg)
 			margin-left: auto
 			margin-right: auto
@@ -451,7 +447,7 @@
 		&-play
 			position: absolute
 			right: 90px
-			top: -72px
+			top: 60px
 			width: 80px
 			height: 80px
 			fill: #fff
@@ -465,10 +461,8 @@
 				right: 50px
 				width: 70px
 				height: 70px
-			@include media-breakpoint-down(md)
-				top: -208px
+				top: 30px
 			@include media-breakpoint-down(xs)
-				top: -66px
 				right: 20px
 			&::before
 				position: absolute
@@ -495,9 +489,10 @@
 					width: calc(100% - 10px)
 					height: calc(100% - 10px)
 			&:hover
-				fill: #e02656
-				&::after, &::before
-					border-color: #e02656
+				fill: #000000
+				background: #fff
+				&::after
+					border-color: #000000
 		&-slide
 			position: relative
 			z-index: 1
@@ -570,9 +565,17 @@
 			&:last-child
 				margin-right: 0
 		&-content
-			position: relative
+			position: absolute
+			left: 50%
+			transform: translate(-50%, 0)
+			z-index: 9
+			top: 0
+			width: 100%
+			max-width: 1200px
+			height: 100%
 			display: flex
-			justify-content: center
+			flex-direction: column
+			align-items: flex-end
 			.container
 				position: absolute
 				left: 50%

@@ -64,9 +64,9 @@
 					</a>
 				</div>
 				<nav class="header__nav">
-				<?php 
+					<?php 
 						wp_nav_menu([
-							'menu'            => 'menu',
+							'menu'            => 'header_menu',
 							'container'       => '',
 							'menu_class'      => 'header__nav-list'
 						]);

@@ -94,6 +94,26 @@
 						&::after,
 						&::before
 							transform: rotate(180deg)
+					@include media-breakpoint-down(lg)
+						&:hover
+							& > a
+								color: #fff
+							&::before
+								opacity: 0
+								visibility: hidden
+							&::after,
+							&::before
+								transform: rotate(0deg)
+						&:focus-visible,
+						&.is-active
+							& > a
+								color: #e02656
+							&::before
+								opacity: 1
+								visibility: visible
+							&::after,
+							&::before
+								transform: rotate(180deg)
 					&::before
 						position: absolute
 						z-index: 1

@@ -137,7 +137,7 @@ $(function() {
 	if($(window).width() < 1200) {
 		$('.menu-item-has-children > a').click(function(e) {
 			e.preventDefault();
-			$(this).toggleClass('is-active');
+			$(this).parent().toggleClass('is-active');
 			$(this).next().stop().slideToggle(300);
 		});
 	} else {

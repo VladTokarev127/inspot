@@ -1,12 +1,78 @@
+<?php
+	$tel = get_field('tel', 'options');
+	$result = preg_replace('/(?:\G|^)[+\d]*\K[^:+\d]/m', '', $tel);
+?>
 	</main>
 
 		<footer class="footer">
 			<div class="container">
 
-				<div class="footer__grid">
-					<?php while( the_repeater_field('footer_list', 'options') ): ?>
-						<div class="footer__item"><?php the_sub_field('text'); ?></div>
-					<?php endwhile; ?>
+				<div class="footer__grid footer__grid_desc">
+					<div class="footer__item">
+						<p><?php the_field('ogrn', 'options'); ?></p>
+						<p><?php the_field('inn', 'options'); ?></p>
+					</div>
+					<div class="footer__item">
+						<p><?php the_field('address', 'options'); ?></p>
+						<p><a href="<?php the_field('policy', 'options'); ?>">политика конфиденциальности</a></p>
+					</div>
+					<div class="footer__item">
+						<p><a href="mailto:<?php the_field('mail', 'options'); ?>"><?php the_field('mail', 'options'); ?></a>	</p>
+						<p><a href="tel:<?php echo $result; ?>"><?php echo $tel; ?></a></p>
+					</div>
+					<div class="footer__item">
+						<?php 
+							wp_nav_menu([
+								'menu'            => 'footer_menu',
+								'container'       => '',
+							]);
+						?>
+						<div class="footer__copy"><?php the_field('copyright', 'options'); ?></div>
+					</div>
+				</div>
+
+				<div class="footer__grid footer__grid_tab">
+					<div class="footer__item">
+						<p><?php the_field('ogrn', 'options'); ?></p>
+						<p><?php the_field('inn', 'options'); ?></p>
+						<p><?php the_field('address', 'options'); ?></p>
+					</div>
+					<div class="footer__item">
+						<p><a href="mailto:<?php the_field('mail', 'options'); ?>"><?php the_field('mail', 'options'); ?></a></p>
+						<p><a href="tel:<?php echo $result; ?>"><?php echo $tel; ?></a></p>
+						<p><a href="<?php the_field('policy', 'options'); ?>">политика конфиденциальности</a></p>
+					</div>
+					<div class="footer__item">
+						<?php 
+							wp_nav_menu([
+								'menu'            => 'footer_menu',
+								'container'       => '',
+							]);
+						?>
+						<div class="footer__copy"><?php the_field('copyright', 'options'); ?></div>
+					</div>
+				</div>
+
+				<div class="footer__grid footer__grid_mob">
+					<div class="footer__item">
+						<p><?php the_field('ogrn', 'options'); ?></p>
+						<p><?php the_field('inn', 'options'); ?></p>
+						<p><?php the_field('address', 'options'); ?></p>
+						<p><a href="<?php the_field('policy', 'options'); ?>">политика конфиденциальности</a></p>
+					</div>
+					<div class="footer__item">
+						<p><a href="mailto:<?php the_field('mail', 'options'); ?>"><?php the_field('mail', 'options'); ?></a></p>
+						<p><a href="tel:<?php echo $result; ?>"><?php echo $tel; ?></a></p>
+						<?php 
+							wp_nav_menu([
+								'menu'            => 'footer_menu',
+								'container'       => '',
+							]);
+						?>
+					</div>
+					<div class="footer__item">
+						<div class="footer__copy"><?php the_field('copyright', 'options'); ?></div>
+					</div>
 				</div>
 
 			</div>

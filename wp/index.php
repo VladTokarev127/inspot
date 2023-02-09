@@ -14,13 +14,13 @@
 								</span>
 							</div>
 							<div class="hero__swiper-content">
+								<a href="<?php the_sub_field('video'); ?>" class="hero__swiper-play">
+									<svg width="11" height="14" viewBox="0 0 11 14" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11 7L0.5 13.0622L0.500001 0.937822L11 7Z"/>
+									</svg>
+								</a>
 								<div class="container">
 									<div class="hero__swiper-content-wrapper">
-										<a href="<?php the_sub_field('video'); ?>" class="hero__swiper-play">
-											<svg width="11" height="14" viewBox="0 0 11 14" xmlns="http://www.w3.org/2000/svg">
-												<path d="M11 7L0.5 13.0622L0.500001 0.937822L11 7Z"/>
-											</svg>
-										</a>
 										<div class="hero__swiper-title"><?php the_sub_field('title'); ?></div>
 										<div class="hero__swiper-desc"><?php the_sub_field('text'); ?></div>
 										<a href="<?php the_sub_field('link'); ?>" class="hero__swiper-btn btn btn_white">Подробнее</a>

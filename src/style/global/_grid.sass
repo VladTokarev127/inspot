@@ -289,7 +289,7 @@ form
 	align-items: center
 	justify-content: center
 	z-index: 99999
-	padding: 0 15%
+	padding: 0 15px
 	img
 		max-width: 100%
 		height: auto
@@ -322,6 +322,8 @@ form
 		overflow: hidden
 		max-width: 850px
 		margin: 0 auto
+		@include media-breakpoint-down(lg)
+			max-width: 290px
 	&__logo
 		display: flex
 		align-items: center
@@ -336,6 +338,8 @@ form
 		z-index: 1
 		img
 			max-width: 300px
+			@include media-breakpoint-down(lg)
+				max-width: 100px
 		&.is-active
 			opacity: 1
 			visibility: visible
@@ -343,7 +347,7 @@ form
 	&__sublogo
 		display: flex
 		align-items: center
-		flex: 0 60%
+		flex: 0 auto
 		margin-left: -100%
 		overflow: hidden
 		transition: 1.5s ease-in-out
@@ -358,3 +362,5 @@ form
 			transform: translate(-100%, 0)
 			transition: 1.5s ease-in-out
 			transition-delay: 1.5s
+			@include media-breakpoint-down(lg)
+				max-width: 160px
