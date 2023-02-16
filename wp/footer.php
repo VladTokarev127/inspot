@@ -111,10 +111,14 @@
 	<?php if(is_front_page()): ?>
 		<script>
 			document.addEventListener('DOMContentLoaded',function() {
+				$('body').addClass('is-fixed');
 				$('.preloader__circle, .preloader__logo, .preloader__sublogo').addClass('is-active');
 				window.onload = function(){
 					setTimeout(function() {
 						$('.preloader').fadeOut(700);
+						setTimeout(function() {
+							$('body').removeClass('is-fixed');
+						}, 700)
 					}, 3500)
 				}
 			})

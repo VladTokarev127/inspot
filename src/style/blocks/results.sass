@@ -1,5 +1,11 @@
 .results
 	position: relative
+	padding-top: 15px
+	background-image: url(../img/results-bg.png)
+	background-repeat: no-repeat
+	background-position: center top
+	@include media-breakpoint-down(lg)
+		padding-top: 15px
 	&__title
 		margin-bottom: 60px
 		@include media-breakpoint-down(md)
@@ -169,6 +175,13 @@
 			width: 100%
 			height: 100%
 			object-fit: cover
+			&:last-child
+				display: none
+			@include media-breakpoint-down(md)
+				&:first-child
+					display: none
+				&:last-child
+					display: block
 	&__text
 	&__bottom
 		&-title

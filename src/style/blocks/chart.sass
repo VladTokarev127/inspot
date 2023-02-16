@@ -2,9 +2,10 @@
 	padding-top: 100px
 	padding-bottom: 131px
 	background-color: #111
-	background-image: url(../img/chart-bg.png)
-	background-repeat: no-repeat
-	background-position: calc(100% - 17px) 100%
+	position: relative
+	// background-image: url(../img/chart-bg.png)
+	// background-repeat: no-repeat
+	// background-position: calc(100% - 17px) 100%
 	@include media-breakpoint-down(lg)
 		padding-top: 60px
 		padding-bottom: 117px
@@ -15,6 +16,37 @@
 		background-size: contain
 	@include media-breakpoint-down(xs)
 		padding-top: 49px
+	&__bg
+		position: absolute
+		font-size: 0
+		bottom: 0
+		left: 50%
+		transform: translate(-50%, 0)
+		right: 200px
+		@include media-breakpoint-down(lg)
+			right: -305px
+		@include media-breakpoint-down(md)
+			right: -305px
+		@include media-breakpoint-down(sm)
+			right: -305px
+		@include media-breakpoint-down(xs)
+			right: -265px
+		img
+			height: auto
+			&:last-child
+				display: none
+			@include media-breakpoint-down(lg)
+				width: 917px
+			@include media-breakpoint-down(md)
+				width: 584px
+			@include media-breakpoint-down(sm)
+				width: 438px
+				&:last-child
+					display: block
+				&:first-child
+					display: none
+			@include media-breakpoint-down(xs)
+				width: 240px
 	&__title
 		font-style: italic
 		font-weight: 800

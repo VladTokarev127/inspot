@@ -117,7 +117,7 @@ get_header();
 			<div class="prices__text"><?php the_field('text_1'); ?></div>
 
 			<div class="prices__btns">
-				<a href="<?php the_field('link_1'); ?>" class="btn btn_grey prices__btn" download>Смотреть полный прайс</a>
+				<a href="<?php the_field('link_1'); ?>" class="btn btn_grey prices__btn popup-link" data-popup="popup-download">Смотреть полный прайс</a>
 				<a href="<?php the_field('link_1_2'); ?>" class="btn btn_red prices__btn" download>список всех акций</a>
 			</div>
 			

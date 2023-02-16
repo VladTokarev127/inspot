@@ -125,6 +125,15 @@ get_header();
 			</div>
 
 			<div class="contacts__socials contacts__socials_mob">
+				<?php if(get_field('vk')): ?>
+					<a href="<?php the_field('vk'); ?>" target="_blank" class="contacts__item">
+						<div class="contacts__item-icon contacts__item-icon_fb">
+							<img src="/wp-content/themes/inspot/img/vk.svg" alt="вконтакте">
+							<img src="/wp-content/themes/inspot/img/vk-active.svg" alt="вконтакте">
+						</div>
+						<div class="contacts__item-name">вконтакте</div>
+					</a>
+				<?php endif; ?>
 				<?php if(get_field('facebook')): ?>
 					<a href="<?php the_field('facebook'); ?>" target="_blank" class="contacts__item">
 						<div class="contacts__item-icon contacts__item-icon_fb">

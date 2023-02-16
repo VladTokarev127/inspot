@@ -2,7 +2,7 @@
 	&__hero
 		background-image: url(../img/franchise-bg.png)
 		background-repeat: no-repeat
-		padding-bottom: 200px
+		padding-bottom: 185px
 		background-position: center bottom
 		@include media-breakpoint-down(lg)
 			padding-bottom: 120px
@@ -73,6 +73,17 @@
 			-webkit-mask-repeat: no-repeat
 			-webkit-mask-size: 100% 100%
 			position: relative
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+				&:last-child
+					display: none
+				@include media-breakpoint-down(md)
+					&:last-child
+						display: block
+					&:first-child
+						display: none
 			@include media-breakpoint-down(lg)
 				-webkit-mask-image: url(../img/franchise-advantages-mask-lg.svg)
 			@include media-breakpoint-down(md)
@@ -136,3 +147,5 @@
 			b,strong
 				font-weight: 800
 				color: #e02656
+				@include media-breakpoint-down(xs)
+					display: block

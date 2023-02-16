@@ -258,21 +258,29 @@
 					&:last-child
 						&::after
 							background: #D33060
+							@include media-breakpoint-down(md)
+								display: none
 			&:nth-child(2)
 				.hero__clubs-mask
 					&:last-child
 						&::after
 							background: #A95385
+							@include media-breakpoint-down(md)
+								display: none
 			&:nth-child(3)
 				.hero__clubs-mask
 					&:last-child
 						&::after
 							background: #7E76AB
+							@include media-breakpoint-down(md)
+								display: none
 			&:nth-child(4)
 				.hero__clubs-mask
 					&:last-child
 						&::after
 							background: #5598CF
+							@include media-breakpoint-down(md)
+								display: none
 			@include media-breakpoint-down(md)
 				flex-wrap: wrap
 				margin-bottom: 60px
@@ -419,6 +427,8 @@
 				object-fit: cover
 				filter: saturate(0)
 				transition: .7s ease-in-out
+				@include media-breakpoint-down(md)
+					filter: saturate(1)
 
 	&__mobile
 		position: relative
@@ -486,6 +496,7 @@
 				border-radius: 50%
 				border: 1px dashed #fff
 				transition: .3s ease-in-out
+				animation: 10s linear 0s normal none infinite running rot
 				@include media-breakpoint-down(lg)
 					width: calc(100% - 10px)
 					height: calc(100% - 10px)
@@ -710,3 +721,9 @@
 		background-position: 100% center
 	100%
 		background-position: 0% center
+
+@keyframes rot
+	0%
+		transform: translate(-50%, -50%) rotate(0deg)
+	100%
+		transform: translate(-50%, -50%) rotate(360deg)

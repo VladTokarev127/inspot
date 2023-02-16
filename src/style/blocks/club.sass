@@ -60,6 +60,11 @@
 		&-swiper
 			margin: -90px
 			padding: 90px
+			&.is-ios
+				.swiper-pagination
+					top: 176px
+				.club__hero-swiper-full
+					bottom: 79px
 			&-container
 				flex: 0 57.5%
 				max-width: 57.5%
@@ -110,6 +115,7 @@
 				&:last-child
 					margin-right: 0
 			&-full
+				display: none !important
 				position: absolute
 				bottom: 32px
 				left: 40px
@@ -183,7 +189,7 @@
 							position: absolute
 							left: 0
 							top: 0
-							content: ''
+							// content: ''
 							width: 100%
 							height: 100%
 							mix-blend-mode: multiply
@@ -200,11 +206,11 @@
 						position: absolute
 						z-index: -1
 						left: 0
-						top: 0
+						top: -20px
 						width: 100%
 						height: 100%
 						object-fit: cover
-						filter: blur(55px)
+						filter: blur(50px)
 						opacity: 0
 						visibility: hidden
 						mix-blend-mode: normal

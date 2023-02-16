@@ -1,5 +1,8 @@
 .graph
 	padding-top: 200px
+	background-image: url(../img/graph-bg-bg.png)
+	background-repeat: no-repeat
+	background-position: center bottom
 	@include media-breakpoint-down(md)
 		padding-top: 140px
 	&__title
@@ -12,6 +15,7 @@
 		text-transform: uppercase
 		color: #fff
 		margin-bottom: 100px
+		flex: 1 100%
 		@include media-breakpoint-down(md)
 			margin-bottom: 60px
 		@include media-breakpoint-down(md)
@@ -30,6 +34,7 @@
 				margin-bottom: 0
 	&__label
 		text-transform: uppercase
+		font-weight: 800
 		font-size: 35px
 		text-transform: uppercase
 		color: #323232
@@ -41,12 +46,31 @@
 	&__img
 		width: 100%
 		margin-top: -150px
+		margin-left: -144px
+		@include media-breakpoint-down(lg)
+			margin-left: -113px
 		@include media-breakpoint-down(md)
 			margin-top: -100px
+			margin-left: -75px
 		@include media-breakpoint-down(sm)
 			margin-top: -50px
+			margin-left: -20px
 		@include media-breakpoint-down(xs)
 			margin-top: -25px
+			margin-left: -12px
 		img
-			width: 100%
 			height: auto
+			&:last-child
+				display: none
+			@include media-breakpoint-down(lg)
+				width: 1029px
+			@include media-breakpoint-down(md)
+				width: 685px
+			@include media-breakpoint-down(sm)
+				width: 518px
+				&:first-child
+					display: none
+				&:last-child
+					display: block
+			@include media-breakpoint-down(xs)
+				width: 339px

@@ -18,7 +18,8 @@ get_header();
 						<span style="background-image: url(<?php echo esc_url(get_field('img_1')['url']); ?>);"></span>
 					</span>
 					<span class="franchise__advantages-mask">
-					<img src="<?php echo esc_url(get_field('img_1')['url']); ?>" alt="<?php echo get_field('img_1')['alt']; ?>">
+						<img src="<?php echo esc_url(get_field('img_1')['url']); ?>" alt="<?php echo get_field('img_1')['alt']; ?>">
+						<img src="<?php echo esc_url(get_field('img_1-mob')['url']); ?>" alt="<?php echo get_field('img_1-mob')['alt']; ?>">
 					</span>
 				</div>
 				<div class="franchise__advantages-list">
@@ -41,7 +42,10 @@ get_header();
 				<?php while( the_repeater_field('list_2') ): ?>
 					<div class="results__item">
 						<div class="results__item-content">
-							<div class="results__img"><img src="<?php echo esc_url(get_sub_field('img')['url']); ?>" alt="<?php echo get_sub_field('img')['alt']; ?>"></div>
+							<div class="results__img">
+								<img src="<?php echo esc_url(get_sub_field('img')['url']); ?>" alt="<?php echo get_sub_field('img')['alt']; ?>">
+								<img src="<?php echo esc_url(get_sub_field('img_mob')['url']); ?>" alt="<?php echo get_sub_field('img_mob')['alt']; ?>">
+							</div>
 							<div class="results__text">
 								<h3 class="results__item-title"><?php the_sub_field('title'); ?></h3>
 								<div class="results__subtitle"><?php the_sub_field('subtitle'); ?></div>
@@ -110,7 +114,10 @@ get_header();
 					<div class="tournament__swiper-wrapper swiper-wrapper">
 						<?php while( the_repeater_field('list_5') ): ?>
 							<div class="tournament__swiper-slide swiper-slide">
-								<div class="tournament__bg"><img src="<?php echo esc_url(get_sub_field('img')['url']); ?>" alt="<?php echo get_sub_field('img')['alt']; ?>"></div>
+								<div class="tournament__bg">
+									<img src="<?php echo esc_url(get_sub_field('img')['url']); ?>" alt="<?php echo get_sub_field('img')['alt']; ?>">
+									<img src="<?php echo esc_url(get_sub_field('img_mob')['url']); ?>" alt="<?php echo get_sub_field('img_mob')['alt']; ?>">
+								</div>
 								<div class="tournament__content">
 									<div class="tournament__logo"><img src="<?php echo esc_url(get_sub_field('logo')['url']); ?>" alt="<?php echo get_sub_field('logo')['alt']; ?>"></div>
 									<h3 class="tournament__content-title"><?php the_sub_field('title'); ?></h3>
@@ -141,7 +148,10 @@ get_header();
 			<h2 class="title graph__title"><?php the_field('title_5'); ?></h2>
 			<div class="graph__text"><?php the_field('subtitle_3'); ?></div>
 			<div class="graph__label"><?php the_field('text_2'); ?></div>
-			<div class="graph__img"><img src="<?php echo esc_url(get_field('img_2')['url']); ?>" alt="<?php echo get_field('img_2')['alt']; ?>"></div>
+			<div class="graph__img">
+				<img src="<?php echo esc_url(get_field('img_2')['url']); ?>" alt="<?php echo get_field('img_2')['alt']; ?>">
+				<img src="<?php echo esc_url(get_field('img_2-mob')['url']); ?>" alt="<?php echo get_field('img_2-mob')['alt']; ?>">
+			</div>
 
 		</div>
 	</section>
@@ -171,7 +181,7 @@ get_header();
 
 			<div class="download__mask">
 				<h2 class="download__title"><?php the_field('title_7'); ?></h2>
-				<a href="<?php the_field('file_2'); ?>" class="download__btn btn btn_white" download>Скачать</a>
+				<a href="<?php the_field('file_2'); ?>" class="download__btn btn btn_white popup-link" data-popup="popup-download">Скачать</a>
 			</div>
 
 		</div>
@@ -183,6 +193,10 @@ get_header();
 		<div class="container">
 
 			<h2 class="chart__title"><?php the_field('title_8'); ?></h2>
+			<div class="chart__bg container">
+				<img src="/wp-content/themes/inspot/img/chart-bg.png" alt="">
+				<img src="/wp-content/themes/inspot/img/chart-bg-sm.png" alt="">
+			</div>
 
 		</div>
 	</section>
@@ -221,7 +235,7 @@ get_header();
 
 			<div class="offer__mask">
 				<h2 class="offer__title"><?php the_field('title_9'); ?></h2>
-				<a href="<?php the_field('file_3'); ?>" class="offer__btn btn btn_red" download>Скачать договор</a>
+				<a href="<?php the_field('file_3'); ?>" class="offer__btn btn btn_red popup-link" data-popup="popup-download">Скачать договор</a>
 			</div>
 
 		</div>

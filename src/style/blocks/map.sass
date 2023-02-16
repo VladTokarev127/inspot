@@ -44,8 +44,16 @@
 		> div
 			display: flex
 			align-items: center
+			font-size: 0
 		.js-marquee
 			white-space: nowrap
+			float: none !important
+			margin-right: 12px !important
+			display: flex
+			align-items: center
+			&:last-child
+				position: relative
+				top: 2px
 	.container
 		position: relative
 		z-index: 1
@@ -159,8 +167,8 @@
 			display: none
 		.leaflet-tile-pane
 			// display: none
-		.leaflet-interactive
-			transition: .3s ease-in-out
+		.leaflet-interactive:not(.leaflet-marker-icon)
+			transition: opacity .3s ease-in-out, fill .3s ease-in-out, stroke .3s ease-in-out
 			opacity: 0
 			&:hover
 				opacity: 1

@@ -17,23 +17,23 @@
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
 				let mobile = window.innerWidth < 768 ? true : false;
-				let zoom = mobile ? 4 : 2;
+				let zoom = mobile ? 3 : 4;
 
 				var greenIcon = L.icon({
 					iconUrl: '/wp-content/themes/inspot/img/map-icon.svg',
-					iconSize: [65, 43],
-					iconAnchor: [0, 0],
-					popupAnchor: [32, 200],
+					iconSize: [63, 49],
+					iconAnchor: [63/2, 49],
+					popupAnchor: [0, 150],
 				});
 
 				var greece = L.map('map', {
 						zoomControl: false
-				}).setView([51.5, -0.09], zoom);
+				}).setView([55.5, 49.09], zoom);
 
 				L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 						attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 						subdomains: 'abcd',
-						minZoom: 4,
+						minZoom: 2,
 						maxZoom: 18,
 				}).addTo(greece);
 

@@ -1,5 +1,22 @@
 $(function() {
 
+	function iOS() {
+		return [
+			'iPad Simulator',
+			'iPhone Simulator',
+			'iPod Simulator',
+			'iPad',
+			'iPhone',
+			'iPod'
+		].includes(navigator.platform)
+		// iPad on iOS 13 detection
+		|| (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+	}
+
+	if (iOS()) {
+		$('.club__hero-swiper').addClass('is-ios');
+	}
+
 	$('.hero__grid .hero__item').hover(function() {
 		let index = $(this).index();
 		let parent = $(this).parent();
