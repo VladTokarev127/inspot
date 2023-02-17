@@ -11,6 +11,8 @@
 		margin-top: -50px
 		@include media-breakpoint-down(lg)
 			margin-bottom: 150px
+		@include media-breakpoint-down(xs)
+			margin-bottom: 50px
 	&__info
 		max-width: 100%
 		width: 100%
@@ -97,19 +99,17 @@
 				margin-bottom: 0
 	&__socials
 		display: flex
+		flex-wrap: wrap
+		justify-content: center
 		flex: 1
+		@include media-breakpoint-down(md)
+			margin-bottom: -50px
 		&_mob
 			display: none
 		&_desc
 			display: none
 		&_mob
 			display: flex
-			@include media-breakpoint-down(md)
-				display: grid
-				grid-template-columns: repeat(3,1fr)
-				grid-gap: 50px
-			@include media-breakpoint-down(xs)
-				grid-template-columns: repeat(2,1fr)
 	&__item
 		flex: 1
 		text-align: center
@@ -119,6 +119,11 @@
 		font-size: 18px
 		text-transform: uppercase
 		color: #E7E7E7
+		@include media-breakpoint-down(md)
+			flex: 0 33%
+			margin-bottom: 50px
+		@include media-breakpoint-down(xs)
+			flex: 0 50%
 		&:hover &-icon::after,
 		&:hover &-icon::before
 			opacity: 1
@@ -187,7 +192,7 @@
 		grid-template-columns: repeat(1,1fr)
 		&-mob
 			display: none
-			margin-bottom: 150px
+			margin-bottom: 50px
 			@include media-breakpoint-down(lg)
 				display: block
 				width: 100%

@@ -65,7 +65,7 @@
 
 			<div class="hero__clubs-list">
 				<?php while( the_repeater_field('clubs_list') ): ?>
-					<a href="<?php the_sub_field('link'); ?>" class="hero__clubs-item">
+					<a class="hero__clubs-item">
 						<div class="hero__clubs-content">
 							<div class="hero__clubs-num"><?php the_sub_field('title'); ?></div>
 							<div class="hero__clubs-text"><?php the_sub_field('text'); ?></div>

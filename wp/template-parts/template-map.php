@@ -17,7 +17,7 @@
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
 				let mobile = window.innerWidth < 768 ? true : false;
-				let zoom = mobile ? 3 : 4;
+				let zoom = mobile ? 3 : 3;
 
 				var greenIcon = L.icon({
 					iconUrl: '/wp-content/themes/inspot/img/map-icon.svg',
@@ -33,7 +33,7 @@
 				L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 						attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
 						subdomains: 'abcd',
-						minZoom: 2,
+						minZoom: 3,
 						maxZoom: 18,
 				}).addTo(greece);
 
